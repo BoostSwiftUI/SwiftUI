@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAA4118B2C39C7BE00023E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA411862C39C7BE00023E9F /* Assets.xcassets */; };
+		BAC74B932C39C0C500557FB7 /* CoupangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74B922C39C0C500557FB7 /* CoupangTests.swift */; };
+		BAC74B9D2C39C0C500557FB7 /* CoupangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74B9C2C39C0C500557FB7 /* CoupangUITests.swift */; };
+		BAC74B9F2C39C0C500557FB7 /* CoupangUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74B9E2C39C0C500557FB7 /* CoupangUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAC74B8F2C39C0C500557FB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAC74B762C39C0C300557FB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAC74B7D2C39C0C300557FB7;
+			remoteInfo = Coupang;
+		};
+		BAC74B992C39C0C500557FB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAC74B762C39C0C300557FB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAC74B7D2C39C0C300557FB7;
+			remoteInfo = Coupang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAA411862C39C7BE00023E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAC74B7E2C39C0C300557FB7 /* Coupang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coupang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC74B8E2C39C0C500557FB7 /* CoupangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC74B922C39C0C500557FB7 /* CoupangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangTests.swift; sourceTree = "<group>"; };
+		BAC74B982C39C0C500557FB7 /* CoupangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC74B9C2C39C0C500557FB7 /* CoupangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangUITests.swift; sourceTree = "<group>"; };
+		BAC74B9E2C39C0C500557FB7 /* CoupangUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BAA411A02C39C87900023E9F /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
+		BAA411A82C39C87C00023E9F /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+		BAA411AC2C39C87E00023E9F /* Preview Content */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Preview Content"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAC74B7B2C39C0C300557FB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC74B8B2C39C0C500557FB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC74B952C39C0C500557FB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAA411872C39C7BE00023E9F /* Coupang */ = {
+			isa = PBXGroup;
+			children = (
+				BAA411AC2C39C87E00023E9F /* Preview Content */,
+				BAA411A82C39C87C00023E9F /* Resources */,
+				BAA411A02C39C87900023E9F /* Sources */,
+				BAA411862C39C7BE00023E9F /* Assets.xcassets */,
+			);
+			path = Coupang;
+			sourceTree = "<group>";
+		};
+		BAC74B752C39C0C300557FB7 = {
+			isa = PBXGroup;
+			children = (
+				BAA411872C39C7BE00023E9F /* Coupang */,
+				BAC74B912C39C0C500557FB7 /* CoupangTests */,
+				BAC74B9B2C39C0C500557FB7 /* CoupangUITests */,
+				BAC74B7F2C39C0C300557FB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAC74B7F2C39C0C300557FB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAC74B7E2C39C0C300557FB7 /* Coupang.app */,
+				BAC74B8E2C39C0C500557FB7 /* CoupangTests.xctest */,
+				BAC74B982C39C0C500557FB7 /* CoupangUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAC74B912C39C0C500557FB7 /* CoupangTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAC74B922C39C0C500557FB7 /* CoupangTests.swift */,
+			);
+			path = CoupangTests;
+			sourceTree = "<group>";
+		};
+		BAC74B9B2C39C0C500557FB7 /* CoupangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BAC74B9C2C39C0C500557FB7 /* CoupangUITests.swift */,
+				BAC74B9E2C39C0C500557FB7 /* CoupangUITestsLaunchTests.swift */,
+			);
+			path = CoupangUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAC74B7D2C39C0C300557FB7 /* Coupang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC74BA22C39C0C500557FB7 /* Build configuration list for PBXNativeTarget "Coupang" */;
+			buildPhases = (
+				BAC74B7A2C39C0C300557FB7 /* Sources */,
+				BAC74B7B2C39C0C300557FB7 /* Frameworks */,
+				BAC74B7C2C39C0C300557FB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BAA411A02C39C87900023E9F /* Sources */,
+				BAA411A82C39C87C00023E9F /* Resources */,
+				BAA411AC2C39C87E00023E9F /* Preview Content */,
+			);
+			name = Coupang;
+			productName = Coupang;
+			productReference = BAC74B7E2C39C0C300557FB7 /* Coupang.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAC74B8D2C39C0C500557FB7 /* CoupangTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC74BA52C39C0C500557FB7 /* Build configuration list for PBXNativeTarget "CoupangTests" */;
+			buildPhases = (
+				BAC74B8A2C39C0C500557FB7 /* Sources */,
+				BAC74B8B2C39C0C500557FB7 /* Frameworks */,
+				BAC74B8C2C39C0C500557FB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAC74B902C39C0C500557FB7 /* PBXTargetDependency */,
+			);
+			name = CoupangTests;
+			productName = CoupangTests;
+			productReference = BAC74B8E2C39C0C500557FB7 /* CoupangTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAC74B972C39C0C500557FB7 /* CoupangUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC74BA82C39C0C500557FB7 /* Build configuration list for PBXNativeTarget "CoupangUITests" */;
+			buildPhases = (
+				BAC74B942C39C0C500557FB7 /* Sources */,
+				BAC74B952C39C0C500557FB7 /* Frameworks */,
+				BAC74B962C39C0C500557FB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAC74B9A2C39C0C500557FB7 /* PBXTargetDependency */,
+			);
+			name = CoupangUITests;
+			productName = CoupangUITests;
+			productReference = BAC74B982C39C0C500557FB7 /* CoupangUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAC74B762C39C0C300557FB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					BAC74B7D2C39C0C300557FB7 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					BAC74B8D2C39C0C500557FB7 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = BAC74B7D2C39C0C300557FB7;
+					};
+					BAC74B972C39C0C500557FB7 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = BAC74B7D2C39C0C300557FB7;
+					};
+				};
+			};
+			buildConfigurationList = BAC74B792C39C0C300557FB7 /* Build configuration list for PBXProject "Coupang" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAC74B752C39C0C300557FB7;
+			productRefGroup = BAC74B7F2C39C0C300557FB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAC74B7D2C39C0C300557FB7 /* Coupang */,
+				BAC74B8D2C39C0C500557FB7 /* CoupangTests */,
+				BAC74B972C39C0C500557FB7 /* CoupangUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAC74B7C2C39C0C300557FB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA4118B2C39C7BE00023E9F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC74B8C2C39C0C500557FB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC74B962C39C0C500557FB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAC74B7A2C39C0C300557FB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC74B8A2C39C0C500557FB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC74B932C39C0C500557FB7 /* CoupangTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC74B942C39C0C500557FB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC74B9F2C39C0C500557FB7 /* CoupangUITestsLaunchTests.swift in Sources */,
+				BAC74B9D2C39C0C500557FB7 /* CoupangUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAC74B902C39C0C500557FB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAC74B7D2C39C0C300557FB7 /* Coupang */;
+			targetProxy = BAC74B8F2C39C0C500557FB7 /* PBXContainerItemProxy */;
+		};
+		BAC74B9A2C39C0C500557FB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAC74B7D2C39C0C300557FB7 /* Coupang */;
+			targetProxy = BAC74B992C39C0C500557FB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BAC74BA02C39C0C500557FB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAC74BA12C39C0C500557FB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAC74BA32C39C0C500557FB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Coupang/Preview Content\"";
+				DEVELOPMENT_TEAM = 2ZQR76M3UH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.Coupang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAC74BA42C39C0C500557FB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Coupang/Preview Content\"";
+				DEVELOPMENT_TEAM = 2ZQR76M3UH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.Coupang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAC74BA62C39C0C500557FB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2ZQR76M3UH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.CoupangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coupang.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Coupang";
+			};
+			name = Debug;
+		};
+		BAC74BA72C39C0C500557FB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2ZQR76M3UH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.CoupangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coupang.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Coupang";
+			};
+			name = Release;
+		};
+		BAC74BA92C39C0C500557FB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2ZQR76M3UH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.CoupangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Coupang;
+			};
+			name = Debug;
+		};
+		BAC74BAA2C39C0C500557FB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2ZQR76M3UH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.CoupangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Coupang;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAC74B792C39C0C300557FB7 /* Build configuration list for PBXProject "Coupang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC74BA02C39C0C500557FB7 /* Debug */,
+				BAC74BA12C39C0C500557FB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAC74BA22C39C0C500557FB7 /* Build configuration list for PBXNativeTarget "Coupang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC74BA32C39C0C500557FB7 /* Debug */,
+				BAC74BA42C39C0C500557FB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAC74BA52C39C0C500557FB7 /* Build configuration list for PBXNativeTarget "CoupangTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC74BA62C39C0C500557FB7 /* Debug */,
+				BAC74BA72C39C0C500557FB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAC74BA82C39C0C500557FB7 /* Build configuration list for PBXNativeTarget "CoupangUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC74BA92C39C0C500557FB7 /* Debug */,
+				BAC74BAA2C39C0C500557FB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAC74B762C39C0C300557FB7 /* Project object */;
+}
