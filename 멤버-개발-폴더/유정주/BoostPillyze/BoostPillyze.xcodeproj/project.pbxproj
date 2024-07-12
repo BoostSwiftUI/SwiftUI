@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				9B046FF62C41735B00ADAFF3 /* BoostPillyzeApp.swift */,
-				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
-				9B046FFA2C41735C00ADAFF3 /* Assets.xcassets */,
+				9B0470202C41752100ADAFF3 /* Home */,
+				9B0470212C41752800ADAFF3 /* Resource */,
 				9B046FFC2C41735C00ADAFF3 /* Preview Content */,
 			);
 			path = BoostPillyze;
@@ -111,6 +111,22 @@
 				9B0470072C41735D00ADAFF3 /* BoostPillyzeTests.swift */,
 			);
 			path = BoostPillyzeTests;
+			sourceTree = "<group>";
+		};
+		9B0470202C41752100ADAFF3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9B0470212C41752800ADAFF3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9B046FFA2C41735C00ADAFF3 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
