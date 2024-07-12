@@ -11,15 +11,23 @@ struct PillyzeTabBar: View {
   @Binding var index: Int
 
   var body: some View {
-    HStack(spacing: 30) {
-      Button {
+    ZStack {
+      HStack(spacing: 115) {
+        Button {
+          print("건강 탭")
+        } label: {
+          TabBarItem(title: "내 건강", image: Image(systemName: "heart.fill"))
+        }
 
-      } label: {
-        TabBarItem(title: "내 건강", image: Image(systemName: "heart.fill"))
+        Button {
+          print("영양제 탭")
+        } label: {
+          TabBarItem(title: "영양제", image: Image(systemName: "pill.fill"))
+        }
       }
 
       Button {
-
+        print("plus 버튼 탭")
       } label: {
         Image(systemName: "plus")
           .resizable()
@@ -30,18 +38,7 @@ struct PillyzeTabBar: View {
           .clipShape(Circle())
           .offset(y: -Metrics.centerButtonOffset)
       }
-
-      Button {
-
-      } label: {
-        TabBarItem(title: "영양제", image: Image(systemName: "pill.fill"))
-      }
     }
-    .padding(.top, Metrics.centerButtonOffset)
-    .frame(height: Metrics.tabBarHeight)
-    .frame(maxWidth: .infinity)
-    .background(.background)
-    .clipShape(TabBarBackgroundShape())
   }
 }
 
@@ -57,57 +54,10 @@ private struct TabBarItem: View {
   }
 }
 
-struct TabBarBackgroundShape: Shape {
-  func path(in rect: CGRect) -> Path {
-    Path { path in
-      path.move(to: .init(x: 0, y: rect.height))
-      path.addLine(to: .init(x: rect.width, y: rect.height))
-      path
-        .addLine(
-          to: .init(
-            x: rect.width,
-            y: Metrics.cornerRadius + Metrics.centerButtonOffset
-          )
-        )
-      path.addArc(
-        tangent1End: .init(x: rect.width, y: Metrics.centerButtonOffset),
-        tangent2End: .init(
-          x: rect.width - Metrics.cornerRadius,
-          y: Metrics.centerButtonOffset
-        ),
-        radius: Metrics.cornerRadius
-      )
-      path
-        .addLine(
-          to: .init(x: Metrics.cornerRadius, y: Metrics.centerButtonOffset)
-        )
-      path.addArc(
-        tangent1End: .init(x: 0, y: Metrics.centerButtonOffset),
-        tangent2End: .init(
-          x: 0,
-          y: Metrics.cornerRadius + Metrics.centerButtonOffset
-        ),
-        radius: Metrics.cornerRadius
-      )
-    }
-  }
-}
-
 private enum Metrics {
-  static let cornerRadius: CGFloat = 35
   static let centerButtonOffset: CGFloat = 8
-  static let tabBarHeight: CGFloat = 60
 }
 
 #Preview {
   PillyzeTabBar(index: .constant(0))
-}
-
-#Preview("TabBarBackgroundShape") {
-  VStack {
-    Spacer()
-    TabBarBackgroundShape()
-      .frame(width: .infinity, height: Metrics.tabBarHeight)
-      .background(.yellow)
-  }
 }

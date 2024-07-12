@@ -13,6 +13,14 @@ struct ContentView: View {
     VStack {
       Spacer()
       PillyzeTabBar(index: $index)
+        .frame(height: Metrics.tabBarHeight)
+        .frame(maxWidth: .infinity)
+        .background(
+          UnevenRoundedRectangle(
+            topLeadingRadius: Metrics.cornerRadius,
+            topTrailingRadius: Metrics.cornerRadius
+          ).fill(.background)
+        )
     }
     .background(Color.pillyzeBackground.ignoresSafeArea(edges: .top))
   }
@@ -20,6 +28,7 @@ struct ContentView: View {
 
 
 private enum Metrics {
+  static let cornerRadius: CGFloat = 35
   static let tabBarHeight: CGFloat = 60
 }
 
