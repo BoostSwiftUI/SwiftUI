@@ -11,7 +11,7 @@ struct PillyzeTabBar: View {
   @Binding var index: Int
   
   var body: some View {
-    HStack(spacing: 115) {
+    HStack(spacing: 30) {
       Button {
         
       } label: {
@@ -21,10 +21,23 @@ struct PillyzeTabBar: View {
       Button {
         
       } label: {
+        Image(systemName: "plus")
+          .resizable()
+          .frame(width: 24, height: 24)
+          .frame(maxWidth: 56, maxHeight: 56)
+          .foregroundStyle(.white)
+          .background(.pillyzePrimary)
+          .clipShape(Circle())
+          .offset(y: -8)
+      }
+      
+      Button {
+        
+      } label: {
         TabBarItem(title: "영양제", image: Image(systemName: "pill.fill"))
       }
     }
-    .frame(width: .infinity)
+    .frame(width: .infinity, height: 60)
   }
 }
 
@@ -36,7 +49,7 @@ struct TabBarItem: View {
       image
       Text(title)
     }
-    .frame(width: 60)
+    .frame(width: 82)
   }
 }
 
