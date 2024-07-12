@@ -14,6 +14,9 @@
 		6082A0FC2C410E8E00C72C97 /* PillyzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0FB2C410E8E00C72C97 /* PillyzeTests.swift */; };
 		6082A1062C410E8E00C72C97 /* PillyzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A1052C410E8E00C72C97 /* PillyzeUITests.swift */; };
 		6082A1082C410E8E00C72C97 /* PillyzeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A1072C410E8E00C72C97 /* PillyzeUITestsLaunchTests.swift */; };
+		6082A11A2C41235500C72C97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A1192C41235500C72C97 /* Header.swift */; };
+		6082A11D2C41288300C72C97 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A11C2C41288300C72C97 /* TabBar.swift */; };
+		6082A11F2C41299900C72C97 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A11E2C41299900C72C97 /* TabBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		6082A1012C410E8E00C72C97 /* PillyzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillyzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6082A1052C410E8E00C72C97 /* PillyzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillyzeUITests.swift; sourceTree = "<group>"; };
 		6082A1072C410E8E00C72C97 /* PillyzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillyzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6082A1192C41235500C72C97 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		6082A11C2C41288300C72C97 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		6082A11E2C41299900C72C97 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				6082A0EA2C410E8D00C72C97 /* PillyzeApp.swift */,
-				6082A0EC2C410E8D00C72C97 /* ContentView.swift */,
-				6082A0EE2C410E8E00C72C97 /* Assets.xcassets */,
+				6082A1152C4120A100C72C97 /* Views */,
+				6082A1142C41209F00C72C97 /* Models */,
+				6082A1172C4120B600C72C97 /* Resources */,
 				6082A0F02C410E8E00C72C97 /* Preview Content */,
 			);
 			path = Pillyze;
@@ -125,6 +132,48 @@
 				6082A1072C410E8E00C72C97 /* PillyzeUITestsLaunchTests.swift */,
 			);
 			path = PillyzeUITests;
+			sourceTree = "<group>";
+		};
+		6082A1142C41209F00C72C97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6082A1152C4120A100C72C97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6082A0EC2C410E8D00C72C97 /* ContentView.swift */,
+				6082A11B2C41285E00C72C97 /* TabBar */,
+				6082A1182C41234600C72C97 /* Header */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6082A1172C4120B600C72C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6082A0EE2C410E8E00C72C97 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6082A1182C41234600C72C97 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				6082A1192C41235500C72C97 /* Header.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		6082A11B2C41285E00C72C97 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6082A11C2C41288300C72C97 /* TabBar.swift */,
+				6082A11E2C41299900C72C97 /* TabBarButton.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6082A0ED2C410E8D00C72C97 /* ContentView.swift in Sources */,
+				6082A11A2C41235500C72C97 /* Header.swift in Sources */,
 				6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */,
+				6082A11F2C41299900C72C97 /* TabBarButton.swift in Sources */,
+				6082A11D2C41288300C72C97 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +489,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericKwon95.Pillyze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,9 +522,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericKwon95.Pillyze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
