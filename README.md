@@ -17,5 +17,5 @@
 | [ericKwon95](https://github.com/ericKwon95) | [qwerty3345](https://github.com/qwerty3345) | [MaraMincho](https://github.com/MaraMincho) | [jeongju9216](https://github.com/jeongju9216) | [yoondj98](https://github.com/yoondj98) | [junbok97](https://github.com/junbok97) | [WhiteHyun](https://github.com/WhiteHyun) |
 
 # 📝 학습정리
-- [Wiki 바로가기](https://github.com/junbok97/SwiftUI/wiki)
+- [Wiki 바로가기](https://github.com/BoostSwiftUI/SwiftUI/wiki)
 
