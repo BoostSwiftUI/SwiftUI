@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+  @State private var index: Int = 0
   var body: some View {
     VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+      
+      Spacer()
+      PillyzeTabBar(index: $index)
     }
-    .padding()
   }
 }
 
