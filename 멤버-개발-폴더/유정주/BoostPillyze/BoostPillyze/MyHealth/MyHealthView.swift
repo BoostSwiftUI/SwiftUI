@@ -32,12 +32,26 @@ struct MyHealthView: View {
                 }
             }
             .padding(.horizontal)
+            .background(Color.primaryNormal)
             
             ScrollView {
-                CalendarList()
+                VStack(spacing: 0) {
+                    CalendarList()
+                        .frame(height: 80, alignment: .top)
+                        .background(Color.primaryNormal)
+                    
+                    ZStack {
+                        Rectangle()
+                            .frame(height: 50)
+                            .foregroundStyle(Color.primaryNormal)
+                        Rectangle()
+                            .foregroundStyle(Color.primaryPlaceholder)
+                            .cornerRadius(24, corners: [.topLeft, .topRight])
+                    }
+                }
             }
         }
-        .background(Color.primaryNormal)
+        .background(Color.primaryPlaceholder)
     }
 }
 
