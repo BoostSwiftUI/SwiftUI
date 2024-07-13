@@ -18,6 +18,8 @@
 		9B5AE82C2C42B26E00BC1ED7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE82B2C42B26E00BC1ED7 /* BaseViewController.swift */; };
 		9B5AE82F2C42B29A00BC1ED7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE82E2C42B29A00BC1ED7 /* BaseView.swift */; };
 		9B5AE8312C42B2E500BC1ED7 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */; };
+		9B5AE8332C42B49E00BC1ED7 /* MyHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8322C42B49E00BC1ED7 /* MyHealthView.swift */; };
+		9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		9B5AE82B2C42B26E00BC1ED7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9B5AE82E2C42B29A00BC1ED7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
+		9B5AE8322C42B49E00BC1ED7 /* MyHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealthView.swift; sourceTree = "<group>"; };
+		9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				9B5AE8252C42AAD200BC1ED7 /* MyHealthViewController.swift */,
+				9B5AE8322C42B49E00BC1ED7 /* MyHealthView.swift */,
 			);
 			path = MyHealth;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 		9B5AE82D2C42B28D00BC1ED7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */,
 				9B5AE82B2C42B26E00BC1ED7 /* BaseViewController.swift */,
 				9B5AE82E2C42B29A00BC1ED7 /* BaseView.swift */,
 				9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */,
@@ -271,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */,
 				9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */,
+				9B5AE8332C42B49E00BC1ED7 /* MyHealthView.swift in Sources */,
 				9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */,
 				9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */,
 				9B046FF92C41735B00ADAFF3 /* ContentView.swift in Sources */,

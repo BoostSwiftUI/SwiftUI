@@ -8,31 +8,17 @@
 import UIKit
 import SwiftUI
 
+// MARK: - MyHealthRepresentView
+
 struct MyHealthRepresentView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        MyHealthViewController()
+        MyHealthViewController(rootView: MyHealthView())
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
 }
 
-final class MyHealthViewController: BaseViewController {
-    
-    // MARK: - Setup
-    
-    override func setUpAttribute() {
-        view.backgroundColor = Color.background
-    }
-}
+// MARK: - MyHealthViewController
 
-// MARK: - Constant
-
-private extension MyHealthViewController {
-    
-    enum Color {
-        
-        static let background = UIColor(resource: .primaryNormal)
-    }
-}
-
+final class MyHealthViewController: LayoutViewController<MyHealthView> {}
