@@ -16,6 +16,11 @@
 | <a href="https://github.com/ericKwon95"><img src="https://avatars.githubusercontent.com/u/22342277?v=4" width="100"></a> | <a href="https://github.com/qwerty3345"><img src="https://avatars.githubusercontent.com/u/59835351?v=4" width="100"></a> | <a href="https://github.com/MaraMincho"><img src="https://avatars.githubusercontent.com/u/103064352?v=4" width="100"></a> | <a href="https://github.com/jeongju9216"><img src="https://avatars.githubusercontent.com/u/89075274?v=4" width="100"></a> | <a href="https://github.com/yoondj98"><img src="https://avatars.githubusercontent.com/u/54929503?v=4" width="100"></a> | <a href="https://github.com/junbok97"><img src="https://avatars.githubusercontent.com/u/71696675?v=4" width="100"></a> | <a href="https://github.com/WhiteHyun"><img src="https://avatars.githubusercontent.com/u/57972338?v=4" width="100"></a> |
 | [ericKwon95](https://github.com/ericKwon95) | [qwerty3345](https://github.com/qwerty3345) | [MaraMincho](https://github.com/MaraMincho) | [jeongju9216](https://github.com/jeongju9216) | [yoondj98](https://github.com/yoondj98) | [junbok97](https://github.com/junbok97) | [WhiteHyun](https://github.com/WhiteHyun) |
 
-# 📝 학습정리
-- [Wiki 바로가기](https://github.com/BoostSwiftUI/SwiftUI/wiki)
-
+# 📝 [Wiki](https://github.com/BoostSwiftUI/SwiftUI/wiki) 콘텐츠
+[Wiki](https://github.com/BoostSwiftUI/SwiftUI/wiki) 바로가기
+- 스터디 요약
+  - 클로버 노트와 GPT로 스터디 내용을 요약, 업로드합니다.
+- 학습 정리
+  - 스터디를 진행하며 학습한 내용을 정리합니다.
+- WWDC 영상 추천
+  - 함께 보면 좋을 WWDC 영상 리스트입니다. 매주 함께 시청하고 토의합니다.
