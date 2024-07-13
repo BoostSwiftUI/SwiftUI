@@ -40,7 +40,7 @@ struct CategoryView: View {
                             CategoryItemButton(category: modelData.categories[index*2])
                             Divider()
                                 .frame(height: 40)
-                            CategoryItemButton(category: index*2+1 < modelData.categories.count ? modelData.categories[1+index*2]: Category(categoryName: "", categoryIcon: ""))
+                            CategoryItemButton(category: index*2+1 < modelData.categories.count ? modelData.categories[1+index*2]: Category(name: "", icon: ""))
                         }
                         .frame(height: 60)
                         .overlay(
