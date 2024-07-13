@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var component: TabBarComponents = .myHealth
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color(.appPrimary)
+                .ignoresSafeArea()
+            
+            switch component {
+            case .myHealth:
+                MyHealth()
+            case .nutrients:
+                Text("nutrients")
+            }
+            
+            TabBar(components: $component)
         }
-        .padding()
     }
 }
 

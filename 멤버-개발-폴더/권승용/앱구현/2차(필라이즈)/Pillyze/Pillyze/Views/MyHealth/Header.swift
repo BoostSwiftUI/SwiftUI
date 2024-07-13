@@ -13,6 +13,7 @@ struct Header: View {
             Image(.logo)
                 .resizable()
                 .scaledToFit()
+                .frame(height: 28)
             
             Spacer()
             
@@ -32,12 +33,13 @@ struct Header: View {
         }
         .frame(height: 32)
         .padding(.vertical, 8)
-        .background {
-            Color(.appPrimary)
-        }
+        .padding(.horizontal, 16)
     }
 }
 
 #Preview {
     Header()
+        .background {
+            Color(.appPrimary)
+        }
 }

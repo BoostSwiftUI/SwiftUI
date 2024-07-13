@@ -17,6 +17,7 @@
 		6082A11A2C41235500C72C97 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A1192C41235500C72C97 /* Header.swift */; };
 		6082A11D2C41288300C72C97 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A11C2C41288300C72C97 /* TabBar.swift */; };
 		6082A11F2C41299900C72C97 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A11E2C41299900C72C97 /* TabBarButton.swift */; };
+		6082A1222C41F40200C72C97 /* MyHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A1212C41F40200C72C97 /* MyHealth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		6082A1192C41235500C72C97 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		6082A11C2C41288300C72C97 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		6082A11E2C41299900C72C97 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		6082A1212C41F40200C72C97 /* MyHealth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,7 @@
 			children = (
 				6082A0EC2C410E8D00C72C97 /* ContentView.swift */,
 				6082A11B2C41285E00C72C97 /* TabBar */,
-				6082A1182C41234600C72C97 /* Header */,
+				6082A1202C41F38100C72C97 /* MyHealth */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,14 +161,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		6082A1182C41234600C72C97 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				6082A1192C41235500C72C97 /* Header.swift */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
 		6082A11B2C41285E00C72C97 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +168,15 @@
 				6082A11E2C41299900C72C97 /* TabBarButton.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6082A1202C41F38100C72C97 /* MyHealth */ = {
+			isa = PBXGroup;
+			children = (
+				6082A1212C41F40200C72C97 /* MyHealth.swift */,
+				6082A1192C41235500C72C97 /* Header.swift */,
+			);
+			path = MyHealth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +314,7 @@
 				6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */,
 				6082A11F2C41299900C72C97 /* TabBarButton.swift in Sources */,
 				6082A11D2C41288300C72C97 /* TabBar.swift in Sources */,
+				6082A1222C41F40200C72C97 /* MyHealth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

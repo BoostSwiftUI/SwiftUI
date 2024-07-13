@@ -12,42 +12,74 @@ enum TabBarComponents {
     case nutrients
 }
 
+fileprivate enum Constant {
+    static let myHealth = "내 건강"
+    static let nutrients = "영양제"
+}
+
 struct TabBar: View {
-    @State private var components: TabBarComponents = .myHealth
+    @Binding var components: TabBarComponents
     
     var body: some View {
-        HStack {
-            Spacer()
-                .frame(width: 48)
-            
-            TabBarButton(enabledResource: .myHealthEnabled, disabledResource: .myHealthDisabled, title: "내 건강", isEnabled: components == .myHealth )
-                .frame(width: 82, height: 60)
-                .onTapGesture {
-                    components = .myHealth
+        GeometryReader { proxy in
+            VStack {
+                Spacer()
+                VStack {
+                    HStack {
+                        Spacer()
+                            .frame(width: 48)
+                        
+                        TabBarButton(
+                            enabledResource: .myHealthEnabled,
+                            disabledResource: .myHealthDisabled,
+                            title: Constant.myHealth,
+                            isEnabled: components == .myHealth
+                        )
+                        .frame(width: 82, height: 60)
+                        .onTapGesture {
+                            components = .myHealth
+                        }
+                        
+                        Spacer()
+                        Image(.addButton)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 52, height: 52)
+                            .offset(y: -12)
+                        
+                        Spacer()
+                        TabBarButton(
+                            enabledResource: .nutrientsEnabled,
+                            disabledResource: .nutrientsDisabled,
+                            title: Constant.nutrients,
+                            isEnabled: components == .nutrients
+                        )
+                        .frame(width: 82, height: 60)
+                        .onTapGesture {
+                            components = .nutrients
+                        }
+                        
+                        Spacer()
+                            .frame(width: 48)
+                    }
+                    Spacer()
+                        .frame(height: proxy.safeAreaInsets.bottom)
                 }
-            
-            Spacer()
-            Image(.addButton)
-                .offset(y: -12)
-            
-            Spacer()
-            TabBarButton(enabledResource: .nutrientsEnabled, disabledResource: .nutrientsDisabled, title: "영양제", isEnabled: components == .nutrients)
-                .frame(width: 82, height: 60)
-                .onTapGesture {
-                    components = .nutrients
+                .background {
+                    UnevenRoundedRectangle(
+                        cornerRadii: RectangleCornerRadii(
+                            topLeading: 20,
+                            topTrailing: 20
+                        ))
+                    .foregroundStyle(.background)
+                    .shadow(radius: 3)
                 }
-            
-            Spacer()
-                .frame(width: 48)
-        }
-        .background {
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundStyle(.background)
-                .shadow(radius: 3)
+            }
+            .ignoresSafeArea()
         }
     }
 }
 
 #Preview {
-    TabBar()
+    TabBar(components: .constant(.myHealth))
 }
