@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductView: View {
+    @Environment(\.dismiss) var dismiss
     @State private var isListMode = false
     @State var products: [Product]
     var columns: [GridItem] {
@@ -41,6 +42,17 @@ struct ProductView: View {
                 })
             }
             .frame(maxWidth: .infinity)
+            .navigationBarBackButtonHidden()
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .foregroundStyle(.black)
+                    }
+                }
+            }
         }
     }
 }
