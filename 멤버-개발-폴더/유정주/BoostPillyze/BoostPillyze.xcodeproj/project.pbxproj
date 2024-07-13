@@ -15,6 +15,9 @@
 		9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0470242C427F6C00ADAFF3 /* MainTabBar.swift */; };
 		9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04702A2C4288DB00ADAFF3 /* View+cornerRadius.swift */; };
 		9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8252C42AAD200BC1ED7 /* MyHealthViewController.swift */; };
+		9B5AE82C2C42B26E00BC1ED7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE82B2C42B26E00BC1ED7 /* BaseViewController.swift */; };
+		9B5AE82F2C42B29A00BC1ED7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE82E2C42B29A00BC1ED7 /* BaseView.swift */; };
+		9B5AE8312C42B2E500BC1ED7 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		9B0470242C427F6C00ADAFF3 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9B04702A2C4288DB00ADAFF3 /* View+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
 		9B5AE8252C42AAD200BC1ED7 /* MyHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealthViewController.swift; sourceTree = "<group>"; };
+		9B5AE82B2C42B26E00BC1ED7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9B5AE82E2C42B29A00BC1ED7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		9B046FF52C41735B00ADAFF3 /* BoostPillyze */ = {
 			isa = PBXGroup;
 			children = (
+				9B5AE8292C42B23600BC1ED7 /* UIkit */,
 				9B046FF62C41735B00ADAFF3 /* BoostPillyzeApp.swift */,
 				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
 				9B0470232C427F5B00ADAFF3 /* TabBar */,
@@ -144,6 +151,24 @@
 				9B04702A2C4288DB00ADAFF3 /* View+cornerRadius.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9B5AE8292C42B23600BC1ED7 /* UIkit */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE82D2C42B28D00BC1ED7 /* Base */,
+			);
+			path = UIkit;
+			sourceTree = "<group>";
+		};
+		9B5AE82D2C42B28D00BC1ED7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE82B2C42B26E00BC1ED7 /* BaseViewController.swift */,
+				9B5AE82E2C42B29A00BC1ED7 /* BaseView.swift */,
+				9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +275,10 @@
 				9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */,
 				9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */,
 				9B046FF92C41735B00ADAFF3 /* ContentView.swift in Sources */,
+				9B5AE82F2C42B29A00BC1ED7 /* BaseView.swift in Sources */,
 				9B046FF72C41735B00ADAFF3 /* BoostPillyzeApp.swift in Sources */,
+				9B5AE8312C42B2E500BC1ED7 /* ViewModelable.swift in Sources */,
+				9B5AE82C2C42B26E00BC1ED7 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
