@@ -1,6 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "(%lld)" : {
+
+    },
+    "%lld원" : {
+
+    },
     "Education" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -121,6 +130,9 @@
           }
         }
       }
+    },
+    "로켓와우" : {
+
     }
   },
   "version" : "1.0"

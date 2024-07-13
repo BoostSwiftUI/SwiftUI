@@ -12,9 +12,11 @@ struct CoupangViewPracticeApp: App {
     @State private var modelData = ModelData()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(modelData)
-                .environment(\.locale, .init(identifier: "ko"))
+            NavigationStack {
+                ContentView()
+                    .environment(modelData)
+                    .environment(\.locale, .init(identifier: "ko"))
+            }
         }
     }
 }

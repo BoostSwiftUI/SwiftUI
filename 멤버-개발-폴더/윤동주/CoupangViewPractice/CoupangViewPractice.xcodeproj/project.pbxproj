@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		085964862C3CB65500BFF5C9 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964852C3CB65500BFF5C9 /* CategoryButton.swift */; };
 		085964882C403C8100BFF5C9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 085964872C403C8100BFF5C9 /* Localizable.xcstrings */; };
+		0859648D2C412E3B00BFF5C9 /* ProductGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859648C2C412E3B00BFF5C9 /* ProductGridView.swift */; };
+		0859648F2C4133A200BFF5C9 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859648E2C4133A200BFF5C9 /* ProductView.swift */; };
 		08639D422C3AF89500173699 /* CoupangViewPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */; };
 		08639D442C3AF89500173699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D432C3AF89500173699 /* ContentView.swift */; };
 		08639D462C3AF89700173699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08639D452C3AF89700173699 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		085964852C3CB65500BFF5C9 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		085964872C403C8100BFF5C9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0859648C2C412E3B00BFF5C9 /* ProductGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridView.swift; sourceTree = "<group>"; };
+		0859648E2C4133A200BFF5C9 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		08639D3E2C3AF89500173699 /* CoupangViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupangViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangViewPracticeApp.swift; sourceTree = "<group>"; };
 		08639D432C3AF89500173699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		0859648B2C412C9C00BFF5C9 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				0859648C2C412E3B00BFF5C9 /* ProductGridView.swift */,
+				0859648E2C4133A200BFF5C9 /* ProductView.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0859648F2C4133A200BFF5C9 /* ProductView.swift in Sources */,
 				08639D442C3AF89500173699 /* ContentView.swift in Sources */,
 				085964862C3CB65500BFF5C9 /* CategoryButton.swift in Sources */,
 				08639D5D2C3AFAB000173699 /* Product.swift in Sources */,
@@ -247,6 +254,7 @@
 				08639D422C3AF89500173699 /* CoupangViewPracticeApp.swift in Sources */,
 				08639D572C3AFA1500173699 /* CategoryView.swift in Sources */,
 				08639D632C3B094900173699 /* Category.swift in Sources */,
+				0859648D2C412E3B00BFF5C9 /* ProductGridView.swift in Sources */,
 				08639D652C3B0A3C00173699 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

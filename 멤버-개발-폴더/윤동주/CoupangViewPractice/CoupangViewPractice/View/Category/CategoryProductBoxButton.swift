@@ -9,15 +9,9 @@ import SwiftUI
 
 struct CategoryProductBoxButton: View {
     
-    init(image: Image, buttonTitle: String, action: (() -> Void)? = nil) {
-        self.image = image
-        self.buttonTitle = buttonTitle
-        self.action = action
-    }
-    
     var image: Image
     var buttonTitle: String
-    var action: (() -> Void)?
+    var action: (() -> Void)? = nil
     
     var body: some View {
         Button {

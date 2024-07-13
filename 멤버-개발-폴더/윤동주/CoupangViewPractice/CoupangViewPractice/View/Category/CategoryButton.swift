@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct CategoryItemButton: View {
+    @Environment(ModelData.self) var modelData
     var category: Category
+    var products: [Product] {
+        self.modelData.products.filter {
+            $0.categories.contains(self.category.categoryName)
+        }
+    }
     
     var body: some View {
-        Button {
-            print("\(LocalizedStringKey(category.categoryName)) 클릭됨")
+        NavigationLink {
+            ProductView(products: products)
         } label: {
             HStack(spacing: 10) {
                 Text(category.categoryIcon)
