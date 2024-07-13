@@ -36,4 +36,14 @@ struct Product: Hashable, Codable {
         case reviewCount = "review_count"
         case sellerName = "seller_name"
     }
+    static let previewData = Product(productName: "GoPro Hero 10 Black",
+                                     categories: ["Technology", "Sports"],
+                                     imageUrl: "https://loremflickr.com/300/300/Technology",
+                                     price: 599000,
+                                     discountRate: 15,
+                                     rocketDelivery: true,
+                                     rocketWow: true,
+                                     rating: 4.7,
+                                     reviewCount: 610,
+                                     sellerName: "GoPro Official Store")
 }

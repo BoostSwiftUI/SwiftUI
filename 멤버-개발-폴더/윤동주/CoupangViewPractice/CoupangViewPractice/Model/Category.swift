@@ -16,4 +16,7 @@ struct Category: Hashable, Codable {
         case name = "categoryName"
         case icon = "categoryIcon"
     }
+    
+    static let previewData = Category(name: "테스트/카테고리",
+                                      icon: "apple")
 }

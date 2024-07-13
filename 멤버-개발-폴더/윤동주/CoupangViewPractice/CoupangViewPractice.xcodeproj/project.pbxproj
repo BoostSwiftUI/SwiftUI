@@ -14,13 +14,13 @@
 		085964912C42738100BFF5C9 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964902C42738100BFF5C9 /* ProductListView.swift */; };
 		085964932C42796E00BFF5C9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964922C42796E00BFF5C9 /* Color+.swift */; };
 		085964962C42B90100BFF5C9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964952C42B90100BFF5C9 /* ProductDetailView.swift */; };
+		085964982C42D6DF00BFF5C9 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 085964972C42D6DF00BFF5C9 /* categories.json */; };
+		0859649A2C42D6E600BFF5C9 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 085964992C42D6E600BFF5C9 /* products.json */; };
 		08639D422C3AF89500173699 /* CoupangViewPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */; };
 		08639D442C3AF89500173699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D432C3AF89500173699 /* ContentView.swift */; };
 		08639D462C3AF89700173699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08639D452C3AF89700173699 /* Assets.xcassets */; };
 		08639D492C3AF89700173699 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08639D482C3AF89700173699 /* Preview Assets.xcassets */; };
 		08639D572C3AFA1500173699 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D562C3AFA1500173699 /* CategoryView.swift */; };
-		08639D5A2C3AFA5400173699 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 08639D582C3AFA5400173699 /* categories.json */; };
-		08639D5B2C3AFA5400173699 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 08639D592C3AFA5400173699 /* products.json */; };
 		08639D5D2C3AFAB000173699 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D5C2C3AFAB000173699 /* Product.swift */; };
 		08639D5F2C3AFF2D00173699 /* CategoryProductBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D5E2C3AFF2D00173699 /* CategoryProductBoxButton.swift */; };
 		08639D632C3B094900173699 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D622C3B094900173699 /* Category.swift */; };
@@ -35,14 +35,14 @@
 		085964902C42738100BFF5C9 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		085964922C42796E00BFF5C9 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		085964952C42B90100BFF5C9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		085964972C42D6DF00BFF5C9 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		085964992C42D6E600BFF5C9 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		08639D3E2C3AF89500173699 /* CoupangViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupangViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangViewPracticeApp.swift; sourceTree = "<group>"; };
 		08639D432C3AF89500173699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08639D452C3AF89700173699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08639D482C3AF89700173699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08639D562C3AFA1500173699 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		08639D582C3AFA5400173699 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories.json; path = "../../../../../앱구현-가이드/1차(쿠팡)/categories.json"; sourceTree = "<group>"; };
-		08639D592C3AFA5400173699 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = "../../../../../앱구현-가이드/1차(쿠팡)/products.json"; sourceTree = "<group>"; };
 		08639D5C2C3AFAB000173699 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		08639D5E2C3AFF2D00173699 /* CategoryProductBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductBoxButton.swift; sourceTree = "<group>"; };
 		08639D622C3B094900173699 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		08639D512C3AF8BD00173699 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				08639D582C3AFA5400173699 /* categories.json */,
-				08639D592C3AFA5400173699 /* products.json */,
+				085964972C42D6DF00BFF5C9 /* categories.json */,
+				085964992C42D6E600BFF5C9 /* products.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -248,10 +248,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0859649A2C42D6E600BFF5C9 /* products.json in Resources */,
 				08639D492C3AF89700173699 /* Preview Assets.xcassets in Resources */,
+				085964982C42D6DF00BFF5C9 /* categories.json in Resources */,
 				085964882C403C8100BFF5C9 /* Localizable.xcstrings in Resources */,
-				08639D5B2C3AFA5400173699 /* products.json in Resources */,
-				08639D5A2C3AFA5400173699 /* categories.json in Resources */,
 				08639D462C3AF89700173699 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

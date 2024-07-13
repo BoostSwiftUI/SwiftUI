@@ -37,5 +37,6 @@ struct CategoryProductBoxButton: View {
 }
 
 #Preview {
-    CategoryProductBoxButton(image: Image("rocket"), buttonTitle: "로켓배송")
+    CategoryProductBoxButton(image: Image("rocket"),
+                             buttonTitle: "로켓배송")
 }

@@ -31,5 +31,5 @@ struct CategoryItemButton: View {
 }
 
 #Preview {
-    CategoryItemButton(category: Category(name: "Technology", icon: "💻"))
+    CategoryItemButton(category: Category.previewData)
 }

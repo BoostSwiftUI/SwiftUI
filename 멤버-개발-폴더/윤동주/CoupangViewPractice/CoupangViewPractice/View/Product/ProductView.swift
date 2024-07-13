@@ -65,7 +65,9 @@ struct ProductView: View {
         }
     }
 }
-//
-//#Preview {
-//    ProductView()
-//}
+
+#Preview {
+    ProductView(products: [
+        Product.previewData
+    ])
+}
