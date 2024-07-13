@@ -10,8 +10,11 @@ import SwiftUI
 struct MyHealth: View {
     var body: some View {
         ZStack {
-            Color(.appPrimary)
-                .ignoresSafeArea()
+            VStack {
+                Color(.appPrimary)
+                Color(.componentBackground)
+            }
+            .ignoresSafeArea()
             
             ScrollView {
                 VStack {
