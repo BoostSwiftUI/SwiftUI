@@ -19,6 +19,7 @@ struct ContentView: View {
             
             MainTabBar(selectedTab: $selectedTab)
         }
+        .background(Color.white)
     }
 }
 
