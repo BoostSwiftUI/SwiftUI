@@ -61,7 +61,10 @@ private struct MyHealthHeader: View {
                     Header()
                 }
                 .background {
-                    Color(.appPrimary).opacity(0.5)
+                    ZStack {
+                        TransparentBlurView(removeAllFilters: false)
+                        Color(.appPrimary).opacity(0.9)
+                    }
                 }
                 Spacer()
             }
