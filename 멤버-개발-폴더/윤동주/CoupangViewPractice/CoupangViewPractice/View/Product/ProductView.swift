@@ -32,11 +32,20 @@ struct ProductView: View {
                 }
                 .padding(.horizontal, 12)
                 LazyVGrid(columns: columns, content: {
-                    ForEach(products, id: \.id) {
+                    ForEach(products, id: \.id) { product in
                             if isListMode {
-                                ProductListView(product: $0)
+                                NavigationLink {
+                                    ProductDetailView(product: product)
+                                } label: {
+                                    ProductListView(product: product)
+                                }
+
                             } else {
-                                ProductGridView(product: $0)
+                                NavigationLink {
+                                    ProductDetailView(product: product)
+                                } label: {
+                                    ProductGridView(product: product)
+                                }
                             }
                         }
                 })

@@ -13,6 +13,7 @@
 		0859648F2C4133A200BFF5C9 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859648E2C4133A200BFF5C9 /* ProductView.swift */; };
 		085964912C42738100BFF5C9 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964902C42738100BFF5C9 /* ProductListView.swift */; };
 		085964932C42796E00BFF5C9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964922C42796E00BFF5C9 /* Color+.swift */; };
+		085964962C42B90100BFF5C9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964952C42B90100BFF5C9 /* ProductDetailView.swift */; };
 		08639D422C3AF89500173699 /* CoupangViewPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */; };
 		08639D442C3AF89500173699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D432C3AF89500173699 /* ContentView.swift */; };
 		08639D462C3AF89700173699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08639D452C3AF89700173699 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		0859648E2C4133A200BFF5C9 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		085964902C42738100BFF5C9 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		085964922C42796E00BFF5C9 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		085964952C42B90100BFF5C9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		08639D3E2C3AF89500173699 /* CoupangViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupangViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangViewPracticeApp.swift; sourceTree = "<group>"; };
 		08639D432C3AF89500173699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 				085964902C42738100BFF5C9 /* ProductListView.swift */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		085964942C42B8E700BFF5C9 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				085964952C42B90100BFF5C9 /* ProductDetailView.swift */,
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		08639D352C3AF89500173699 = {
@@ -131,6 +141,7 @@
 		08639D502C3AF8BA00173699 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				085964942C42B8E700BFF5C9 /* ProductDetail */,
 				0859648B2C412C9C00BFF5C9 /* Product */,
 				085964842C3CB60000BFF5C9 /* Category */,
 			);
@@ -262,6 +273,7 @@
 				08639D422C3AF89500173699 /* CoupangViewPracticeApp.swift in Sources */,
 				08639D572C3AFA1500173699 /* CategoryView.swift in Sources */,
 				08639D632C3B094900173699 /* Category.swift in Sources */,
+				085964962C42B90100BFF5C9 /* ProductDetailView.swift in Sources */,
 				0859648D2C412E3B00BFF5C9 /* ProductGridView.swift in Sources */,
 				08639D652C3B0A3C00173699 /* ModelData.swift in Sources */,
 			);
