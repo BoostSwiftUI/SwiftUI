@@ -8,6 +8,12 @@
 import Foundation
 
 struct Category: Hashable, Codable {
-    let categoryName: String
-    let categoryIcon: String
+    let id = UUID()
+    let name: String
+    let icon: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "categoryName"
+        case icon = "categoryIcon"
+    }
 }

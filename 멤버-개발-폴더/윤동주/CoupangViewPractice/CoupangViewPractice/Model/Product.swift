@@ -8,6 +8,7 @@
 import Foundation
 
 struct Product: Hashable, Codable {
+    let id = UUID()
     let productName: String
     let categories: [String]
     let imageUrl: String
@@ -18,6 +19,10 @@ struct Product: Hashable, Codable {
     let rating: Double
     let reviewCount: Int
     let sellerName: String
+    
+    var discountedPrice: Int {
+        price * (100-(discountRate)) / 100
+    }
     
     enum CodingKeys: String, CodingKey {
         case productName = "product_name"
