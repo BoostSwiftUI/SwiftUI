@@ -1,0 +1,46 @@
+[
+    {
+        "categoryName": "Technology",
+        "categoryIcon": "💻"
+    },
+    {
+        "categoryName": "Science",
+        "categoryIcon": "🔬"
+    },
+    {
+        "categoryName": "Health",
+        "categoryIcon": "🩺"
+    },
+    {
+        "categoryName": "Education",
+        "categoryIcon": "📚"
+    },
+    {
+        "categoryName": "Sports",
+        "categoryIcon": "⚽"
+    },
+    {
+        "categoryName": "Finance",
+        "categoryIcon": "💰"
+    },
+    {
+        "categoryName": "Entertainment",
+        "categoryIcon": "🎭"
+    },
+    {
+        "categoryName": "Travel",
+        "categoryIcon": "✈️"
+    },
+    {
+        "categoryName": "Food",
+        "categoryIcon": "🍔"
+    },
+    {
+        "categoryName": "Gaming",
+        "categoryIcon": "🕹️"
+    },
+    {
+        "categoryName": "Test",
+        "categoryIcon": "🍎"
+    }
+]
