@@ -216,6 +216,18 @@
         "seller_name": "Le Creuset"
     },
     {
+        "product_name": "과학 잡지입니다. 과학잡지 사세요. 안살거면 누르지도 말든가",
+        "categories": ["Home", "Science"],
+        "image_url": "https://loremflickr.com/300/300/Science",
+        "price": 499000,
+        "discount_rate": 18,
+        "rocket_delivery": false,
+        "rocket_wow": false,
+        "rating": 4.9,
+        "review_count": 210,
+        "seller_name": "Le Creuset"
+    },
+    {
         "product_name": "GoPro Hero 10 Black",
         "categories": ["Technology", "Sports"],
         "image_url": "https://loremflickr.com/300/300/Technology",
