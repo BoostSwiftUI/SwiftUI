@@ -12,9 +12,6 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color(.appPrimary)
-                .ignoresSafeArea()
-            
             switch component {
             case .myHealth:
                 MyHealth()

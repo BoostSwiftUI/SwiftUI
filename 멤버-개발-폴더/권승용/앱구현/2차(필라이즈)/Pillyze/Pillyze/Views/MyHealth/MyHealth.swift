@@ -15,10 +15,36 @@ struct MyHealth: View {
             
             ScrollView {
                 VStack {
+                    Spacer()
+                        .frame(height: 46)
+                    Calender()
+                   
+                    VStack {
+                        VStack(spacing: 16) {
+                            MyDiets()
+                            Diet()
+                            Diet()
+                            Diet()
+                            Diet()
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 20)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        UnevenRoundedRectangle(
+                            cornerRadii: RectangleCornerRadii(
+                                topLeading: 24,
+                                topTrailing: 24
+                            )
+                        )
+                        .foregroundStyle(.background)
+                    }
                 }
             }
             
-            ExtractedView()
+            MyHealthHeader()
         }
     }
 }
@@ -27,7 +53,7 @@ struct MyHealth: View {
     MyHealth()
 }
 
-struct ExtractedView: View {
+private struct MyHealthHeader: View {
     var body: some View {
         GeometryReader { proxy in
             VStack {
@@ -39,10 +65,7 @@ struct ExtractedView: View {
                 .background {
                     Color(.appPrimary).opacity(0.5)
                 }
-                
                 Spacer()
-                
-                
             }
             .ignoresSafeArea()
         }
