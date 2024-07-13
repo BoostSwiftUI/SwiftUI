@@ -68,11 +68,11 @@ struct TabBar: View {
                 .background {
                     UnevenRoundedRectangle(
                         cornerRadii: RectangleCornerRadii(
-                            topLeading: 20,
-                            topTrailing: 20
+                            topLeading: 24,
+                            topTrailing: 24
                         ))
-                    .foregroundStyle(.background)
-                    .shadow(radius: 3)
+                    .foregroundStyle(.componentBackground)
+                    .shadow(color: .appShadow, radius: 16)
                 }
             }
             .ignoresSafeArea()
