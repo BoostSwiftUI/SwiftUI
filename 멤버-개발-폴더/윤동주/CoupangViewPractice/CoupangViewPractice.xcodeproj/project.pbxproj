@@ -11,6 +11,8 @@
 		085964882C403C8100BFF5C9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 085964872C403C8100BFF5C9 /* Localizable.xcstrings */; };
 		0859648D2C412E3B00BFF5C9 /* ProductGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859648C2C412E3B00BFF5C9 /* ProductGridView.swift */; };
 		0859648F2C4133A200BFF5C9 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859648E2C4133A200BFF5C9 /* ProductView.swift */; };
+		085964912C42738100BFF5C9 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964902C42738100BFF5C9 /* ProductListView.swift */; };
+		085964932C42796E00BFF5C9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085964922C42796E00BFF5C9 /* Color+.swift */; };
 		08639D422C3AF89500173699 /* CoupangViewPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */; };
 		08639D442C3AF89500173699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08639D432C3AF89500173699 /* ContentView.swift */; };
 		08639D462C3AF89700173699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08639D452C3AF89700173699 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		085964872C403C8100BFF5C9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0859648C2C412E3B00BFF5C9 /* ProductGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridView.swift; sourceTree = "<group>"; };
 		0859648E2C4133A200BFF5C9 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		085964902C42738100BFF5C9 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		085964922C42796E00BFF5C9 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		08639D3E2C3AF89500173699 /* CoupangViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupangViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08639D412C3AF89500173699 /* CoupangViewPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupangViewPracticeApp.swift; sourceTree = "<group>"; };
 		08639D432C3AF89500173699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			children = (
 				0859648C2C412E3B00BFF5C9 /* ProductGridView.swift */,
 				0859648E2C4133A200BFF5C9 /* ProductView.swift */,
+				085964902C42738100BFF5C9 /* ProductListView.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		08639D542C3AF90D00173699 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				085964922C42796E00BFF5C9 /* Color+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -246,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085964912C42738100BFF5C9 /* ProductListView.swift in Sources */,
+				085964932C42796E00BFF5C9 /* Color+.swift in Sources */,
 				0859648F2C4133A200BFF5C9 /* ProductView.swift in Sources */,
 				08639D442C3AF89500173699 /* ContentView.swift in Sources */,
 				085964862C3CB65500BFF5C9 /* CategoryButton.swift in Sources */,
