@@ -17,7 +17,22 @@ struct MyHealthRepresentView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
 }
 
-final class MyHealthViewController: UIViewController {
+final class MyHealthViewController: BaseViewController {
     
+    // MARK: - Setup
     
+    override func setUpAttribute() {
+        view.backgroundColor = Color.background
+    }
 }
+
+// MARK: - Constant
+
+private extension MyHealthViewController {
+    
+    enum Color {
+        
+        static let background = UIColor(resource: .primaryNormal)
+    }
+}
+

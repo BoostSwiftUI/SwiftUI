@@ -12,19 +12,21 @@ struct ContentView: View {
     @State private var selectedTab = Tab.myHealth
     
     var body: some View {
-        VStack {
+        ZStack {
             switch selectedTab {
             case .myHealth:
                 MyHealthRepresentView()
+                    .ignoresSafeArea()
             case .nutrients:
-                Spacer()
                 Text("Selected Tab: \(selectedTab)")
-                Spacer()
             }
             
-            MainTabBar(selectedTab: $selectedTab)
+            VStack {
+                Spacer()
+                MainTabBar(selectedTab: $selectedTab)
+            }
         }
-        .background(Color.white)
+        .background(Color.background)
     }
 }
 
