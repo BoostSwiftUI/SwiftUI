@@ -12,28 +12,28 @@ struct MyHealthView: View {
     // MARK: - Body
     
     var body: some View {
-        ScrollView {
-            VStack {
+        VStack(spacing: 0) {
+            HStack {
+                Image(.logo)
+                Spacer()
                 HStack {
-                    Image(.logo)
-                    Spacer()
-                    HStack {
-                        Button(
-                            action: {},
-                            label: { Image(.headerCalendar) }
-                        )
-                        Button(
-                            action: {},
-                            label: { Image(.headerNotification) }
-                        )
-                        Button(
-                            action: {},
-                            label: { Image(.headerProfile) }
-                        )
-                    }
+                    Button(
+                        action: {},
+                        label: { Image(.headerCalendar) }
+                    )
+                    Button(
+                        action: {},
+                        label: { Image(.headerNotification) }
+                    )
+                    Button(
+                        action: {},
+                        label: { Image(.headerProfile) }
+                    )
                 }
-                .padding(.horizontal)
-                
+            }
+            .padding(.horizontal)
+            
+            ScrollView {
                 CalendarList()
             }
         }
