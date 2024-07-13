@@ -13,9 +13,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            Text("Selected Tab: \(selectedTab)")
-            Spacer()
+            switch selectedTab {
+            case .myHealth:
+                MyHealthRepresentView()
+            case .nutrients:
+                Spacer()
+                Text("Selected Tab: \(selectedTab)")
+                Spacer()
+            }
             
             MainTabBar(selectedTab: $selectedTab)
         }

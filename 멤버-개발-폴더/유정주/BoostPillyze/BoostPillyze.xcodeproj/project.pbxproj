@@ -14,6 +14,7 @@
 		9B0470082C41735D00ADAFF3 /* BoostPillyzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0470072C41735D00ADAFF3 /* BoostPillyzeTests.swift */; };
 		9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0470242C427F6C00ADAFF3 /* MainTabBar.swift */; };
 		9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04702A2C4288DB00ADAFF3 /* View+cornerRadius.swift */; };
+		9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8252C42AAD200BC1ED7 /* MyHealthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9B0470072C41735D00ADAFF3 /* BoostPillyzeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostPillyzeTests.swift; sourceTree = "<group>"; };
 		9B0470242C427F6C00ADAFF3 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9B04702A2C4288DB00ADAFF3 /* View+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
+		9B5AE8252C42AAD200BC1ED7 /* MyHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 				9B046FF62C41735B00ADAFF3 /* BoostPillyzeApp.swift */,
 				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
 				9B0470232C427F5B00ADAFF3 /* TabBar */,
-				9B0470202C41752100ADAFF3 /* Home */,
+				9B0470202C41752100ADAFF3 /* MyHealth */,
 				9B0470282C4288C300ADAFF3 /* Extensions */,
 				9B0470212C41752800ADAFF3 /* Resource */,
 				9B046FFC2C41735C00ADAFF3 /* Preview Content */,
@@ -104,11 +106,12 @@
 			path = BoostPillyzeTests;
 			sourceTree = "<group>";
 		};
-		9B0470202C41752100ADAFF3 /* Home */ = {
+		9B0470202C41752100ADAFF3 /* MyHealth */ = {
 			isa = PBXGroup;
 			children = (
+				9B5AE8252C42AAD200BC1ED7 /* MyHealthViewController.swift */,
 			);
-			path = Home;
+			path = MyHealth;
 			sourceTree = "<group>";
 		};
 		9B0470212C41752800ADAFF3 /* Resource */ = {
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */,
+				9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */,
 				9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */,
 				9B046FF92C41735B00ADAFF3 /* ContentView.swift in Sources */,
 				9B046FF72C41735B00ADAFF3 /* BoostPillyzeApp.swift in Sources */,
