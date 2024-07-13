@@ -78,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				9B046FF62C41735B00ADAFF3 /* BoostPillyzeApp.swift */,
+				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
 				9B0470232C427F5B00ADAFF3 /* TabBar */,
 				9B0470202C41752100ADAFF3 /* Home */,
 				9B0470282C4288C300ADAFF3 /* Extensions */,
@@ -122,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				9B0470242C427F6C00ADAFF3 /* MainTabBar.swift */,
-				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
