@@ -22,11 +22,9 @@ struct MyHealth: View {
                     VStack {
                         VStack(spacing: 16) {
                             MyDiets()
-                            Diet()
-                            Diet()
-                            Diet()
-                            Diet()
-                            Spacer()
+                            ForEach(0...6, id: \.self) { _ in
+                                Diet()
+                            }
                         }
                         .padding(.horizontal, 20)
                         .padding(.vertical, 20)
