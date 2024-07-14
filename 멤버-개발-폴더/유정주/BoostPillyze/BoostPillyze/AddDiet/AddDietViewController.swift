@@ -9,15 +9,6 @@ import UIKit
 import SwiftUI
 import Combine
 
-struct AddDietRepresentView: UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        AddDietViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
-}
-
 final class AddDietViewController: LayoutViewController<AddDietView> {
     
     // MARK: - Attribute
