@@ -23,25 +23,24 @@ struct MyHealthView: View {
                     
                     ContentBackground()
                     
-                    HealthScoreView()
-                        .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                    VStack(spacing: 0) {
+                        HealthScoreView()
+                            .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                            .padding(20)
+                        
+                        VStack(spacing: 20) {
+                            DietView()
+                                .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                            DietView()
+                                .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                        }
                         .padding(.horizontal, 20)
-                        .offset(y: 20 - 50)
-                    
-                    VStack(spacing: 20) {
-                        DietView()
-                            .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
-                        DietView()
-                            .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                    .offset(y: 20 - 50)
+                    .offset(y: -ContentBackground.height)
                 }
                 
-                Rectangle()
+                Spacer()
                     .frame(height: 89)
-                    .foregroundStyle(Color.primaryPlaceholder)
             }
         }
         .background(Color.primaryPlaceholder)
@@ -151,10 +150,12 @@ private struct CalendarListItem: View {
 
 private struct ContentBackground: View {
     
+    private(set) static var height: CGFloat = 50
+    
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(height: 50)
+                .frame(height: Self.height)
                 .foregroundStyle(Color.primaryNormal)
             Rectangle()
                 .foregroundStyle(Color.primaryPlaceholder)
