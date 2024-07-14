@@ -53,7 +53,6 @@ struct MainTabBar: View {
             }
             
             Button {
-                print("추가")
             } label: {
                 Image(.buttonTabbarAdd)
                     .offset(y: -12)
