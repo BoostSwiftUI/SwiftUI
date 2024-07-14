@@ -27,7 +27,21 @@ struct MyHealthView: View {
                         .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
                         .padding(.horizontal, 20)
                         .offset(y: 20 - 50)
+                    
+                    VStack(spacing: 20) {
+                        DietView()
+                            .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                        DietView()
+                            .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
+                    .offset(y: 20 - 50)
                 }
+                
+                Rectangle()
+                    .frame(height: 89)
+                    .foregroundStyle(Color.primaryPlaceholder)
             }
         }
         .background(Color.primaryPlaceholder)
@@ -184,6 +198,62 @@ private struct HealthScoreView: View {
             .padding(.horizontal, 8)
             Spacer()
         }
+        .background(Color.background)
+        .cornerRadius(24, corners: [.allCorners])
+    }
+}
+
+// MARK: - DietView
+
+private struct DietView: View {
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("식단")
+                    .font(.system(size: 14))
+                Text("0 kcal")
+                    .font(.system(size: 18, weight: .bold))
+                HStack {
+                    Color.purple
+                        .frame(width: 12, height: 12)
+                        .cornerRadius(3, corners: .allCorners)
+                    Text("탄")
+                        .font(.system(size: 14))
+                    Text("0%")
+                        .font(.system(size: 14, weight: .bold))
+                }
+                HStack {
+                    Color.blue
+                        .frame(width: 12, height: 12)
+                        .cornerRadius(3, corners: .allCorners)
+                    Text("단")
+                        .font(.system(size: 14))
+                    Text("0%")
+                        .font(.system(size: 14, weight: .bold))
+                }
+                HStack {
+                    Color.green
+                        .frame(width: 12, height: 12)
+                        .cornerRadius(3, corners: .allCorners)
+                    Text("지")
+                        .font(.system(size: 14))
+                    Text("0%")
+                        .font(.system(size: 14, weight: .bold))
+                }
+            }
+            
+            Spacer()
+            
+            VStack {
+                Spacer()
+                Image(.myHealthDiet)
+                    .resizable()
+                    .frame(width: 131, height: 103)
+            }
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 18)
         .background(Color.background)
         .cornerRadius(24, corners: [.allCorners])
     }
