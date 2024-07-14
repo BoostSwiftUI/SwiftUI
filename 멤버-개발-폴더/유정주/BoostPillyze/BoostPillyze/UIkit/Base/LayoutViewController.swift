@@ -10,6 +10,10 @@ import SwiftUI
 
 class LayoutViewController<Content: View>: UIHostingController<Content> {
     
+    var contentView: Content {
+        rootView 
+    }
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
