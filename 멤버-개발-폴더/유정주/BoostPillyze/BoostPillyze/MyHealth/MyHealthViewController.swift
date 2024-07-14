@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 // MARK: - MyHealthRepresentView
 
@@ -21,4 +22,20 @@ struct MyHealthRepresentView: UIViewControllerRepresentable {
 
 // MARK: - MyHealthViewController
 
-final class MyHealthViewController: LayoutViewController<MyHealthView> {}
+final class MyHealthViewController: LayoutViewController<MyHealthView> {
+    
+    // MARK: - Attribute
+    
+    private var cancellables: Set<AnyCancellable> = []
+    
+    // MARK: - Setup
+    
+    override func setUpBinding() {
+        contentView.didTapHealthScoreButton
+            .receive(on: RunLoop.main)
+            .sink {
+                print("Test")
+            }
+            .store(in: &cancellables)
+    }
+}

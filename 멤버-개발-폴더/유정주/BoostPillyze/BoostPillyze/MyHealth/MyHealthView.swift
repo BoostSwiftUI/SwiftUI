@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MyHealthView: View {
+    
+    private(set) var didTapHealthScoreButton = PassthroughSubject<Void, Never>()
     
     // MARK: - Body
     
@@ -24,7 +27,7 @@ struct MyHealthView: View {
                     ContentBackground()
                     
                     VStack(spacing: 0) {
-                        HealthScoreView()
+                        HealthScoreView(didTapHealthScoreButton: didTapHealthScoreButton)
                             .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
                             .padding(20)
                         
@@ -168,6 +171,8 @@ private struct ContentBackground: View {
 
 private struct HealthScoreView: View {
     
+    var didTapHealthScoreButton: PassthroughSubject<Void, Never>
+    
     var body: some View {
         HStack {
             Spacer()
@@ -180,7 +185,9 @@ private struct HealthScoreView: View {
                     .foregroundStyle(.primaryNormal)
                     .padding(.vertical, 4)
                 Button(
-                    action: {},
+                    action: {
+                        didTapHealthScoreButton.send()
+                    },
                     label: {
                         HStack {
                             Spacer()
