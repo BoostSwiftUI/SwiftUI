@@ -62,6 +62,7 @@ struct MyHealthView: View {
                     }
                     .background(Color.background)
                     .cornerRadius(24, corners: [.allCorners])
+                    .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
                     .padding(.horizontal, 20)
                     .offset(y: 20 - 50)
                 }
