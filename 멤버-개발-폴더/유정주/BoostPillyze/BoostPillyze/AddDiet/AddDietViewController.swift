@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 struct AddDietRepresentView: UIViewControllerRepresentable {
     
@@ -19,6 +20,10 @@ struct AddDietRepresentView: UIViewControllerRepresentable {
 
 final class AddDietViewController: LayoutViewController<AddDietView> {
     
+    // MARK: - Attribute
+    
+    private var cancellables: Set<AnyCancellable> = []
+    
     // MARK: - Initializer
     
     init() {
@@ -27,5 +32,17 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Setup
+    
+    override func setUpBinding() {
+        contentView.didTapCancelButton
+            .receive(on: RunLoop.main)
+            .sink { [weak self] in
+                guard let self else { return }
+                dismiss(animated: true)
+            }
+            .store(in: &cancellables)
     }
 }

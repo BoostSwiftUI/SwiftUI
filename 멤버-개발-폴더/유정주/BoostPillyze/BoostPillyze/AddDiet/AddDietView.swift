@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddDietView: View {
+    
+    let didTapCancelButton = PassthroughSubject<Void, Never>()
     
     @State private var searchKeyword = ""
     
     var body: some View {
-        SearchHeaderView(searchKeyword: $searchKeyword)
-            .padding(.horizontal)
+        SearchHeaderView(
+            didTapCancelButton: didTapCancelButton,
+            searchKeyword: $searchKeyword
+        )
+        .padding(.horizontal)
         
         Spacer()
     }
@@ -22,6 +28,8 @@ struct AddDietView: View {
 // MARK: - Search Header
 
 private struct SearchHeaderView: View {
+    
+    let didTapCancelButton: PassthroughSubject<Void, Never>
     
     @Binding var searchKeyword: String
     
@@ -38,7 +46,9 @@ private struct SearchHeaderView: View {
             .clipShape(Capsule())
             
             Button(
-                action: {},
+                action: {
+                    didTapCancelButton.send()
+                },
                 label: {
                     Text("취소")
                         .font(.system(size: 15))
