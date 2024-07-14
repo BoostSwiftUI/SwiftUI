@@ -21,50 +21,12 @@ struct MyHealthView: View {
                         .frame(height: 80, alignment: .top)
                         .background(Color.primaryNormal)
                     
-                    ZStack {
-                        Rectangle()
-                            .frame(height: 50)
-                            .foregroundStyle(Color.primaryNormal)
-                        Rectangle()
-                            .foregroundStyle(Color.primaryPlaceholder)
-                            .cornerRadius(24, corners: [.topLeft, .topRight])
-                    }
+                    ContentBackground()
                     
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("오늘 내 식사,\n몇 점짜리 식단일까?")
-                                .multilineTextAlignment(.center)
-                                .font(.system(size: 20, weight: .bold))
-                            Image(.myHealthScore)
-                            Text("잘 먹어야 건강해요")
-                                .foregroundStyle(.primaryNormal)
-                                .padding(.vertical, 4)
-                            Button(
-                                action: {},
-                                label: {
-                                    HStack {
-                                        Spacer()
-                                        Text("내 식단 점수 확인하기")
-                                            .font(.system(size: 18, weight: .medium))
-                                        Spacer()
-                                    }
-                                    .padding(.vertical, 16)
-                                    .foregroundStyle(Color.background)
-                                    .background(.primaryNormal)
-                                    .cornerRadius(8, corners: .allCorners)
-                                }
-                            )
-                        }
-                        .padding(.vertical, 20)
-                        .padding(.horizontal, 8)
-                        Spacer()
-                    }
-                    .background(Color.background)
-                    .cornerRadius(24, corners: [.allCorners])
-                    .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
-                    .padding(.horizontal, 20)
-                    .offset(y: 20 - 50)
+                    HealthScoreView()
+                        .shadow(color: .primaryNormal.opacity(0.1), radius: 16)
+                        .padding(.horizontal, 20)
+                        .offset(y: 20 - 50)
                 }
             }
         }
@@ -171,6 +133,61 @@ private struct CalendarListItem: View {
     }
 }
 
+// MARK: - Content Background
+
+private struct ContentBackground: View {
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .frame(height: 50)
+                .foregroundStyle(Color.primaryNormal)
+            Rectangle()
+                .foregroundStyle(Color.primaryPlaceholder)
+                .cornerRadius(24, corners: [.topLeft, .topRight])
+        }
+    }
+}
+
+// MARK: - HealthScoreView
+
+private struct HealthScoreView: View {
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            VStack {
+                Text("오늘 내 식사,\n몇 점짜리 식단일까?")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 20, weight: .bold))
+                Image(.myHealthScore)
+                Text("잘 먹어야 건강해요")
+                    .foregroundStyle(.primaryNormal)
+                    .padding(.vertical, 4)
+                Button(
+                    action: {},
+                    label: {
+                        HStack {
+                            Spacer()
+                            Text("내 식단 점수 확인하기")
+                                .font(.system(size: 18, weight: .medium))
+                            Spacer()
+                        }
+                        .padding(.vertical, 16)
+                        .foregroundStyle(Color.background)
+                        .background(.primaryNormal)
+                        .cornerRadius(8, corners: .allCorners)
+                    }
+                )
+            }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 8)
+            Spacer()
+        }
+        .background(Color.background)
+        .cornerRadius(24, corners: [.allCorners])
+    }
+}
 
 // MARK: - Preview
 
