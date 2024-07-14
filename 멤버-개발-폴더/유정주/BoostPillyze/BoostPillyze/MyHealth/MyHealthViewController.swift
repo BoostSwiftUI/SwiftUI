@@ -33,9 +33,22 @@ final class MyHealthViewController: LayoutViewController<MyHealthView> {
     override func setUpBinding() {
         contentView.didTapHealthScoreButton
             .receive(on: RunLoop.main)
-            .sink {
-                print("Test")
+            .sink { [weak self] in
+                guard let self else { return }
+                moveToAddDietViewController()
             }
             .store(in: &cancellables)
     }
 }
+
+// MARK: - Move to AddDietViewController
+
+private extension MyHealthViewController {
+    
+    func moveToAddDietViewController() {
+        let addDietViewController = AddDietViewController()
+        addDietViewController.modalPresentationStyle = .fullScreen
+        present(addDietViewController, animated: true)
+    }
+}
+

@@ -20,6 +20,8 @@
 		9B5AE8312C42B2E500BC1ED7 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */; };
 		9B5AE8332C42B49E00BC1ED7 /* MyHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8322C42B49E00BC1ED7 /* MyHealthView.swift */; };
 		9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */; };
+		9B5AE8392C4397D800BC1ED7 /* AddDietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */; };
+		9B5AE83B2C4397DF00BC1ED7 /* AddDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 		9B5AE8322C42B49E00BC1ED7 /* MyHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealthView.swift; sourceTree = "<group>"; };
 		9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
+		9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietView.swift; sourceTree = "<group>"; };
+		9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				9B046FF82C41735B00ADAFF3 /* ContentView.swift */,
 				9B0470232C427F5B00ADAFF3 /* TabBar */,
 				9B0470202C41752100ADAFF3 /* MyHealth */,
+				9B5AE8372C43978C00BC1ED7 /* AddDiet */,
 				9B0470282C4288C300ADAFF3 /* Extensions */,
 				9B0470212C41752800ADAFF3 /* Resource */,
 				9B046FFC2C41735C00ADAFF3 /* Preview Content */,
@@ -175,6 +180,15 @@
 				9B5AE8302C42B2E500BC1ED7 /* ViewModelable.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9B5AE8372C43978C00BC1ED7 /* AddDiet */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */,
+				9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */,
+			);
+			path = AddDiet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +294,8 @@
 				9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */,
 				9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */,
 				9B5AE8332C42B49E00BC1ED7 /* MyHealthView.swift in Sources */,
+				9B5AE8392C4397D800BC1ED7 /* AddDietView.swift in Sources */,
+				9B5AE83B2C4397DF00BC1ED7 /* AddDietViewController.swift in Sources */,
 				9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */,
 				9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */,
 				9B046FF92C41735B00ADAFF3 /* ContentView.swift in Sources */,
