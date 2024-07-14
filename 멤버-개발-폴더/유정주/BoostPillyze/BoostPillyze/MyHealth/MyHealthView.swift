@@ -13,26 +13,7 @@ struct MyHealthView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Image(.logo)
-                Spacer()
-                HStack {
-                    Button(
-                        action: {},
-                        label: { Image(.headerCalendar) }
-                    )
-                    Button(
-                        action: {},
-                        label: { Image(.headerNotification) }
-                    )
-                    Button(
-                        action: {},
-                        label: { Image(.headerProfile) }
-                    )
-                }
-            }
-            .padding(.horizontal)
-            .background(Color.primaryNormal)
+            Header()
             
             ScrollView {
                 VStack(spacing: 0) {
@@ -52,6 +33,34 @@ struct MyHealthView: View {
             }
         }
         .background(Color.primaryPlaceholder)
+    }
+}
+
+// MARK: - Header
+
+private struct Header: View {
+    
+    var body: some View {
+        HStack {
+            Image(.logo)
+            Spacer()
+            HStack {
+                Button(
+                    action: {},
+                    label: { Image(.headerCalendar) }
+                )
+                Button(
+                    action: {},
+                    label: { Image(.headerNotification) }
+                )
+                Button(
+                    action: {},
+                    label: { Image(.headerProfile) }
+                )
+            }
+        }
+        .padding(.horizontal)
+        .background(Color.primaryNormal)
     }
 }
 
