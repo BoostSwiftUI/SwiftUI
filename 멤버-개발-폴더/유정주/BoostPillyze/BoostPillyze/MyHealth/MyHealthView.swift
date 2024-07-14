@@ -10,7 +10,7 @@ import Combine
 
 struct MyHealthView: View {
     
-    private(set) var didTapHealthScoreButton = PassthroughSubject<Void, Never>()
+    let didTapHealthScoreButton = PassthroughSubject<Void, Never>()
     
     // MARK: - Body
     
@@ -171,7 +171,7 @@ private struct ContentBackground: View {
 
 private struct HealthScoreView: View {
     
-    var didTapHealthScoreButton: PassthroughSubject<Void, Never>
+    let didTapHealthScoreButton: PassthroughSubject<Void, Never>
     
     var body: some View {
         HStack {
