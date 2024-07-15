@@ -9,24 +9,38 @@ import SwiftUI
 
 struct AddDiet: View {
     var body: some View {
-        VStack {
-            HStack {
+        ZStack {
+            VStack {
                 SearchBar()
-                Button {
-                    
-                } label: {
-                    Text("취소")
-                        .font(.system(size: 15))
-                        .fontWeight(.medium)
-                        .foregroundStyle(.textNormal)
-                }
-                .buttonStyle(PlainButtonStyle())
+                Spacer()
             }
-            .padding(.horizontal, 20)
+            
+            VStack {
+                Spacer()
+                BottomPicker()
+            }
         }
     }
 }
 
 #Preview {
     AddDiet()
+}
+
+struct SearchBar: View {
+    var body: some View {
+        HStack {
+            SearchTextField()
+            Button {
+                
+            } label: {
+                Text("취소")
+                    .font(.system(size: 15))
+                    .fontWeight(.medium)
+                    .foregroundStyle(.textNormal)
+            }
+            .buttonStyle(PlainButtonStyle())
+        }
+        .padding(.horizontal, 20)
+    }
 }

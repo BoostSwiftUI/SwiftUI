@@ -1,5 +1,5 @@
 //
-//  SearchBar.swift
+//  SearchTextField.swift
 //  Pillyze
 //
 //  Created by 권승용 on 7/15/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchBar: View {
+struct SearchTextField: View {
     @State private var searchText: String = ""
     
     var body: some View {
@@ -30,5 +30,5 @@ struct SearchBar: View {
 }
 
 #Preview {
-    SearchBar()
+    SearchTextField()
 }
