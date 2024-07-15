@@ -1,5 +1,5 @@
 //
-//  DietListRow.swift
+//  FoodListRow.swift
 //  Pillyze
 //
 //  Created by 권승용 on 7/15/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DietListRow: View {
+struct FoodListRow: View {
     var body: some View {
         HStack(spacing: 0) {
             Text("1")
@@ -48,5 +48,5 @@ struct DietListRow: View {
 }
 
 #Preview {
-    DietListRow()
+    FoodListRow()
 }
