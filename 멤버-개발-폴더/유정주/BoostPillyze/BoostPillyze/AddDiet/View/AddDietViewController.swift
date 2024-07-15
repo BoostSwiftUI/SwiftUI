@@ -21,7 +21,7 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     // MARK: - Initializer
     
     init() {
-        super.init(rootView: AddDietView(viewModel: viewModel))
+        super.init(rootView: AddDietView(output: viewModel.output))
     }
     
     required init?(coder aDecoder: NSCoder) {

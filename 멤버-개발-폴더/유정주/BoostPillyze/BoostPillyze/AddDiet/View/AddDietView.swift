@@ -12,7 +12,7 @@ struct AddDietView: View {
     
     // MARK: - Interface
 
-    @ObservedObject var viewModel: AddDietViewModel
+    @ObservedObject var output: AddDietViewModel.Output
     
     let didTapCancelButton = PassthroughSubject<Void, Never>()
 
@@ -29,7 +29,7 @@ struct AddDietView: View {
         
         ScrollView {
             VStack {
-                ForEach(viewModel.output.foods) { food in
+                ForEach(output.foods) { food in
                     Text(food.name)
                 }
             }
@@ -74,5 +74,5 @@ private struct SearchHeaderView: View {
 // MARK: - Preview
 
 #Preview {
-    AddDietView(viewModel: .init())
+    AddDietView(output: AddDietViewModel().output)
 }

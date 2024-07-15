@@ -19,7 +19,7 @@ extension AddDietViewModel {
     
     // MARK: - Output
     
-    final class Output {
+    final class Output: ObservableObject {
         
         @Published var foods: [Food] = []
     }

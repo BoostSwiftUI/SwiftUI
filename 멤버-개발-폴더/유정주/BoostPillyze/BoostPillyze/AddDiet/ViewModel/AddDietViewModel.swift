@@ -12,7 +12,7 @@ final class AddDietViewModel: ViewModelable {
     
     // MARK: - Interface
     
-    var output = Output()
+    let output = Output()
     
     func bind(input: Input) {
         input.viewDidLoad

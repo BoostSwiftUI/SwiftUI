@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ViewModelable: ObservableObject {
+protocol ViewModelable {
     
     associatedtype Input
     associatedtype Output
