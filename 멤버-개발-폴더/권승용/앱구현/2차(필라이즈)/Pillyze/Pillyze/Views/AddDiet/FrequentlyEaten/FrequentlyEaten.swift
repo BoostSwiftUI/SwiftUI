@@ -23,7 +23,7 @@ struct FrequentlyEaten: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     frequentlyEatenGroup()
-                    FoodList(foods: foods)
+                    FoodList(foods: foods, isRankedList: true)
                 }
             }
         }
