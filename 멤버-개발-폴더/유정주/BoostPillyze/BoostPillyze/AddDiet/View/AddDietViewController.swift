@@ -13,6 +13,9 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     
     // MARK: - Attribute
     
+    private let viewModel = AddDietViewModel()
+    private let input = AddDietViewModel.Input()
+    private var output: AddDietViewModel.Output { viewModel.output }
     private var cancellables: Set<AnyCancellable> = []
     
     // MARK: - Initializer
@@ -25,9 +28,32 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        input.viewDidLoad.send()
+    }
+    
     // MARK: - Setup
     
     override func setUpBinding() {
+        setUpViewModelBinding()
+        setUpContentViewBinding()
+    }
+    
+    private func setUpViewModelBinding() {
+        viewModel.bind(input: input)
+        output.foods
+            .receive(on: RunLoop.main)
+            .sink { [weak self] foods in
+                guard let self else { return }
+                print("1 foods: \(foods)") // swiftlint:disable:this all
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func setUpContentViewBinding() {
         contentView.didTapCancelButton
             .receive(on: RunLoop.main)
             .sink { [weak self] in

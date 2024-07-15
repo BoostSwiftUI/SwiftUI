@@ -201,10 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				9B5AE8422C452B5A00BC1ED7 /* Model */,
-				9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */,
-				9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */,
-				9B5AE83E2C452AD200BC1ED7 /* AddDietViewModel.swift */,
-				9B5AE8402C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift */,
+				9B5AE84A2C4534CC00BC1ED7 /* View */,
+				9B5AE84B2C4534CE00BC1ED7 /* ViewModel */,
 			);
 			path = AddDiet;
 			sourceTree = "<group>";
@@ -223,6 +221,24 @@
 				9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		9B5AE84A2C4534CC00BC1ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */,
+				9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B5AE84B2C4534CE00BC1ED7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE83E2C452AD200BC1ED7 /* AddDietViewModel.swift */,
+				9B5AE8402C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
