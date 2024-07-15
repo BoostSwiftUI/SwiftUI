@@ -18,7 +18,7 @@
         "unit": "100g",
         "caloriesPerUnit": 370,
         "currentRank": 3,
-        "rankChange": -2
+        "rankChange": 0
     },
     {
         "foodName": "김치찌개",
@@ -32,7 +32,7 @@
         "unit": "1공기(210g)",
         "caloriesPerUnit": 313,
         "currentRank": 5,
-        "rankChange": -3
+        "rankChange": 0
     },
     {
         "foodName": "잡채",

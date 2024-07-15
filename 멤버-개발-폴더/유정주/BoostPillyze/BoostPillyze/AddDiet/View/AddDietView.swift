@@ -27,13 +27,12 @@ struct AddDietView: View {
         )
         .padding(.horizontal)
         
-        ScrollView {
-            VStack {
-                ForEach(output.foods) { food in
-                    Text(food.name)
-                }
+        List {
+            ForEach(output.foods) { food in
+                FoodListItem(food: food)
             }
         }
+        .listStyle(.inset)
     }
 }
 
@@ -71,8 +70,63 @@ private struct SearchHeaderView: View {
     }
 }
 
+// MARK: - Food List Item
+
+private struct FoodListItem: View {
+    
+    // MARK: - Body
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            Text("\(food.rank)")
+                .font(.system(size: 16, weight: .bold))
+                .frame(width: 30, alignment: .leading)
+            
+            Image(arrowImageResource)
+                .padding(.leading, 8)
+            
+            VStack(alignment: .leading) {
+                Text(food.name)
+                    .font(.system(size: 16))
+                Text(food.unit)
+                    .font(.system(size: 16))
+                    .foregroundStyle(.textPlaceholder)
+            }
+            .padding(.leading, 8)
+            
+            Spacer()
+            
+            Text("\(food.caloriesPerUnit)kcal")
+                .foregroundStyle(.textSecondary)
+        }
+    }
+    
+    // MARK: - Attribute
+    
+    private let food: Food
+    private var arrowImageResource: ImageResource {
+        if food.rankChange == 0 {
+            .addDietFoodArrowNoChange
+        } else if food.rankChange > 0 {
+            .addDietFoodArrowUp
+        } else {
+            .addDietFoodArrowDown
+        }
+    }
+    
+    // MARK: - Initializer
+    
+    init(food: Food) {
+        self.food = food
+    }
+}
+
 // MARK: - Preview
 
 #Preview {
-    AddDietView(output: AddDietViewModel().output)
+    let viewModel = AddDietViewModel()
+    let input = AddDietViewModel.Input()
+    viewModel.bind(input: input)
+    input.viewDidLoad.send()
+    return AddDietView(output: viewModel.output)
 }
