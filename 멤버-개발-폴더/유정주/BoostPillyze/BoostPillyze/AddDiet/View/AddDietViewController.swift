@@ -21,7 +21,7 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     // MARK: - Initializer
     
     init() {
-        super.init(rootView: AddDietView())
+        super.init(rootView: AddDietView(viewModel: viewModel))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,13 +44,6 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     
     private func setUpViewModelBinding() {
         viewModel.bind(input: input)
-        output.foods
-            .receive(on: RunLoop.main)
-            .sink { [weak self] foods in
-                guard let self else { return }
-                print("1 foods: \(foods)") // swiftlint:disable:this all
-            }
-            .store(in: &cancellables)
     }
     
     private func setUpContentViewBinding() {

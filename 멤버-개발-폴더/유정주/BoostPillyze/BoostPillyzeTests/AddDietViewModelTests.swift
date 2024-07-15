@@ -29,7 +29,7 @@ final class AddDietViewModelTests: XCTestCase {
         
         // when
         var output: [Food]? = nil
-        viewModel.output.foods
+        viewModel.output.$foods
             .sink { foods in
                 output = foods
                 expectation.fulfill()

@@ -19,8 +19,8 @@ extension AddDietViewModel {
     
     // MARK: - Output
     
-    struct Output {
+    final class Output {
         
-        let foods: CurrentValueSubject<[Food], Never> = .init([])
+        @Published var foods: [Food] = []
     }
 }

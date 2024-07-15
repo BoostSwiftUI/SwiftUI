@@ -12,7 +12,7 @@ final class AddDietViewModel: ViewModelable {
     
     // MARK: - Interface
     
-    let output = Output()
+    var output = Output()
     
     func bind(input: Input) {
         input.viewDidLoad
@@ -38,6 +38,6 @@ private extension AddDietViewModel {
     
     func fetchFoods() {
         let foods: [Food] = JSONLoader.load("food_list_with_rank.json")
-        output.foods.send(foods)
+        output.foods = foods
     }
 }

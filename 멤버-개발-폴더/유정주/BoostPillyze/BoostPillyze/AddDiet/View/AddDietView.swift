@@ -10,7 +10,13 @@ import Combine
 
 struct AddDietView: View {
     
+    // MARK: - Interface
+
+    @ObservedObject var viewModel: AddDietViewModel
+    
     let didTapCancelButton = PassthroughSubject<Void, Never>()
+
+    // MARK: - State
     
     @State private var searchKeyword = ""
     
@@ -21,7 +27,13 @@ struct AddDietView: View {
         )
         .padding(.horizontal)
         
-        Spacer()
+        ScrollView {
+            VStack {
+                ForEach(viewModel.output.foods) { food in
+                    Text(food.name)
+                }
+            }
+        }
     }
 }
 
@@ -62,5 +74,5 @@ private struct SearchHeaderView: View {
 // MARK: - Preview
 
 #Preview {
-    AddDietView()
+    AddDietView(viewModel: .init())
 }
