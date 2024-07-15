@@ -8,45 +8,33 @@
 import SwiftUI
 
 struct FoodListRow: View {
+    let food: Food
+    let isRankedList: Bool
+    
     var body: some View {
-        HStack(spacing: 0) {
-            Text("1")
+        ZStack {
+            if isRankedList {
+                foodRank()
+            }
+            FoodInfo(food: food, isRankedList: isRankedList)
+                .padding(.leading, isRankedList ? 48 : 20)
+        }
+    }
+    
+    @ViewBuilder
+    func foodRank() -> some View {
+        HStack {
+            Text("\(food.currentRank)")
                 .font(.system(size: 16))
                 .fontWeight(.heavy)
                 .foregroundStyle(.textNormal)
-            
-            HStack(spacing: 6) {
-                Image(.rankMaintain)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 18, height: 18)
-                
-                VStack(alignment: .leading) {
-                    Text("흰쌀밥")
-                        .font(.system(size: 16))
-                        .fontWeight(.light)
-                        .foregroundStyle(.textNormal)
-                    Text("1공기(210g)")
-                        .font(.system(size: 16))
-                        .fontWeight(.light)
-                        .foregroundStyle(.textSecondary)
-                }
-            }
-            .padding(.leading, 12)
-            
             Spacer()
-            
-            HStack(spacing: 12) {
-                Text("95kcal")
-                Image(.dietUnselected)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
-            }
         }
+        .padding(.leading, 20)
     }
+    
 }
 
 #Preview {
-    FoodListRow()
+    FoodListRow(food: ModelData().foods.first!, isRankedList: true)
 }
