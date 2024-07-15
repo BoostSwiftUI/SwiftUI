@@ -11,7 +11,6 @@ struct PillyzeTabBar: View {
   @Binding var activeTab: Tabs
 
   var body: some View {
-    ZStack(alignment: .bottom) {
       HStack(alignment: .top, spacing: 115) {
         ForEach(Tabs.allCases, id: \.rawValue) { tab in
           TabBarItem(tab: tab, activeTab: $activeTab
@@ -29,21 +28,21 @@ struct PillyzeTabBar: View {
           .shadow(color: .pillyzePrimary.opacity(0.1), radius: 8)
       }
       .background(.white) // 위 모서리가 rounded된 것이 검은 배경으로 보이는 현상 방지
-
-      Button {
-        print("plus 버튼 탭")
-      } label: {
-        Image(.plus)
-          .frame(
-            maxWidth: Metrics.centerButtonSize,
-            maxHeight: Metrics.centerButtonSize
-          )
-          .foregroundStyle(.white)
-          .background(.pillyzePrimary)
-          .clipShape(Circle())
-          .offset(y: Metrics.centerButtonSize - Metrics.tabBarHeight - Metrics.centerButtonOffset)
+      .overlay {
+        Button {
+          print("plus 버튼 탭")
+        } label: {
+          Image(.plus)
+            .frame(
+              maxWidth: Metrics.centerButtonSize,
+              maxHeight: Metrics.centerButtonSize
+            )
+            .foregroundStyle(.white)
+            .background(.pillyzePrimary)
+            .clipShape(Circle())
+            .offset(y: Metrics.centerButtonSize - Metrics.tabBarHeight - Metrics.centerButtonOffset)
+        }
       }
-    }
   }
 }
 
