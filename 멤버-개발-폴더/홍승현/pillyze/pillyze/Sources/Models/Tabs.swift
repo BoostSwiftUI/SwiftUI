@@ -14,12 +14,12 @@ enum Tabs: String, Hashable, CaseIterable {
   var image: Image {
     switch self {
     case .myHealth:
-        .init(.myHealth)
+      .init(.myHealth)
     case .nutrients:
-        .init(.nutrients)
+      .init(.nutrients)
     }
   }
-  
+
   var index: Int {
     Tabs.allCases.firstIndex(of: self) ?? 0
   }

@@ -87,9 +87,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAD7D1402C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyze" */;
 			buildPhases = (
+				BA5022232C456CB2008E7F9B /* Swift Format */,
 				BAD7D1182C41752F00E00E16 /* Sources */,
 				BAD7D1192C41752F00E00E16 /* Frameworks */,
 				BAD7D11A2C41752F00E00E16 /* Resources */,
+				BA5022242C456CC8008E7F9B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -183,6 +185,8 @@
 				Base,
 			);
 			mainGroup = BAD7D1132C41752F00E00E16;
+			packageReferences = (
+			);
 			productRefGroup = BAD7D11D2C41752F00E00E16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,6 +221,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA5022232C456CB2008E7F9B /* Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftformat > /dev/null; then\n    if [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n        echo \"Not running Swift Format for Xcode Previews\"\n        exit 0;\n    fi\n    swiftformat .\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+		BA5022242C456CC8008E7F9B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n    swiftlint --config \"$SRCROOT/.swiftlint.yml\"\n    # swiftlint --fix && swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAD7D1182C41752F00E00E16 /* Sources */ = {
@@ -293,7 +336,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -357,7 +400,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
