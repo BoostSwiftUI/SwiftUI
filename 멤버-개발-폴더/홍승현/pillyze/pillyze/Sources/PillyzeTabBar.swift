@@ -8,56 +8,70 @@
 import SwiftUI
 
 struct PillyzeTabBar: View {
-  @Binding var index: Int
+  @Binding var activeTab: Tabs
 
   var body: some View {
-    ZStack {
-      HStack(spacing: 115) {
-        Button {
-          print("건강 탭")
-        } label: {
-          TabBarItem(title: "내 건강", image: Image(systemName: "heart.fill"))
-        }
-
-        Button {
-          print("영양제 탭")
-        } label: {
-          TabBarItem(title: "영양제", image: Image(systemName: "pill.fill"))
+    ZStack(alignment: .bottom) {
+      HStack(alignment: .top, spacing: 115) {
+        ForEach(Tabs.allCases, id: \.rawValue) { tab in
+          TabBarItem(tab: tab, activeTab: $activeTab
+          )
         }
       }
+      .padding(.horizontal, 48)
+      .background {
+        UnevenRoundedRectangle(
+          topLeadingRadius: Metrics.cornerRadius,
+          topTrailingRadius: Metrics.cornerRadius
+        )
+          .fill(.white)
+          .ignoresSafeArea()
+          .shadow(color: .pillyzePrimary.opacity(0.1), radius: 8)
+      }
+      .background(.white) // 위 모서리가 rounded된 것이 검은 배경으로 보이는 현상 방지
 
       Button {
         print("plus 버튼 탭")
       } label: {
-        Image(systemName: "plus")
-          .resizable()
-          .frame(width: 24, height: 24)
-          .frame(maxWidth: 56, maxHeight: 56)
+        Image(.plus)
+          .frame(
+            maxWidth: Metrics.centerButtonSize,
+            maxHeight: Metrics.centerButtonSize
+          )
           .foregroundStyle(.white)
           .background(.pillyzePrimary)
           .clipShape(Circle())
-          .offset(y: -Metrics.centerButtonOffset)
+          .offset(y: Metrics.centerButtonSize - Metrics.tabBarHeight - Metrics.centerButtonOffset)
       }
     }
   }
 }
 
 private struct TabBarItem: View {
-  let title: String
-  let image: Image
+  var tab: Tabs
+  @Binding var activeTab: Tabs
   var body: some View {
     VStack(spacing: Metrics.centerButtonOffset) {
-      image
-      Text(title)
+      tab.image.renderingMode(.template)
+      Text(tab.rawValue)
+        .font(.caption)
     }
-    .frame(width: 82)
+    .frame(maxWidth: .infinity)
+    .padding(.vertical, 8)
+    .foregroundStyle(activeTab == tab ? .pillyzePrimary : .disabled)
+    .onTapGesture {
+      activeTab = tab
+    }
   }
 }
 
 private enum Metrics {
   static let centerButtonOffset: CGFloat = 8
+  static let cornerRadius: CGFloat = 24
+  static let centerButtonSize: CGFloat = 56
+  static let tabBarHeight: CGFloat = 60
 }
 
 #Preview {
-  PillyzeTabBar(index: .constant(0))
+  PillyzeTabBar(activeTab: .constant(.myHealth))
 }
