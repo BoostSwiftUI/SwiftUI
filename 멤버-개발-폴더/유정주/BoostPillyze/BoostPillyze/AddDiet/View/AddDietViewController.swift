@@ -54,5 +54,13 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
                 dismiss(animated: true)
             }
             .store(in: &cancellables)
+        
+        contentView.didTapFoodListItem
+            .receive(on: RunLoop.main)
+            .sink { [weak self] food in
+                guard let self else { return }
+                input.toggleFoodSelection.send(food)
+            }
+            .store(in: &cancellables)
     }
 }

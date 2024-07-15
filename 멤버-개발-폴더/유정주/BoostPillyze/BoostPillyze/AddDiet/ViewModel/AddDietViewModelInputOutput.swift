@@ -15,6 +15,7 @@ extension AddDietViewModel {
     struct Input {
      
         let viewDidLoad: PassthroughSubject<Void, Never> = .init()
+        let toggleFoodSelection: PassthroughSubject<Food, Never> = .init()
     }
     
     // MARK: - Output
@@ -22,5 +23,6 @@ extension AddDietViewModel {
     final class Output: ObservableObject {
         
         @Published var foods: [Food] = []
+        @Published var selectedFoods: Set<Food> = []
     }
 }

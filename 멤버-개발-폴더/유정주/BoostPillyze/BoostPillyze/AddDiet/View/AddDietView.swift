@@ -15,6 +15,7 @@ struct AddDietView: View {
     @ObservedObject var output: AddDietViewModel.Output
     
     let didTapCancelButton = PassthroughSubject<Void, Never>()
+    let didTapFoodListItem = PassthroughSubject<Food, Never>()
 
     // MARK: - State
     
@@ -29,7 +30,12 @@ struct AddDietView: View {
         
         List {
             ForEach(output.foods) { food in
-                FoodListItem(food: food)
+                let isSelected = output.selectedFoods.contains(food)
+                FoodListItem(food: food, isSelected: isSelected)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        didTapFoodListItem.send(food)
+                    }
             }
         }
         .listStyle(.inset)
@@ -98,12 +104,17 @@ private struct FoodListItem: View {
             
             Text("\(food.caloriesPerUnit)kcal")
                 .foregroundStyle(.textSecondary)
+            
+            Image(isSelected ? .addDietFoodActiveOn : .addDietFoodActiveOff)
+                .padding(.leading, 12)
         }
     }
     
     // MARK: - Attribute
     
     private let food: Food
+    private let isSelected: Bool
+    
     private var arrowImageResource: ImageResource {
         if food.rankChange == 0 {
             .addDietFoodArrowNoChange
@@ -116,8 +127,9 @@ private struct FoodListItem: View {
     
     // MARK: - Initializer
     
-    init(food: Food) {
+    init(food: Food, isSelected: Bool) {
         self.food = food
+        self.isSelected = isSelected
     }
 }
 
