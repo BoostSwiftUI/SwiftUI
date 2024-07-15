@@ -9,11 +9,12 @@ import SwiftUI
 
 struct FoodList: View {
     let foods: [Food]
+    let isRankedList: Bool
     
     var body: some View {
         VStack(spacing: 0){
             ForEach(foods) { food in
-                FoodListRow(food: food, isRankedList: true)
+                FoodListRow(food: food, isRankedList: isRankedList)
                 Divider()
                     .padding(.horizontal, 20)
             }
@@ -22,5 +23,9 @@ struct FoodList: View {
 }
 
 #Preview {
-    FoodList(foods: ModelData().foods)
+    FoodList(foods: ModelData().foods, isRankedList: true)
+}
+
+#Preview {
+    FoodList(foods: ModelData().foods, isRankedList: false)
 }
