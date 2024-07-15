@@ -22,6 +22,12 @@
 		9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */; };
 		9B5AE8392C4397D800BC1ED7 /* AddDietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */; };
 		9B5AE83B2C4397DF00BC1ED7 /* AddDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */; };
+		9B5AE83D2C45238800BC1ED7 /* AddDietViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE83C2C45238800BC1ED7 /* AddDietViewModelTests.swift */; };
+		9B5AE83F2C452AD200BC1ED7 /* AddDietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE83E2C452AD200BC1ED7 /* AddDietViewModel.swift */; };
+		9B5AE8412C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8402C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift */; };
+		9B5AE8442C452B5D00BC1ED7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8432C452B5D00BC1ED7 /* Food.swift */; };
+		9B5AE8462C452BA300BC1ED7 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8452C452BA300BC1ED7 /* JSONLoader.swift */; };
+		9B5AE8492C452D8000BC1ED7 /* food_list_with_rank.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		9B5AE8342C42B54200BC1ED7 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietView.swift; sourceTree = "<group>"; };
 		9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietViewController.swift; sourceTree = "<group>"; };
+		9B5AE83C2C45238800BC1ED7 /* AddDietViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietViewModelTests.swift; sourceTree = "<group>"; };
+		9B5AE83E2C452AD200BC1ED7 /* AddDietViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietViewModel.swift; sourceTree = "<group>"; };
+		9B5AE8402C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietViewModelInputOutput.swift; sourceTree = "<group>"; };
+		9B5AE8432C452B5D00BC1ED7 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		9B5AE8452C452BA300BC1ED7 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_list_with_rank.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0470072C41735D00ADAFF3 /* BoostPillyzeTests.swift */,
+				9B5AE83C2C45238800BC1ED7 /* AddDietViewModelTests.swift */,
 			);
 			path = BoostPillyzeTests;
 			sourceTree = "<group>";
@@ -134,6 +147,7 @@
 		9B0470212C41752800ADAFF3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9B5AE8472C452D6F00BC1ED7 /* JSON */,
 				9B046FFA2C41735C00ADAFF3 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -167,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				9B5AE82D2C42B28D00BC1ED7 /* Base */,
+				9B5AE8452C452BA300BC1ED7 /* JSONLoader.swift */,
 			);
 			path = UIkit;
 			sourceTree = "<group>";
@@ -185,10 +200,29 @@
 		9B5AE8372C43978C00BC1ED7 /* AddDiet */ = {
 			isa = PBXGroup;
 			children = (
+				9B5AE8422C452B5A00BC1ED7 /* Model */,
 				9B5AE8382C4397D800BC1ED7 /* AddDietView.swift */,
 				9B5AE83A2C4397DF00BC1ED7 /* AddDietViewController.swift */,
+				9B5AE83E2C452AD200BC1ED7 /* AddDietViewModel.swift */,
+				9B5AE8402C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift */,
 			);
 			path = AddDiet;
+			sourceTree = "<group>";
+		};
+		9B5AE8422C452B5A00BC1ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE8432C452B5D00BC1ED7 /* Food.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B5AE8472C452D6F00BC1ED7 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +308,7 @@
 			files = (
 				9B046FFE2C41735C00ADAFF3 /* Preview Assets.xcassets in Resources */,
 				9B046FFB2C41735C00ADAFF3 /* Assets.xcassets in Resources */,
+				9B5AE8492C452D8000BC1ED7 /* food_list_with_rank.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,15 +326,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5AE8412C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift in Sources */,
 				9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */,
+				9B5AE8442C452B5D00BC1ED7 /* Food.swift in Sources */,
 				9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */,
 				9B5AE8332C42B49E00BC1ED7 /* MyHealthView.swift in Sources */,
 				9B5AE8392C4397D800BC1ED7 /* AddDietView.swift in Sources */,
 				9B5AE83B2C4397DF00BC1ED7 /* AddDietViewController.swift in Sources */,
 				9B5AE8262C42AAD200BC1ED7 /* MyHealthViewController.swift in Sources */,
 				9B04702B2C4288DB00ADAFF3 /* View+cornerRadius.swift in Sources */,
+				9B5AE83F2C452AD200BC1ED7 /* AddDietViewModel.swift in Sources */,
 				9B046FF92C41735B00ADAFF3 /* ContentView.swift in Sources */,
 				9B5AE82F2C42B29A00BC1ED7 /* BaseView.swift in Sources */,
+				9B5AE8462C452BA300BC1ED7 /* JSONLoader.swift in Sources */,
 				9B046FF72C41735B00ADAFF3 /* BoostPillyzeApp.swift in Sources */,
 				9B5AE8312C42B2E500BC1ED7 /* ViewModelable.swift in Sources */,
 				9B5AE82C2C42B26E00BC1ED7 /* BaseViewController.swift in Sources */,
@@ -311,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B0470082C41735D00ADAFF3 /* BoostPillyzeTests.swift in Sources */,
+				9B5AE83D2C45238800BC1ED7 /* AddDietViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
