@@ -8,27 +8,31 @@
 import SwiftUI
 
 struct AddDiet: View {
+    let foods: [Food]
+    
     var body: some View {
-        ZStack {
-            VStack {
-                SearchBar()
-                Spacer()
-            }
-            
-            VStack {
-                Spacer()
-                BottomPicker()
+        GeometryReader { proxy in
+            ZStack {
+                VStack {
+                    searchBar()
+                    FrequentlyEaten(foods: foods)
+                }
+                
+                VStack {
+                    Spacer()
+                    BottomPicker()
+                        .padding(.bottom, proxy.safeAreaInsets.bottom)
+                        .background {
+                            Color(.componentBackground)
+                        }
+                }
+                .ignoresSafeArea()
             }
         }
     }
-}
-
-#Preview {
-    AddDiet()
-}
-
-struct SearchBar: View {
-    var body: some View {
+    
+    @ViewBuilder
+    func searchBar() -> some View {
         HStack {
             SearchTextField()
             Button {
@@ -43,4 +47,8 @@ struct SearchBar: View {
         }
         .padding(.horizontal, 20)
     }
+}
+
+#Preview {
+    AddDiet(foods: ModelData().foods)
 }

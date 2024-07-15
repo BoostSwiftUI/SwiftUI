@@ -11,13 +11,11 @@ struct FoodList: View {
     let foods: [Food]
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0){
-                ForEach(foods) { food in
-                    FoodListRow(food: food, isRankedList: true)
-                    Divider()
-                        .padding(.horizontal, 20)
-                }
+        VStack(spacing: 0){
+            ForEach(foods) { food in
+                FoodListRow(food: food, isRankedList: true)
+                Divider()
+                    .padding(.horizontal, 20)
             }
         }
     }
