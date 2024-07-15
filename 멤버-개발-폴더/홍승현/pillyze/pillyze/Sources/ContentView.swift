@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @State private var selection: Tabs = .myHealth
   var body: some View {
-    VStack {
+    VStack(spacing: 0) {
       TabView(selection: $selection) {
         Text("MyHealth")
           .tag(Tabs.myHealth)
