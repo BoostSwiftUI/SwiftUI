@@ -8,28 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var index: Int = 0
+  @State private var selection: Tabs = .myHealth
   var body: some View {
-    VStack {
-      Spacer()
-      PillyzeTabBar(index: $index)
-        .frame(height: Metrics.tabBarHeight)
-        .frame(maxWidth: .infinity)
-        .background(
-          UnevenRoundedRectangle(
-            topLeadingRadius: Metrics.cornerRadius,
-            topTrailingRadius: Metrics.cornerRadius
-          ).fill(.background)
-        )
+    VStack(spacing: 0) {
+      TabView(selection: $selection) {
+        HomeView()
+          .tag(Tabs.myHealth)
+          .toolbar(.hidden, for: .tabBar)
+
+        Text("Nutrients")
+          .tag(Tabs.nutrients)
+          .toolbar(.hidden, for: .tabBar)
+      }
+
+      PillyzeTabBar(activeTab: $selection)
     }
-    .background(Color.pillyzeBackground.ignoresSafeArea(edges: .top))
   }
-}
-
-
-private enum Metrics {
-  static let cornerRadius: CGFloat = 35
-  static let tabBarHeight: CGFloat = 60
 }
 
 #Preview {

@@ -1,5 +1,5 @@
 //
-//  pillyzeUITestsLaunchTests.swift
+//  PillyzeUITestsLaunchTests.swift
 //  pillyzeUITests
 //
 //  Created by 홍승현 on 7/12/24.
@@ -7,8 +7,7 @@
 
 import XCTest
 
-final class pillyzeUITestsLaunchTests: XCTestCase {
-
+final class PillyzeUITestsLaunchTests: XCTestCase {
   override class var runsForEachTargetApplicationUIConfiguration: Bool {
     true
   }
