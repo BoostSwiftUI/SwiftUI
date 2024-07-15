@@ -17,7 +17,7 @@ struct AddDiet: View {
                 } label: {
                     Text("취소")
                         .font(.system(size: 15))
-                        .fontWeight(.regular)
+                        .fontWeight(.medium)
                         .foregroundStyle(.textNormal)
                 }
                 .buttonStyle(PlainButtonStyle())

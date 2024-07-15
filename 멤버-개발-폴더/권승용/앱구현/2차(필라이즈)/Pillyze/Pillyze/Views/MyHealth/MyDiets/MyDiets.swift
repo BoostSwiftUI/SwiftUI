@@ -31,10 +31,7 @@ struct MyDiets: View {
                 
             } label: {
                 Text("내 식단 점수 확인하기")
-                    .font(.system(size: 18))
-                    .fontWeight(.medium)
-                    .foregroundStyle(.white)
-                    .buttonBackground()
+                    .buttonEnabledStyle()
             }
             .buttonStyle(PlainButtonStyle())
         }
