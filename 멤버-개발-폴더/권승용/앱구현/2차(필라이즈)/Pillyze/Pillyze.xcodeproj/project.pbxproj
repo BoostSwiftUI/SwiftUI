@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600C092F2C454F3B0002B296 /* DietList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C092E2C454F3B0002B296 /* DietList.swift */; };
+		600C09312C454F410002B296 /* DietListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C09302C454F410002B296 /* DietListRow.swift */; };
 		6076A3E12C45039A00F95DC9 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E02C45039A00F95DC9 /* SearchTextField.swift */; };
 		6076A3E42C45073100F95DC9 /* BottomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E32C45073100F95DC9 /* BottomPicker.swift */; };
 		6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0EA2C410E8D00C72C97 /* PillyzeApp.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		600C092E2C454F3B0002B296 /* DietList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietList.swift; sourceTree = "<group>"; };
+		600C09302C454F410002B296 /* DietListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietListRow.swift; sourceTree = "<group>"; };
 		6076A3E02C45039A00F95DC9 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		6076A3E32C45073100F95DC9 /* BottomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPicker.swift; sourceTree = "<group>"; };
 		6082A0E72C410E8D00C72C97 /* Pillyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600C092D2C454EE60002B296 /* DietList */ = {
+			isa = PBXGroup;
+			children = (
+				600C092E2C454F3B0002B296 /* DietList.swift */,
+				600C09302C454F410002B296 /* DietListRow.swift */,
+			);
+			path = DietList;
+			sourceTree = "<group>";
+		};
 		6076A3DF2C45038400F95DC9 /* SearchTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +270,7 @@
 			children = (
 				60DF1A5B2C42C0D50090057B /* AddDiet.swift */,
 				6076A3DF2C45038400F95DC9 /* SearchTextField */,
+				600C092D2C454EE60002B296 /* DietList */,
 				6076A3E22C45072000F95DC9 /* BottomBar */,
 			);
 			path = AddDiet;
@@ -398,11 +412,13 @@
 				60DF1A572C4260960090057B /* Diet.swift in Sources */,
 				6082A1242C42126E00C72C97 /* Calender.swift in Sources */,
 				6082A11A2C41235500C72C97 /* Header.swift in Sources */,
+				600C09312C454F410002B296 /* DietListRow.swift in Sources */,
 				60DF1A4F2C4238060090057B /* MyDiets.swift in Sources */,
 				60DF1A5C2C42C0D50090057B /* AddDiet.swift in Sources */,
 				6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */,
 				6082A11F2C41299900C72C97 /* TabBarButton.swift in Sources */,
 				60DF1A542C423CD40090057B /* ButtonEnabledStyle.swift in Sources */,
+				600C092F2C454F3B0002B296 /* DietList.swift in Sources */,
 				6076A3E42C45073100F95DC9 /* BottomPicker.swift in Sources */,
 				6082A11D2C41288300C72C97 /* TabBar.swift in Sources */,
 				60DF1A592C429DFE0090057B /* TransparentBlurView.swift in Sources */,
