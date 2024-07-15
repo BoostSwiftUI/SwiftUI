@@ -15,6 +15,7 @@
 		6076A3E12C45039A00F95DC9 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E02C45039A00F95DC9 /* SearchTextField.swift */; };
 		6076A3E42C45073100F95DC9 /* BottomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E32C45073100F95DC9 /* BottomPicker.swift */; };
 		6078E43C2C4571F2007BA201 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078E43B2C4571F2007BA201 /* Favorites.swift */; };
+		6078E4402C457EC9007BA201 /* DirectAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078E43F2C457EC9007BA201 /* DirectAdd.swift */; };
 		6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0EA2C410E8D00C72C97 /* PillyzeApp.swift */; };
 		6082A0ED2C410E8D00C72C97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0EC2C410E8D00C72C97 /* ContentView.swift */; };
 		6082A0EF2C410E8E00C72C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6082A0EE2C410E8E00C72C97 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		6076A3E02C45039A00F95DC9 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		6076A3E32C45073100F95DC9 /* BottomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPicker.swift; sourceTree = "<group>"; };
 		6078E43B2C4571F2007BA201 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		6078E43F2C457EC9007BA201 /* DirectAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAdd.swift; sourceTree = "<group>"; };
 		6082A0E72C410E8D00C72C97 /* Pillyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6082A0EA2C410E8D00C72C97 /* PillyzeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillyzeApp.swift; sourceTree = "<group>"; };
 		6082A0EC2C410E8D00C72C97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,25 @@
 				6078E43B2C4571F2007BA201 /* Favorites.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		6078E43D2C457E82007BA201 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				600C092D2C454EE60002B296 /* FoodList */,
+				6076A3E22C45072000F95DC9 /* BottomBar */,
+				60A9C3EA2C4568E3006433AF /* Chip */,
+				6076A3DF2C45038400F95DC9 /* SearchTextField */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6078E43E2C457EA2007BA201 /* DirectAdd */ = {
+			isa = PBXGroup;
+			children = (
+				6078E43F2C457EC9007BA201 /* DirectAdd.swift */,
+			);
+			path = DirectAdd;
 			sourceTree = "<group>";
 		};
 		6082A0DE2C410E8D00C72C97 = {
@@ -325,12 +346,10 @@
 			isa = PBXGroup;
 			children = (
 				60DF1A5B2C42C0D50090057B /* AddDiet.swift */,
-				6076A3DF2C45038400F95DC9 /* SearchTextField */,
-				60A9C3EA2C4568E3006433AF /* Chip */,
 				60A9C3E72C4568AE006433AF /* FrequentlyEaten */,
 				6078E43A2C4571E5007BA201 /* Favorites */,
-				600C092D2C454EE60002B296 /* FoodList */,
-				6076A3E22C45072000F95DC9 /* BottomBar */,
+				6078E43E2C457EA2007BA201 /* DirectAdd */,
+				6078E43D2C457E82007BA201 /* Common */,
 			);
 			path = AddDiet;
 			sourceTree = "<group>";
@@ -472,6 +491,7 @@
 				600C09382C4555610002B296 /* FoodList.swift in Sources */,
 				60A9C3E02C4556E0006433AF /* ModelData.swift in Sources */,
 				6082A0ED2C410E8D00C72C97 /* ContentView.swift in Sources */,
+				6078E4402C457EC9007BA201 /* DirectAdd.swift in Sources */,
 				60DF1A4B2C4235E80090057B /* ComponentBackground.swift in Sources */,
 				6076A3E12C45039A00F95DC9 /* SearchTextField.swift in Sources */,
 				60DF1A572C4260960090057B /* Diet.swift in Sources */,

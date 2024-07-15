@@ -31,7 +31,7 @@ struct FrequentlyEaten: View {
     
     @ViewBuilder
     func chipButtons() -> some View {
-        HStack {
+        HStack(spacing: 10) {
             Chip(title: "전체", isEnabled: .constant(false))
             Chip(title: "음식", isEnabled: .constant(false))
             Chip(title: "세트", isEnabled: .constant(false))
