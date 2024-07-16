@@ -8,6 +8,13 @@
 import SwiftUI
 import Combine
 
+enum AddDietTab {
+    
+    case most
+    case favorites
+    case custom
+}
+
 struct AddDietView: View {
     
     // MARK: - Interface
@@ -20,6 +27,7 @@ struct AddDietView: View {
     // MARK: - State
     
     @State private var searchKeyword = ""
+    @State private var currentTab: AddDietTab = .most
     
     var body: some View {
         SearchHeaderView(
@@ -28,17 +36,18 @@ struct AddDietView: View {
         )
         .padding(.horizontal)
         
-        List {
-            ForEach(output.foods) { food in
-                let isSelected = output.selectedFoods.contains(food)
-                FoodListItem(food: food, isSelected: isSelected)
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        didTapFoodListItem.send(food)
-                    }
-            }
+        switch currentTab {
+        case .most:
+            FoodList(
+                didTapFoodListItem: didTapFoodListItem,
+                foods: $output.foods,
+                selectedFoods: $output.selectedFoods
+            )
+        case .favorites:
+            EmptyView()
+        case .custom:
+            EmptyView()
         }
-        .listStyle(.inset)
     }
 }
 
@@ -73,6 +82,30 @@ private struct SearchHeaderView: View {
             )
             .foregroundStyle(.black)
         }
+    }
+}
+
+// MARK: - Food List
+
+private struct FoodList: View {
+    
+    let didTapFoodListItem: PassthroughSubject<Food, Never>
+    
+    @Binding var foods: [Food]
+    @Binding var selectedFoods: Set<Food>
+    
+    var body: some View {
+        List {
+            ForEach(foods) { food in
+                let isSelected = selectedFoods.contains(food)
+                FoodListItem(food: food, isSelected: isSelected)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        didTapFoodListItem.send(food)
+                    }
+            }
+        }
+        .listStyle(.inset)
     }
 }
 
