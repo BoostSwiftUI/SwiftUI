@@ -73,7 +73,7 @@ private extension WeeklyDatePicker {
 
     func dateCell(_ date: Date) -> some View {
         let isSelectedDate = date.isSameDay(as: selectedDate)
-        let isSelectableDate = startRangeDate.day <= date.day && date.day <= endRangeDate.day
+        let isSelectableDate = startRangeDate.startOfDay <= date.startOfDay && date.startOfDay <= endRangeDate.startOfDay
 
         return VStack(spacing: 12) {
             Text(date.formattedString(by: .ee))
