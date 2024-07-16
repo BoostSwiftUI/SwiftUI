@@ -8,13 +8,6 @@
 import SwiftUI
 import Combine
 
-enum AddDietTab {
-    
-    case most
-    case favorites
-    case custom
-}
-
 struct AddDietView: View {
     
     // MARK: - Interface
@@ -100,57 +93,49 @@ private struct TopTabBar: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            Button(
-                action: {
-                    currentTab = .most
-                }, label: {
-                    VStack {
-                        Text("자주 드셨어요")
-                            .font(.system(size: 18, weight: .bold))
-                            .padding(.vertical, 9)
-                            .padding(.horizontal, 15)
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundStyle(currentTab == .most ? .primaryNormal : .background)
-                    }
-                }
-            )
-            .foregroundStyle(.black)
-            
-            Button(
-                action: {
-                    currentTab = .favorites
-                }, label: {
-                    VStack {
-                        Text("즐겨찾기")
-                            .font(.system(size: 18, weight: .bold))
-                            .padding(.vertical, 9)
-                            .padding(.horizontal, 15)
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundStyle(currentTab == .favorites ? .primaryNormal : .background)
-                    }
-                }
-            )
-            .foregroundStyle(.black)
-            
-            Button(
-                action: {
-                    currentTab = .custom
-                }, label: {
-                    VStack {
-                        Text("직접 등록")
-                            .font(.system(size: 18, weight: .bold))
-                            .padding(.vertical, 9)
-                            .padding(.horizontal, 15)
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundStyle(currentTab == .custom ? .primaryNormal : .background)
-                    }
-                }
-            )
-            .foregroundStyle(.black)
+            TopTabBarItem(currentTab: $currentTab, myTab: .most)
+            TopTabBarItem(currentTab: $currentTab, myTab: .favorites)
+            TopTabBarItem(currentTab: $currentTab, myTab: .custom)
         }
+    }
+}
+
+// MARK: - Top TabBar Item
+
+private struct TopTabBarItem: View {
+    
+    // MARK: - Binding
+    
+    @Binding var currentTab: AddDietTab
+    
+    // MARK: - Attribute
+    
+    private let myTab: AddDietTab
+    
+    var body: some View {
+        Button(
+            action: {
+                currentTab = myTab
+            }, label: {
+                VStack {
+                    Text(myTab.title)
+                        .font(.system(size: 18, weight: .bold))
+                        .padding(.vertical, 9)
+                        .padding(.horizontal, 15)
+                    Rectangle()
+                        .frame(height: 2)
+                        .foregroundStyle(currentTab == myTab ? .primaryNormal : .background)
+                }
+            }
+        )
+        .foregroundStyle(.black)
+    }
+    
+    // MARK: - Initializer
+    
+    init(currentTab: Binding<AddDietTab>, myTab: AddDietTab) {
+        self._currentTab = currentTab
+        self.myTab = myTab
     }
 }
 
