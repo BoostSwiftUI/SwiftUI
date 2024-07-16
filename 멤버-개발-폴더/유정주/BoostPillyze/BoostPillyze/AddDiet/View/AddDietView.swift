@@ -36,6 +36,13 @@ struct AddDietView: View {
         )
         .padding(.horizontal)
         
+        ZStack(alignment: .bottom) {
+            TopTabBar(currentTab: $currentTab)
+            Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.disabled)
+        }
+        
         switch currentTab {
         case .most:
             FoodList(
@@ -44,9 +51,9 @@ struct AddDietView: View {
                 selectedFoods: $output.selectedFoods
             )
         case .favorites:
-            EmptyView()
+            Spacer()
         case .custom:
-            EmptyView()
+            Spacer()
         }
     }
 }
@@ -78,6 +85,68 @@ private struct SearchHeaderView: View {
                 label: {
                     Text("취소")
                         .font(.system(size: 15))
+                }
+            )
+            .foregroundStyle(.black)
+        }
+    }
+}
+
+// MARK: - Top TabBar
+
+private struct TopTabBar: View {
+    
+    @Binding var currentTab: AddDietTab
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            Button(
+                action: {
+                    currentTab = .most
+                }, label: {
+                    VStack {
+                        Text("자주 드셨어요")
+                            .font(.system(size: 18, weight: .bold))
+                            .padding(.vertical, 9)
+                            .padding(.horizontal, 15)
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundStyle(currentTab == .most ? .primaryNormal : .background)
+                    }
+                }
+            )
+            .foregroundStyle(.black)
+            
+            Button(
+                action: {
+                    currentTab = .favorites
+                }, label: {
+                    VStack {
+                        Text("즐겨찾기")
+                            .font(.system(size: 18, weight: .bold))
+                            .padding(.vertical, 9)
+                            .padding(.horizontal, 15)
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundStyle(currentTab == .favorites ? .primaryNormal : .background)
+                    }
+                }
+            )
+            .foregroundStyle(.black)
+            
+            Button(
+                action: {
+                    currentTab = .custom
+                }, label: {
+                    VStack {
+                        Text("직접 등록")
+                            .font(.system(size: 18, weight: .bold))
+                            .padding(.vertical, 9)
+                            .padding(.horizontal, 15)
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundStyle(currentTab == .custom ? .primaryNormal : .background)
+                    }
                 }
             )
             .foregroundStyle(.black)
