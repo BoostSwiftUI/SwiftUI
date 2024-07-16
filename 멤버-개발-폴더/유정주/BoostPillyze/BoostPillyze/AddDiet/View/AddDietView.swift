@@ -51,7 +51,7 @@ struct AddDietView: View {
                 selectedFoods: $output.selectedFoods
             )
         case .favorites:
-            Spacer()
+            PlaceholderView()
         case .custom:
             Spacer()
         }
@@ -232,6 +232,19 @@ private struct FoodListItem: View {
     init(food: Food, isSelected: Bool) {
         self.food = food
         self.isSelected = isSelected
+    }
+}
+
+// MARK: - Placeholder
+
+private struct PlaceholderView: View {
+    
+    var body: some View {
+        Spacer()
+        Image(.addDietPlaceholder)
+            .resizable()
+            .scaledToFit()
+        Spacer()
     }
 }
 
