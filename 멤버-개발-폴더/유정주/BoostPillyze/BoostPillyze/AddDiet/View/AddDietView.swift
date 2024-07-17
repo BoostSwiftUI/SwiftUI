@@ -21,6 +21,8 @@ struct AddDietView: View {
     
     @State private var searchKeyword = ""
     @State private var currentTab: AddDietTab = .most
+    @State private var categories: [String] = ["전체", "음식", "세트", "인기"]
+    @State private var currentCategory: String = "인기"
     
     var body: some View {
         SearchHeaderView(
@@ -34,6 +36,16 @@ struct AddDietView: View {
             Rectangle()
                 .frame(height: 1)
                 .foregroundStyle(.disabled)
+        }
+        
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(categories, id: \.self) { category in
+                    CategoryChipButton(currentCategory: $currentCategory, title: category)
+                }
+            }
+            .padding(.vertical, 11)
+            .padding(.horizontal, 20)
         }
         
         switch currentTab {
@@ -136,6 +148,37 @@ private struct TopTabBarItem: View {
     init(currentTab: Binding<AddDietTab>, myTab: AddDietTab) {
         self._currentTab = currentTab
         self.myTab = myTab
+    }
+}
+
+// MARK: - Chip Button
+
+private struct CategoryChipButton: View {
+    
+    @Binding var currentCategory: String
+    
+    private let title: String
+    
+    var body: some View {
+        Button(
+            action: {
+                currentCategory = title
+            },
+            label: {
+                Text(title)
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(currentCategory == title ? .background : .textSecondary)
+                    .clipShape(Capsule())
+                    .padding(.vertical, 4)
+                    .padding(.horizontal, 16)
+                    .background(currentCategory == title ? .primaryNormal : .disabled, in: Capsule())
+            }
+        )
+    }
+    
+    init(currentCategory: Binding<String>, title: String) {
+        self._currentCategory = currentCategory
+        self.title = title
     }
 }
 
