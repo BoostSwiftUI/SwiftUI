@@ -20,6 +20,9 @@ struct AddDietView: View {
     // MARK: - State
     
     @State private var searchKeyword = ""
+    @State private var currentTab: AddDietTab = .most
+    @State private var categories: [String] = ["전체", "음식", "세트", "인기"]
+    @State private var currentCategory: String = "인기"
     
     var body: some View {
         SearchHeaderView(
@@ -28,17 +31,35 @@ struct AddDietView: View {
         )
         .padding(.horizontal)
         
-        List {
-            ForEach(output.foods) { food in
-                let isSelected = output.selectedFoods.contains(food)
-                FoodListItem(food: food, isSelected: isSelected)
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        didTapFoodListItem.send(food)
-                    }
-            }
+        ZStack(alignment: .bottom) {
+            TopTabBar(currentTab: $currentTab)
+            Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.disabled)
         }
-        .listStyle(.inset)
+        
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(categories, id: \.self) { category in
+                    CategoryChipButton(currentCategory: $currentCategory, title: category)
+                }
+            }
+            .padding(.vertical, 11)
+            .padding(.horizontal, 20)
+        }
+        
+        switch currentTab {
+        case .most:
+            FoodList(
+                didTapFoodListItem: didTapFoodListItem,
+                foods: $output.foods,
+                selectedFoods: $output.selectedFoods
+            )
+        case .favorites:
+            PlaceholderView()
+        case .custom:
+            Spacer()
+        }
     }
 }
 
@@ -73,6 +94,115 @@ private struct SearchHeaderView: View {
             )
             .foregroundStyle(.black)
         }
+    }
+}
+
+// MARK: - Top TabBar
+
+private struct TopTabBar: View {
+    
+    @Binding var currentTab: AddDietTab
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            TopTabBarItem(currentTab: $currentTab, myTab: .most)
+            TopTabBarItem(currentTab: $currentTab, myTab: .favorites)
+            TopTabBarItem(currentTab: $currentTab, myTab: .custom)
+        }
+    }
+}
+
+// MARK: - Top TabBar Item
+
+private struct TopTabBarItem: View {
+    
+    // MARK: - Binding
+    
+    @Binding var currentTab: AddDietTab
+    
+    // MARK: - Attribute
+    
+    private let myTab: AddDietTab
+    
+    var body: some View {
+        Button(
+            action: {
+                currentTab = myTab
+            }, label: {
+                VStack {
+                    Text(myTab.title)
+                        .font(.system(size: 18, weight: .bold))
+                        .padding(.vertical, 9)
+                        .padding(.horizontal, 15)
+                    Rectangle()
+                        .frame(height: 2)
+                        .foregroundStyle(currentTab == myTab ? .primaryNormal : .background)
+                }
+            }
+        )
+        .foregroundStyle(.black)
+    }
+    
+    // MARK: - Initializer
+    
+    init(currentTab: Binding<AddDietTab>, myTab: AddDietTab) {
+        self._currentTab = currentTab
+        self.myTab = myTab
+    }
+}
+
+// MARK: - Chip Button
+
+private struct CategoryChipButton: View {
+    
+    @Binding var currentCategory: String
+    
+    private let title: String
+    
+    var body: some View {
+        Button(
+            action: {
+                currentCategory = title
+            },
+            label: {
+                Text(title)
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(currentCategory == title ? .background : .textSecondary)
+                    .clipShape(Capsule())
+                    .padding(.vertical, 4)
+                    .padding(.horizontal, 16)
+                    .background(currentCategory == title ? .primaryNormal : .disabled, in: Capsule())
+            }
+        )
+    }
+    
+    init(currentCategory: Binding<String>, title: String) {
+        self._currentCategory = currentCategory
+        self.title = title
+    }
+}
+
+// MARK: - Food List
+
+private struct FoodList: View {
+    
+    let didTapFoodListItem: PassthroughSubject<Food, Never>
+    
+    @Binding var foods: [Food]
+    @Binding var selectedFoods: Set<Food>
+    
+    var body: some View {
+        List {
+            ForEach(foods) { food in
+                let isSelected = selectedFoods.contains(food)
+                FoodListItem(food: food, isSelected: isSelected)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        didTapFoodListItem.send(food)
+                    }
+            }
+        }
+        .listStyle(.inset)
     }
 }
 
@@ -130,6 +260,19 @@ private struct FoodListItem: View {
     init(food: Food, isSelected: Bool) {
         self.food = food
         self.isSelected = isSelected
+    }
+}
+
+// MARK: - Placeholder
+
+private struct PlaceholderView: View {
+    
+    var body: some View {
+        Spacer()
+        Image(.addDietPlaceholder)
+            .resizable()
+            .scaledToFit()
+        Spacer()
     }
 }
 

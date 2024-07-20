@@ -28,6 +28,7 @@
 		9B5AE8442C452B5D00BC1ED7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8432C452B5D00BC1ED7 /* Food.swift */; };
 		9B5AE8462C452BA300BC1ED7 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE8452C452BA300BC1ED7 /* JSONLoader.swift */; };
 		9B5AE8492C452D8000BC1ED7 /* food_list_with_rank.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */; };
+		9B5AE84D2C46860800BC1ED7 /* AddDietTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE84C2C46860800BC1ED7 /* AddDietTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9B5AE8432C452B5D00BC1ED7 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		9B5AE8452C452BA300BC1ED7 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_list_with_rank.json; sourceTree = "<group>"; };
+		9B5AE84C2C46860800BC1ED7 /* AddDietTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				9B5AE8432C452B5D00BC1ED7 /* Food.swift */,
+				9B5AE84C2C46860800BC1ED7 /* AddDietTab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B5AE8412C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift in Sources */,
+				9B5AE84D2C46860800BC1ED7 /* AddDietTab.swift in Sources */,
 				9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */,
 				9B5AE8442C452B5D00BC1ED7 /* Food.swift in Sources */,
 				9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */,
