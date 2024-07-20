@@ -20,7 +20,14 @@
   - 함께 보면 좋을 WWDC 영상 리스트입니다. 매주 함께 시청하고 토의합니다.
 
 # 🧑🏻‍💻 스터디원
+## iOS 개발자
 | 권승용 | 김대황 | 정다함 | 유정주 | 윤동주 | 이준복 | 홍승현 |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | <a href="https://github.com/ericKwon95"><img src="https://avatars.githubusercontent.com/u/22342277?v=4" width="100"></a> | <a href="https://github.com/qwerty3345"><img src="https://avatars.githubusercontent.com/u/59835351?v=4" width="100"></a> | <a href="https://github.com/MaraMincho"><img src="https://avatars.githubusercontent.com/u/103064352?v=4" width="100"></a> | <a href="https://github.com/jeongju9216"><img src="https://avatars.githubusercontent.com/u/89075274?v=4" width="100"></a> | <a href="https://github.com/yoondj98"><img src="https://avatars.githubusercontent.com/u/54929503?v=4" width="100"></a> | <a href="https://github.com/junbok97"><img src="https://avatars.githubusercontent.com/u/71696675?v=4" width="100"></a> | <a href="https://github.com/WhiteHyun"><img src="https://avatars.githubusercontent.com/u/57972338?v=4" width="100"></a> |
 | [ericKwon95](https://github.com/ericKwon95) | [qwerty3345](https://github.com/qwerty3345) | [MaraMincho](https://github.com/MaraMincho) | [jeongju9216](https://github.com/jeongju9216) | [yoondj98](https://github.com/yoondj98) | [junbok97](https://github.com/junbok97) | [WhiteHyun](https://github.com/WhiteHyun) |
+
+## 디자이너
+| 김채영 |
+| :--: |
+| <a href="https://github.com/zena-1106"><img src="https://avatars.githubusercontent.com/u/135627798?v=4" width="100"></a> |
+| [zena-1106](https://github.com/zena-1106) |
