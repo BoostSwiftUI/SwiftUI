@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyDiets: View {
+    
     var body: some View {
         VStack(spacing: 0) {
             Text("오늘 내 식사,\n몇 점 짜리 식단일까?")
@@ -27,13 +28,12 @@ struct MyDiets: View {
                 .foregroundStyle(.appPrimary)
                 .padding(.vertical, 10)
             
-            Button {
-                
+            NavigationLink {
+                AddDiet(foods: ModelData().foods)
             } label: {
                 Text("내 식단 점수 확인하기")
                     .buttonEnabledStyle()
             }
-            .buttonStyle(PlainButtonStyle())
         }
         .frame(maxWidth: .infinity)
         .padding(20)
@@ -43,7 +43,6 @@ struct MyDiets: View {
                 HStack {
                     Spacer()
                     Button {
-                        
                     } label: {
                         Image(.close)
                             .resizable()

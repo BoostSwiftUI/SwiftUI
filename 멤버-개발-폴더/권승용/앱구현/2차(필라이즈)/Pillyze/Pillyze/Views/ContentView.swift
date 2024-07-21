@@ -11,15 +11,16 @@ struct ContentView: View {
     @State private var component: TabBarComponents = .myHealth
     
     var body: some View {
-        ZStack {
-            switch component {
-            case .myHealth:
-                MyHealth()
-            case .nutrients:
-                Text("nutrients")
+        NavigationStack {
+            ZStack {
+                switch component {
+                case .myHealth:
+                    MyHealth()
+                case .nutrients:
+                    Text("nutrients")
+                }
+                TabBar(components: $component)
             }
-            
-            TabBar(components: $component)
         }
     }
 }
