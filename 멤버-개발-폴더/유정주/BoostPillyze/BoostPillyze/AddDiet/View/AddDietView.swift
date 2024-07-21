@@ -167,11 +167,21 @@ private struct CategoryChipButton: View {
             label: {
                 Text(title)
                     .font(.system(size: 16, weight: .medium))
-                    .foregroundStyle(currentCategory == title ? .background : .textSecondary)
+                    .foregroundStyle(currentCategory == title ? .background : .textPlaceholder)
                     .clipShape(Capsule())
                     .padding(.vertical, 4)
                     .padding(.horizontal, 16)
-                    .background(currentCategory == title ? .primaryNormal : .disabled, in: Capsule())
+                    .background(
+                        Group {
+                            if currentCategory == title {
+                                Capsule()
+                                    .fill(Color.primaryNormal)
+                            } else {
+                                Capsule()
+                                    .stroke(Color.disabled, lineWidth: 1)
+                            }
+                        }
+                    )
             }
         )
     }
