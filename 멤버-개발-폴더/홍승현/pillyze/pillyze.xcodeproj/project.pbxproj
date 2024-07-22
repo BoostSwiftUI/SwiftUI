@@ -3,54 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		BAD7D12D2C41753200E00E16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BAD7D1142C41752F00E00E16 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BAD7D11B2C41752F00E00E16;
-			remoteInfo = pillyze;
-		};
-		BAD7D1372C41753200E00E16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BAD7D1142C41752F00E00E16 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BAD7D11B2C41752F00E00E16;
-			remoteInfo = pillyze;
-		};
-/* End PBXContainerItemProxy section */
+/* Begin PBXBuildFile section */
+		BF559B102C4E730B00D83286 /* PillyzeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B0F2C4E730B00D83286 /* PillyzeApp.swift */; };
+		BF559B122C4E730B00D83286 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B112C4E730B00D83286 /* ContentView.swift */; };
+		BF559B142C4E730C00D83286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF559B132C4E730C00D83286 /* Assets.xcassets */; };
+		BF559B172C4E730C00D83286 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF559B162C4E730C00D83286 /* Preview Assets.xcassets */; };
+		BF559B2A2C4E739C00D83286 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B202C4E739C00D83286 /* Pretendard-Black.otf */; };
+		BF559B2B2C4E739C00D83286 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B212C4E739C00D83286 /* Pretendard-Bold.otf */; };
+		BF559B2C2C4E739C00D83286 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B222C4E739C00D83286 /* Pretendard-ExtraBold.otf */; };
+		BF559B2D2C4E739C00D83286 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B232C4E739C00D83286 /* Pretendard-ExtraLight.otf */; };
+		BF559B2E2C4E739C00D83286 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B242C4E739C00D83286 /* Pretendard-Light.otf */; };
+		BF559B2F2C4E739C00D83286 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B252C4E739C00D83286 /* Pretendard-Medium.otf */; };
+		BF559B302C4E739C00D83286 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B262C4E739C00D83286 /* Pretendard-Regular.otf */; };
+		BF559B312C4E739C00D83286 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B272C4E739C00D83286 /* Pretendard-SemiBold.otf */; };
+		BF559B322C4E739C00D83286 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF559B282C4E739C00D83286 /* Pretendard-Thin.otf */; };
+		BF559B352C4E73B100D83286 /* PillyzeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B342C4E73B100D83286 /* PillyzeTabBar.swift */; };
+		BF559B382C4E73BA00D83286 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B372C4E73BA00D83286 /* Tabs.swift */; };
+		BF559B3C2C4E73C900D83286 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B3A2C4E73C900D83286 /* HomeView.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BAD7D11C2C41752F00E00E16 /* pillyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pillyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAD7D12C2C41753200E00E16 /* pillyzeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pillyzeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAD7D1362C41753200E00E16 /* pillyzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pillyzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF559B0C2C4E730B00D83286 /* Pillyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF559B0F2C4E730B00D83286 /* PillyzeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillyzeApp.swift; sourceTree = "<group>"; };
+		BF559B112C4E730B00D83286 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF559B132C4E730C00D83286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF559B162C4E730C00D83286 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF559B1D2C4E733E00D83286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BF559B202C4E739C00D83286 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		BF559B212C4E739C00D83286 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		BF559B222C4E739C00D83286 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		BF559B232C4E739C00D83286 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		BF559B242C4E739C00D83286 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		BF559B252C4E739C00D83286 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		BF559B262C4E739C00D83286 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		BF559B272C4E739C00D83286 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		BF559B282C4E739C00D83286 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		BF559B342C4E73B100D83286 /* PillyzeTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillyzeTabBar.swift; sourceTree = "<group>"; };
+		BF559B372C4E73BA00D83286 /* Tabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		BF559B3A2C4E73C900D83286 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		BAD7D11E2C41752F00E00E16 /* pillyze */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = pillyze; sourceTree = "<group>"; };
-		BAD7D12F2C41753200E00E16 /* pillyzeTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = pillyzeTests; sourceTree = "<group>"; };
-		BAD7D1392C41753200E00E16 /* pillyzeUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = pillyzeUITests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		BAD7D1192C41752F00E00E16 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD7D1292C41753200E00E16 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD7D1332C41753200E00E16 /* Frameworks */ = {
+		BF559B092C4E730B00D83286 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,246 +57,201 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BAD7D1132C41752F00E00E16 = {
+		BF559B032C4E730B00D83286 = {
 			isa = PBXGroup;
 			children = (
-				BAD7D11E2C41752F00E00E16 /* pillyze */,
-				BAD7D12F2C41753200E00E16 /* pillyzeTests */,
-				BAD7D1392C41753200E00E16 /* pillyzeUITests */,
-				BAD7D11D2C41752F00E00E16 /* Products */,
+				BF559B0E2C4E730B00D83286 /* Pillyze */,
+				BF559B0D2C4E730B00D83286 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BAD7D11D2C41752F00E00E16 /* Products */ = {
+		BF559B0D2C4E730B00D83286 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BAD7D11C2C41752F00E00E16 /* pillyze.app */,
-				BAD7D12C2C41753200E00E16 /* pillyzeTests.xctest */,
-				BAD7D1362C41753200E00E16 /* pillyzeUITests.xctest */,
+				BF559B0C2C4E730B00D83286 /* Pillyze.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BF559B0E2C4E730B00D83286 /* Pillyze */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B1F2C4E736F00D83286 /* Sources */,
+				BF559B1E2C4E736D00D83286 /* Resources */,
+				BF559B1D2C4E733E00D83286 /* Info.plist */,
+				BF559B0F2C4E730B00D83286 /* PillyzeApp.swift */,
+				BF559B152C4E730C00D83286 /* Preview Content */,
+			);
+			path = Pillyze;
+			sourceTree = "<group>";
+		};
+		BF559B152C4E730C00D83286 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B162C4E730C00D83286 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF559B1E2C4E736D00D83286 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B292C4E739C00D83286 /* Fonts */,
+				BF559B132C4E730C00D83286 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF559B1F2C4E736F00D83286 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B392C4E73BF00D83286 /* Scenes */,
+				BF559B362C4E73B500D83286 /* Models */,
+				BF559B332C4E73AC00D83286 /* Components */,
+				BF559B112C4E730B00D83286 /* ContentView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BF559B292C4E739C00D83286 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B202C4E739C00D83286 /* Pretendard-Black.otf */,
+				BF559B212C4E739C00D83286 /* Pretendard-Bold.otf */,
+				BF559B222C4E739C00D83286 /* Pretendard-ExtraBold.otf */,
+				BF559B232C4E739C00D83286 /* Pretendard-ExtraLight.otf */,
+				BF559B242C4E739C00D83286 /* Pretendard-Light.otf */,
+				BF559B252C4E739C00D83286 /* Pretendard-Medium.otf */,
+				BF559B262C4E739C00D83286 /* Pretendard-Regular.otf */,
+				BF559B272C4E739C00D83286 /* Pretendard-SemiBold.otf */,
+				BF559B282C4E739C00D83286 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BF559B332C4E73AC00D83286 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B342C4E73B100D83286 /* PillyzeTabBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BF559B362C4E73B500D83286 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B372C4E73BA00D83286 /* Tabs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF559B392C4E73BF00D83286 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B3B2C4E73C900D83286 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF559B3B2C4E73C900D83286 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF559B3A2C4E73C900D83286 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BAD7D11B2C41752F00E00E16 /* pillyze */ = {
+		BF559B0B2C4E730B00D83286 /* Pillyze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAD7D1402C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyze" */;
+			buildConfigurationList = BF559B1A2C4E730C00D83286 /* Build configuration list for PBXNativeTarget "Pillyze" */;
 			buildPhases = (
-				BA5022232C456CB2008E7F9B /* Swift Format */,
-				BAD7D1182C41752F00E00E16 /* Sources */,
-				BAD7D1192C41752F00E00E16 /* Frameworks */,
-				BAD7D11A2C41752F00E00E16 /* Resources */,
-				BA5022242C456CC8008E7F9B /* SwiftLint */,
+				BF559B082C4E730B00D83286 /* Sources */,
+				BF559B092C4E730B00D83286 /* Frameworks */,
+				BF559B0A2C4E730B00D83286 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				BAD7D11E2C41752F00E00E16 /* pillyze */,
-			);
-			name = pillyze;
-			packageProductDependencies = (
-			);
-			productName = pillyze;
-			productReference = BAD7D11C2C41752F00E00E16 /* pillyze.app */;
+			name = Pillyze;
+			productName = Pillyze;
+			productReference = BF559B0C2C4E730B00D83286 /* Pillyze.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BAD7D12B2C41753200E00E16 /* pillyzeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAD7D1432C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyzeTests" */;
-			buildPhases = (
-				BAD7D1282C41753200E00E16 /* Sources */,
-				BAD7D1292C41753200E00E16 /* Frameworks */,
-				BAD7D12A2C41753200E00E16 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BAD7D12E2C41753200E00E16 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BAD7D12F2C41753200E00E16 /* pillyzeTests */,
-			);
-			name = pillyzeTests;
-			packageProductDependencies = (
-			);
-			productName = pillyzeTests;
-			productReference = BAD7D12C2C41753200E00E16 /* pillyzeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BAD7D1352C41753200E00E16 /* pillyzeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAD7D1462C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyzeUITests" */;
-			buildPhases = (
-				BAD7D1322C41753200E00E16 /* Sources */,
-				BAD7D1332C41753200E00E16 /* Frameworks */,
-				BAD7D1342C41753200E00E16 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BAD7D1382C41753200E00E16 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BAD7D1392C41753200E00E16 /* pillyzeUITests */,
-			);
-			name = pillyzeUITests;
-			packageProductDependencies = (
-			);
-			productName = pillyzeUITests;
-			productReference = BAD7D1362C41753200E00E16 /* pillyzeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BAD7D1142C41752F00E00E16 /* Project object */ = {
+		BF559B042C4E730B00D83286 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					BAD7D11B2C41752F00E00E16 = {
-						CreatedOnToolsVersion = 16.0;
-					};
-					BAD7D12B2C41753200E00E16 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = BAD7D11B2C41752F00E00E16;
-					};
-					BAD7D1352C41753200E00E16 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = BAD7D11B2C41752F00E00E16;
+					BF559B0B2C4E730B00D83286 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = BAD7D1172C41752F00E00E16 /* Build configuration list for PBXProject "pillyze" */;
-			compatibilityVersion = "Xcode 15.0";
+			buildConfigurationList = BF559B072C4E730B00D83286 /* Build configuration list for PBXProject "Pillyze" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BAD7D1132C41752F00E00E16;
-			packageReferences = (
-			);
-			productRefGroup = BAD7D11D2C41752F00E00E16 /* Products */;
+			mainGroup = BF559B032C4E730B00D83286;
+			productRefGroup = BF559B0D2C4E730B00D83286 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BAD7D11B2C41752F00E00E16 /* pillyze */,
-				BAD7D12B2C41753200E00E16 /* pillyzeTests */,
-				BAD7D1352C41753200E00E16 /* pillyzeUITests */,
+				BF559B0B2C4E730B00D83286 /* Pillyze */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BAD7D11A2C41752F00E00E16 /* Resources */ = {
+		BF559B0A2C4E730B00D83286 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD7D12A2C41753200E00E16 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD7D1342C41753200E00E16 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BF559B2D2C4E739C00D83286 /* Pretendard-ExtraLight.otf in Resources */,
+				BF559B172C4E730C00D83286 /* Preview Assets.xcassets in Resources */,
+				BF559B2B2C4E739C00D83286 /* Pretendard-Bold.otf in Resources */,
+				BF559B2F2C4E739C00D83286 /* Pretendard-Medium.otf in Resources */,
+				BF559B302C4E739C00D83286 /* Pretendard-Regular.otf in Resources */,
+				BF559B2C2C4E739C00D83286 /* Pretendard-ExtraBold.otf in Resources */,
+				BF559B2E2C4E739C00D83286 /* Pretendard-Light.otf in Resources */,
+				BF559B312C4E739C00D83286 /* Pretendard-SemiBold.otf in Resources */,
+				BF559B2A2C4E739C00D83286 /* Pretendard-Black.otf in Resources */,
+				BF559B322C4E739C00D83286 /* Pretendard-Thin.otf in Resources */,
+				BF559B142C4E730C00D83286 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BA5022232C456CB2008E7F9B /* Swift Format */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Format";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftformat > /dev/null; then\n    if [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n        echo \"Not running Swift Format for Xcode Previews\"\n        exit 0;\n    fi\n    swiftformat .\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
-		};
-		BA5022242C456CC8008E7F9B /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n    swiftlint --config \"$SRCROOT/.swiftlint.yml\"\n    # swiftlint --fix && swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		BAD7D1182C41752F00E00E16 /* Sources */ = {
+		BF559B082C4E730B00D83286 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD7D1282C41753200E00E16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD7D1322C41753200E00E16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BF559B352C4E73B100D83286 /* PillyzeTabBar.swift in Sources */,
+				BF559B122C4E730B00D83286 /* ContentView.swift in Sources */,
+				BF559B102C4E730B00D83286 /* PillyzeApp.swift in Sources */,
+				BF559B3C2C4E73C900D83286 /* HomeView.swift in Sources */,
+				BF559B382C4E73BA00D83286 /* Tabs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BAD7D12E2C41753200E00E16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BAD7D11B2C41752F00E00E16 /* pillyze */;
-			targetProxy = BAD7D12D2C41753200E00E16 /* PBXContainerItemProxy */;
-		};
-		BAD7D1382C41753200E00E16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BAD7D11B2C41752F00E00E16 /* pillyze */;
-			targetProxy = BAD7D1372C41753200E00E16 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		BAD7D13E2C41753200E00E16 /* Debug */ = {
+		BF559B182C4E730C00D83286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -336,7 +288,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -351,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -359,11 +311,10 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
-		BAD7D13F2C41753200E00E16 /* Release */ = {
+		BF559B192C4E730C00D83286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -400,7 +351,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -409,193 +360,98 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		BAD7D1412C41753200E00E16 /* Debug */ = {
+		BF559B1B2C4E730C00D83286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"pillyze/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Pillyze/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZQR76M3UH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Hyun - Pillyze";
+				INFOPLIST_FILE = Pillyze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.pillyze;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.Pillyze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BAD7D1422C41753200E00E16 /* Release */ = {
+		BF559B1C2C4E730C00D83286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"pillyze/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Pillyze/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZQR76M3UH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Hyun - Pillyze";
+				INFOPLIST_FILE = Pillyze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.pillyze;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.Pillyze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		BAD7D1442C41753200E00E16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZQR76M3UH;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.pillyzeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pillyze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pillyze";
-			};
-			name = Debug;
-		};
-		BAD7D1452C41753200E00E16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZQR76M3UH;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.pillyzeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pillyze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pillyze";
-			};
-			name = Release;
-		};
-		BAD7D1472C41753200E00E16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZQR76M3UH;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.pillyzeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = pillyze;
-			};
-			name = Debug;
-		};
-		BAD7D1482C41753200E00E16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZQR76M3UH;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitehyun.pillyzeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = pillyze;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BAD7D1172C41752F00E00E16 /* Build configuration list for PBXProject "pillyze" */ = {
+		BF559B072C4E730B00D83286 /* Build configuration list for PBXProject "Pillyze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAD7D13E2C41753200E00E16 /* Debug */,
-				BAD7D13F2C41753200E00E16 /* Release */,
+				BF559B182C4E730C00D83286 /* Debug */,
+				BF559B192C4E730C00D83286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAD7D1402C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyze" */ = {
+		BF559B1A2C4E730C00D83286 /* Build configuration list for PBXNativeTarget "Pillyze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAD7D1412C41753200E00E16 /* Debug */,
-				BAD7D1422C41753200E00E16 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAD7D1432C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyzeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAD7D1442C41753200E00E16 /* Debug */,
-				BAD7D1452C41753200E00E16 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAD7D1462C41753200E00E16 /* Build configuration list for PBXNativeTarget "pillyzeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAD7D1472C41753200E00E16 /* Debug */,
-				BAD7D1482C41753200E00E16 /* Release */,
+				BF559B1B2C4E730C00D83286 /* Debug */,
+				BF559B1C2C4E730C00D83286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BAD7D1142C41752F00E00E16 /* Project object */;
+	rootObject = BF559B042C4E730B00D83286 /* Project object */;
 }

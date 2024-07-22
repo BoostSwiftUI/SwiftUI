@@ -1,6 +1,6 @@
 //
 //  PillyzeApp.swift
-//  pillyze
+//  Pillyze
 //
 //  Created by 홍승현 on 7/12/24.
 //
