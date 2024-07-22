@@ -23,6 +23,7 @@
 		BF559B352C4E73B100D83286 /* PillyzeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B342C4E73B100D83286 /* PillyzeTabBar.swift */; };
 		BF559B382C4E73BA00D83286 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B372C4E73BA00D83286 /* Tabs.swift */; };
 		BF559B3C2C4E73C900D83286 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF559B3A2C4E73C900D83286 /* HomeView.swift */; };
+		BF8895682C4E8D7800BD4003 /* Ex+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8895672C4E8D7800BD4003 /* Ex+Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BF559B342C4E73B100D83286 /* PillyzeTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillyzeTabBar.swift; sourceTree = "<group>"; };
 		BF559B372C4E73BA00D83286 /* Tabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		BF559B3A2C4E73C900D83286 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BF8895672C4E8D7800BD4003 /* Ex+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Font.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		BF559B1F2C4E736F00D83286 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BF8895662C4E8D6900BD4003 /* Extensions */,
 				BF559B392C4E73BF00D83286 /* Scenes */,
 				BF559B362C4E73B500D83286 /* Models */,
 				BF559B332C4E73AC00D83286 /* Components */,
@@ -161,6 +164,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BF8895662C4E8D6900BD4003 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF8895672C4E8D7800BD4003 /* Ex+Font.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF559B1A2C4E730C00D83286 /* Build configuration list for PBXNativeTarget "Pillyze" */;
 			buildPhases = (
+				BF8895642C4E8D0400BD4003 /* SwiftFormat */,
 				BF559B082C4E730B00D83286 /* Sources */,
 				BF559B092C4E730B00D83286 /* Frameworks */,
 				BF559B0A2C4E730B00D83286 /* Resources */,
+				BF8895652C4E8D1B00BD4003 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -235,6 +248,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF8895642C4E8D0400BD4003 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftformat > /dev/null; then\n    if [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n        echo \"Not running Swift Format for Xcode Previews\"\n        exit 0;\n    fi\n    swiftformat .\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+		BF8895652C4E8D1B00BD4003 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n    swiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF559B082C4E730B00D83286 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -243,6 +297,7 @@
 				BF559B352C4E73B100D83286 /* PillyzeTabBar.swift in Sources */,
 				BF559B122C4E730B00D83286 /* ContentView.swift in Sources */,
 				BF559B102C4E730B00D83286 /* PillyzeApp.swift in Sources */,
+				BF8895682C4E8D7800BD4003 /* Ex+Font.swift in Sources */,
 				BF559B3C2C4E73C900D83286 /* HomeView.swift in Sources */,
 				BF559B382C4E73BA00D83286 /* Tabs.swift in Sources */,
 			);
@@ -380,6 +435,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pillyze/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZQR76M3UH;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pillyze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -410,6 +466,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pillyze/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZQR76M3UH;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pillyze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -56,7 +56,7 @@ private struct TabBarItem: View {
     VStack(spacing: Metrics.centerButtonOffset) {
       tab.image.renderingMode(.template)
       Text(tab.rawValue)
-        .font(.caption)
+        .font(.pretendard(size: 12, weight: .medium))
     }
     .frame(maxWidth: .infinity)
     .padding(.vertical, 8)
@@ -77,5 +77,6 @@ private enum Metrics {
 }
 
 #Preview {
-  PillyzeTabBar(activeTab: .constant(.myHealth))
+  @State var tabs: Tabs = .myHealth
+  return PillyzeTabBar(activeTab: $tabs)
 }
