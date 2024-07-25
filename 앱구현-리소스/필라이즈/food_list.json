@@ -1,0 +1,152 @@
+[
+    {
+        "foodName": "밥",
+        "unit": "1공기(210g)",
+        "caloriesPerUnit": 313
+    },
+    {
+        "foodName": "김치찌개",
+        "unit": "1인분(300g)",
+        "caloriesPerUnit": 240
+    },
+    {
+        "foodName": "불고기",
+        "unit": "1인분(200g)",
+        "caloriesPerUnit": 290
+    },
+    {
+        "foodName": "비빔밥",
+        "unit": "1그릇(450g)",
+        "caloriesPerUnit": 530
+    },
+    {
+        "foodName": "삼겹살",
+        "unit": "100g",
+        "caloriesPerUnit": 370
+    },
+    {
+        "foodName": "잡채",
+        "unit": "1인분(250g)",
+        "caloriesPerUnit": 440
+    },
+    {
+        "foodName": "떡볶이",
+        "unit": "1인분(300g)",
+        "caloriesPerUnit": 335
+    },
+    {
+        "foodName": "갈비탕",
+        "unit": "1그릇(400g)",
+        "caloriesPerUnit": 370
+    },
+    {
+        "foodName": "된장찌개",
+        "unit": "1인분(300g)",
+        "caloriesPerUnit": 185
+    },
+    {
+        "foodName": "김밥",
+        "unit": "1줄(200g)",
+        "caloriesPerUnit": 320
+    },
+    {
+        "foodName": "라면",
+        "unit": "1봉지(120g)",
+        "caloriesPerUnit": 500
+    },
+    {
+        "foodName": "김치",
+        "unit": "1접시(100g)",
+        "caloriesPerUnit": 30
+    },
+    {
+        "foodName": "콩나물국",
+        "unit": "1그릇(300g)",
+        "caloriesPerUnit": 60
+    },
+    {
+        "foodName": "된장국",
+        "unit": "1그릇(300g)",
+        "caloriesPerUnit": 90
+    },
+    {
+        "foodName": "오징어볶음",
+        "unit": "1인분(200g)",
+        "caloriesPerUnit": 180
+    },
+    {
+        "foodName": "감자조림",
+        "unit": "1접시(150g)",
+        "caloriesPerUnit": 210
+    },
+    {
+        "foodName": "계란찜",
+        "unit": "1인분(150g)",
+        "caloriesPerUnit": 140
+    },
+    {
+        "foodName": "두부조림",
+        "unit": "1접시(150g)",
+        "caloriesPerUnit": 200
+    },
+    {
+        "foodName": "미역국",
+        "unit": "1그릇(300g)",
+        "caloriesPerUnit": 75
+    },
+    {
+        "foodName": "닭갈비",
+        "unit": "1인분(200g)",
+        "caloriesPerUnit": 355
+    },
+    {
+        "foodName": "제육볶음",
+        "unit": "1인분(200g)",
+        "caloriesPerUnit": 320
+    },
+    {
+        "foodName": "새우볶음밥",
+        "unit": "1그릇(300g)",
+        "caloriesPerUnit": 470
+    },
+    {
+        "foodName": "고추장찌개",
+        "unit": "1인분(300g)",
+        "caloriesPerUnit": 210
+    },
+    {
+        "foodName": "물김치",
+        "unit": "1접시(100g)",
+        "caloriesPerUnit": 20
+    },
+    {
+        "foodName": "어묵볶음",
+        "unit": "1접시(150g)",
+        "caloriesPerUnit": 280
+    },
+    {
+        "foodName": "파전",
+        "unit": "1개(200g)",
+        "caloriesPerUnit": 350
+    },
+    {
+        "foodName": "부추전",
+        "unit": "1개(200g)",
+        "caloriesPerUnit": 330
+    },
+    {
+        "foodName": "동태찌개",
+        "unit": "1그릇(400g)",
+        "caloriesPerUnit": 260
+    },
+    {
+        "foodName": "콩비지찌개",
+        "unit": "1그릇(300g)",
+        "caloriesPerUnit": 180
+    },
+    {
+        "foodName": "돼지국밥",
+        "unit": "1그릇(450g)",
+        "caloriesPerUnit": 450
+    }
+]
