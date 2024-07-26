@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct PillyzeApp: App {
+  init() {
+    Font.registerFont()
+  }
   var body: some Scene {
     WindowGroup {
-      EmptyView()
+      VStack{
+        Text("적용 됨?")
+          .applyFont(.bold, size: ._16)
+
+      }
     }
   }
 }
