@@ -53,6 +53,7 @@ private extension AddDietViewModel {
             output.selectedFoods.remove(food)
         } else {
             output.selectedFoods.insert(food)
+            output.playAddListLottie.send()
         }
     }
 }
