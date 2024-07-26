@@ -11,7 +11,6 @@
 		E82091882C53D84B0051472F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82091872C53D84B0051472F /* Assets.xcassets */; };
 		E820918B2C53D84B0051472F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E820918A2C53D84B0051472F /* Preview Assets.xcassets */; };
 		E82091932C53D8840051472F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82091922C53D8840051472F /* Font.swift */; };
-		E82091952C53D8EF0051472F /* FLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82091942C53D8EE0051472F /* FLColor.swift */; };
 		E820919D2C53D9EB0051472F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E82091982C53D9EB0051472F /* Pretendard-Bold.otf */; };
 		E820919E2C53D9EB0051472F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E82091992C53D9EB0051472F /* Pretendard-Medium.otf */; };
 		E820919F2C53D9EB0051472F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */; };
@@ -23,7 +22,6 @@
 		E82091872C53D84B0051472F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E820918A2C53D84B0051472F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E82091922C53D8840051472F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		E82091942C53D8EE0051472F /* FLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLColor.swift; sourceTree = "<group>"; };
 		E82091982C53D9EB0051472F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		E82091992C53D9EB0051472F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			children = (
 				E82091A02C53D9F40051472F /* Sources */,
 				E820919C2C53D9EB0051472F /* Resources */,
-				E82091872C53D84B0051472F /* Assets.xcassets */,
 				E82091892C53D84B0051472F /* Preview Content */,
 			);
 			path = Pillyze;
@@ -79,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				E82091922C53D8840051472F /* Font.swift */,
-				E82091942C53D8EE0051472F /* FLColor.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -97,6 +93,7 @@
 		E820919C2C53D9EB0051472F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E82091872C53D84B0051472F /* Assets.xcassets */,
 				E820919B2C53D9EB0051472F /* Font */,
 			);
 			path = Resources;
@@ -184,7 +181,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82091952C53D8EF0051472F /* FLColor.swift in Sources */,
 				E82091842C53D8490051472F /* PillyzeApp.swift in Sources */,
 				E82091932C53D8840051472F /* Font.swift in Sources */,
 			);
