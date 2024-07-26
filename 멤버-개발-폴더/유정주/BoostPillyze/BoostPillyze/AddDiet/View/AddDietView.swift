@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Lottie
 
 struct AddDietView: View {
     
@@ -23,42 +24,60 @@ struct AddDietView: View {
     @State private var currentTab: AddDietTab = .most
     @State private var categories: [String] = ["전체", "음식", "세트", "인기"]
     @State private var currentCategory: String = "인기"
+    @State private var playbackMode: LottiePlaybackMode = LottiePlaybackMode.paused
+    @State private var animationCount = 0
     
     var body: some View {
-        SearchHeaderView(
-            didTapCancelButton: didTapCancelButton,
-            searchKeyword: $searchKeyword
-        )
-        .padding(.horizontal)
-        
-        ZStack(alignment: .bottom) {
-            TopTabBar(currentTab: $currentTab)
-            Rectangle()
-                .frame(height: 1)
-                .foregroundStyle(.disabled)
-        }
-        
-        ScrollView(.horizontal) {
-            HStack {
-                ForEach(categories, id: \.self) { category in
-                    CategoryChipButton(currentCategory: $currentCategory, title: category)
-                }
-            }
-            .padding(.vertical, 11)
-            .padding(.horizontal, 20)
-        }
-        
-        switch currentTab {
-        case .most:
-            FoodList(
-                didTapFoodListItem: didTapFoodListItem,
-                foods: $output.foods,
-                selectedFoods: $output.selectedFoods
+        VStack {
+            SearchHeaderView(
+                didTapCancelButton: didTapCancelButton,
+                searchKeyword: $searchKeyword
             )
-        case .favorites:
-            PlaceholderView()
-        case .custom:
-            Spacer()
+            .padding(.horizontal)
+            
+            ZStack(alignment: .bottom) {
+                TopTabBar(currentTab: $currentTab)
+                Rectangle()
+                    .frame(height: 1)
+                    .foregroundStyle(.disabled)
+            }
+            
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(categories, id: \.self) { category in
+                        CategoryChipButton(currentCategory: $currentCategory, title: category)
+                    }
+                }
+                .padding(.vertical, 11)
+                .padding(.horizontal, 20)
+            }
+            
+            switch currentTab {
+            case .most:
+                ZStack {
+                    FoodList(
+                        didTapFoodListItem: didTapFoodListItem,
+                        foods: $output.foods,
+                        selectedFoods: $output.selectedFoods
+                    )
+                }
+            case .favorites:
+                PlaceholderView()
+            case .custom:
+                Spacer()
+            }
+        }
+        .overlay {
+            if animationCount > 0 {
+                LottieView {
+                    try await DotLottieFile.named("add-list")
+                }
+                .playing(.fromProgress(0, toProgress: 1, loopMode: .playOnce))
+                .id(animationCount)
+            }
+        }
+        .onReceive(output.playAddListLottie) {
+            animationCount += 1
         }
     }
 }
@@ -167,11 +186,21 @@ private struct CategoryChipButton: View {
             label: {
                 Text(title)
                     .font(.system(size: 16, weight: .medium))
-                    .foregroundStyle(currentCategory == title ? .background : .textSecondary)
+                    .foregroundStyle(currentCategory == title ? .background : .textPlaceholder)
                     .clipShape(Capsule())
                     .padding(.vertical, 4)
                     .padding(.horizontal, 16)
-                    .background(currentCategory == title ? .primaryNormal : .disabled, in: Capsule())
+                    .background(
+                        Group {
+                            if currentCategory == title {
+                                Capsule()
+                                    .fill(Color.primaryNormal)
+                            } else {
+                                Capsule()
+                                    .stroke(Color.disabled, lineWidth: 1)
+                            }
+                        }
+                    )
             }
         )
     }
