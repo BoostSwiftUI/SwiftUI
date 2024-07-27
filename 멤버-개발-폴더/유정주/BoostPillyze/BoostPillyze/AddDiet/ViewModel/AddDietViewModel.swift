@@ -55,5 +55,6 @@ private extension AddDietViewModel {
             output.selectedFoods.insert(food)
             output.playAddListLottie.send()
         }
+        output.totalCalories = output.selectedFoods.reduce(0) { $0 + $1.caloriesPerUnit }
     }
 }

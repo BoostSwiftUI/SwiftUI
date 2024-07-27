@@ -54,12 +54,18 @@ struct AddDietView: View {
             
             switch currentTab {
             case .most:
-                ZStack {
+                VStack(spacing: 0) {
                     FoodList(
                         didTapFoodListItem: didTapFoodListItem,
                         foods: $output.foods,
                         selectedFoods: $output.selectedFoods
                     )
+                    
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundStyle(Color.disabled)
+                    
+                    AdDietButton(totalCalories: $output.totalCalories)
                 }
             case .favorites:
                 PlaceholderView()
@@ -289,6 +295,49 @@ private struct FoodListItem: View {
     init(food: Food, isSelected: Bool) {
         self.food = food
         self.isSelected = isSelected
+    }
+}
+
+// MARK: - AddDietButton
+
+private struct AdDietButton: View {
+    
+    @Binding var totalCalories: Int
+    
+    var body: some View {
+        HStack {
+            HStack(spacing: 4) {
+                Text("\(totalCalories)kcal")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundStyle(Color.primaryNormal)
+                
+                Text("를")
+                    .font(.system(size: 16))
+            }
+            
+            Spacer()
+            
+            Button(
+                action: {},
+                label: {
+                    HStack {
+                        Spacer()
+                        Text("기록하기")
+                            .font(.system(size: 18, weight: .medium))
+                        Spacer()
+                    }
+                    .padding(.vertical, 16)
+                    .padding(.horizontal, 24)
+                    .foregroundStyle(Color.background)
+                    .background(totalCalories == 0 ? .primaryDisabled : .primaryNormal)
+                    .cornerRadius(8, corners: .allCorners)
+                }
+            )
+            .frame(width: 205)
+            .disabled(totalCalories == 0)
+        }
+        .padding(.vertical, 8)
+        .padding(.horizontal, 20)
     }
 }
 

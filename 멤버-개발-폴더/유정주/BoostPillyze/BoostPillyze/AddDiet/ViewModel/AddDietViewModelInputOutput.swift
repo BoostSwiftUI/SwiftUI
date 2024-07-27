@@ -24,6 +24,8 @@ extension AddDietViewModel {
         
         @Published var foods: [Food] = []
         @Published var selectedFoods: Set<Food> = []
+        @Published var totalCalories: Int = 0
+        
         let playAddListLottie: PassthroughSubject<Void, Never> = .init()
     }
 }
