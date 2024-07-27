@@ -32,7 +32,6 @@ struct FoodListRow: View {
         }
         .padding(.leading, 20)
     }
-    
 }
 
 #Preview {

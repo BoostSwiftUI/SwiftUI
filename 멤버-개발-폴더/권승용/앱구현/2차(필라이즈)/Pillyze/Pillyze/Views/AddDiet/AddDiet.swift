@@ -15,7 +15,7 @@ struct AddDiet: View {
             ZStack {
                 VStack {
                     searchBar()
-                    FrequentlyEaten(foods: foods)
+                    CustomTabBar()
                 }
                 
                 VStack {
