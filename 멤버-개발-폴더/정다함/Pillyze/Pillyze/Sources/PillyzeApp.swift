@@ -15,8 +15,7 @@ struct PillyzeApp: App {
   var body: some Scene {
     WindowGroup {
       VStack{
-        Text("적용 됨?")
-          .applyFont(.bold, size: ._16)
+        MainHeader()
 
       }
     }
