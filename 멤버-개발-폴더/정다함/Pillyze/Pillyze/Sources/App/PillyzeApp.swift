@@ -15,7 +15,7 @@ struct PillyzeApp: App {
   var body: some Scene {
     WindowGroup {
       VStack{
-        MainHeader()
+        MainView(viewModel: .init(state: .init()))
 
       }
     }

@@ -16,6 +16,10 @@
 		E820919F2C53D9EB0051472F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */; };
 		E881EA352C53E3FC0016A384 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA342C53E3FC0016A384 /* Header.swift */; };
 		E881EA382C547D510016A384 /* MiniReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA372C547D510016A384 /* MiniReducer.swift */; };
+		E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED12C561F4D006BF124 /* MainView.swift */; };
+		E8A05ED42C561F76006BF124 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED32C561F76006BF124 /* MainViewModel.swift */; };
+		E8A05ED62C562003006BF124 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED52C562003006BF124 /* ViewModelable.swift */; };
+		E8A05ED82C562E95006BF124 /* HCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED72C562E95006BF124 /* HCalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		E881EA342C53E3FC0016A384 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E881EA372C547D510016A384 /* MiniReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniReducer.swift; sourceTree = "<group>"; };
+		E8A05ED12C561F4D006BF124 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E8A05ED32C561F76006BF124 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E8A05ED52C562003006BF124 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
+		E8A05ED72C562E95006BF124 /* HCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +115,9 @@
 		E82091A02C53D9F40051472F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E8A05ED02C561EF5006BF124 /* Main */,
+				E8A05ECF2C561EE9006BF124 /* App */,
 				E881EA362C547D430016A384 /* Commons */,
-				E82091832C53D8490051472F /* PillyzeApp.swift */,
 				E82091912C53D8660051472F /* DesignSystem */,
 			);
 			path = Sources;
@@ -118,8 +127,27 @@
 			isa = PBXGroup;
 			children = (
 				E881EA372C547D510016A384 /* MiniReducer.swift */,
+				E8A05ED52C562003006BF124 /* ViewModelable.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		E8A05ECF2C561EE9006BF124 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E82091832C53D8490051472F /* PillyzeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E8A05ED02C561EF5006BF124 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E8A05ED12C561F4D006BF124 /* MainView.swift */,
+				E8A05ED32C561F76006BF124 /* MainViewModel.swift */,
+				E8A05ED72C562E95006BF124 /* HCalendarView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E82091842C53D8490051472F /* PillyzeApp.swift in Sources */,
+				E8A05ED62C562003006BF124 /* ViewModelable.swift in Sources */,
 				E881EA352C53E3FC0016A384 /* Header.swift in Sources */,
+				E8A05ED82C562E95006BF124 /* HCalendarView.swift in Sources */,
 				E82091932C53D8840051472F /* Font.swift in Sources */,
+				E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */,
 				E881EA382C547D510016A384 /* MiniReducer.swift in Sources */,
+				E8A05ED42C561F76006BF124 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
