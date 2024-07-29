@@ -11,21 +11,25 @@ struct Favorites: View {
     let foods: [Food]
     
     var body: some View {
-        VStack(spacing: 0) {
-            chipButtons()
+        ZStack {
+            Color.componentBackground
             
-            if foods.isEmpty {
-                Image(.favoritesPlaceholder)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 335, height: 335)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 54)
-                Spacer()
-            } else {
-                ScrollView {
-                    VStack {
-                        FoodList(foods: foods, isRankedList: false)
+            VStack(spacing: 0) {
+                chipButtons()
+                
+                if foods.isEmpty {
+                    Image(.favoritesPlaceholder)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 335, height: 335)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 54)
+                    Spacer()
+                } else {
+                    ScrollView {
+                        VStack {
+                            FoodList(foods: foods, isRankedList: false)
+                        }
                     }
                 }
             }
@@ -48,8 +52,10 @@ struct Favorites: View {
 
 #Preview("With data") {
     Favorites(foods: ModelData().foods)
+        .environment(ModelData())
 }
 
 #Preview("No data") {
     Favorites(foods: [])
+        .environment(ModelData())
 }

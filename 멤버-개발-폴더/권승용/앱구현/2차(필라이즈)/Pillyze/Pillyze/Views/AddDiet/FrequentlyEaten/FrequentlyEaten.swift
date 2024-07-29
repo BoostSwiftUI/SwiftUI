@@ -17,13 +17,17 @@ struct FrequentlyEaten: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            chipButtons()
-                .padding(.bottom, 23)
-            ScrollView {
-                VStack(alignment: .leading) {
-                    frequentlyEatenGroup()
-                    FoodList(foods: foods, isRankedList: true)
+        ZStack {
+            Color.componentBackground
+            
+            VStack(alignment: .leading, spacing: 0) {
+                chipButtons()
+                    .padding(.bottom, 23)
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        frequentlyEatenGroup()
+                        FoodList(foods: foods, isRankedList: true)
+                    }
                 }
             }
         }
@@ -74,4 +78,5 @@ struct FrequentlyEaten: View {
 
 #Preview {
     FrequentlyEaten(foods: ModelData().foods)
+        .environment(ModelData())
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MyDiets: View {
     
+    @State private var isPresented: Bool = false
+    
     var body: some View {
         VStack(spacing: 0) {
             Text("오늘 내 식사,\n몇 점 짜리 식단일까?")
@@ -28,11 +30,14 @@ struct MyDiets: View {
                 .foregroundStyle(.appPrimary)
                 .padding(.vertical, 10)
             
-            NavigationLink {
-                AddDiet()
+            Button {
+                isPresented = true
             } label: {
                 Text("내 식단 점수 확인하기")
                     .buttonEnabledStyle()
+            }
+            .fullScreenCover(isPresented: $isPresented) {
+                AddDiet()
             }
         }
         .frame(maxWidth: .infinity)

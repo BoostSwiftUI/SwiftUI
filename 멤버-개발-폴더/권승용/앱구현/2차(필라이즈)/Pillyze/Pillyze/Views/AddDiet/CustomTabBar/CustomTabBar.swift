@@ -22,50 +22,54 @@ struct CustomTabBar: View {
     @State private var isLoading: Bool = true
     
     var body: some View {
-        GeometryReader { proxy in
-            VStack(spacing: 0) {
-                TabBarHeader(selection: $selection, indicatorOffset: $indicatorOffset, proxy: proxy)
-                    .onChange(of: selection) { oldValue, newValue in
-                        switch newValue {
-                        case .frequentlyEaten:
-                            indicatorOffset = 0
-                        case .favorites:
-                            indicatorOffset = proxy.size.width / 3
-                        case .directAdd:
-                            indicatorOffset = (proxy.size.width / 3) * 2
+        ZStack {
+            Color.componentBackground
+            
+            GeometryReader { proxy in
+                VStack(spacing: 0) {
+                    TabBarHeader(selection: $selection, indicatorOffset: $indicatorOffset, proxy: proxy)
+                        .onChange(of: selection) { oldValue, newValue in
+                            switch newValue {
+                            case .frequentlyEaten:
+                                indicatorOffset = 0
+                            case .favorites:
+                                indicatorOffset = proxy.size.width / 3
+                            case .directAdd:
+                                indicatorOffset = (proxy.size.width / 3) * 2
+                            }
+                        }
+                    
+                    if isLoading {
+                        VStack {
+                            Spacer()
+                            LottieView {
+                                try await DotLottieFile.named("loading")
+                            }
+                            .playing(loopMode: .loop)
+                            Spacer()
                         }
                     }
-                
-                if isLoading {
-                    VStack {
-                        Spacer()
-                        LottieView {
-                            try await DotLottieFile.named("loading")
-                        }
-                        .playing(loopMode: .loop)
-                        Spacer()
+                    else {
+                        TabView(selection: $selection) {
+                            Group {
+                                FrequentlyEaten(foods: modelData.foods)
+                                    .tag(TabSelection.frequentlyEaten)
+                                
+                                Favorites(foods: modelData.foods)
+                                    .tag(TabSelection.favorites)
+                                
+                                DirectAdd(foods: modelData.foods)
+                                    .tag(TabSelection.directAdd)
+                            }
+                            .tabViewStyle(.page(indexDisplayMode: .never))
+                            .animation(.easeInOut(duration: 0.2), value: selection)}
                     }
                 }
-                else {
-                    TabView(selection: $selection) {
-                        Group {
-                            FrequentlyEaten(foods: modelData.foods)
-                                .tag(TabSelection.frequentlyEaten)
-                            
-                            Favorites(foods: modelData.foods)
-                                .tag(TabSelection.favorites)
-                            
-                            DirectAdd(foods: modelData.foods)
-                                .tag(TabSelection.directAdd)
-                        }
-                        .tabViewStyle(.page(indexDisplayMode: .never))
-                        .animation(.easeInOut(duration: 0.2), value: selection)}
-                }
-            }
-            .ignoresSafeArea(edges: .bottom)
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                    isLoading = false
+                .ignoresSafeArea(edges: .bottom)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                        isLoading = false
+                    }
                 }
             }
         }

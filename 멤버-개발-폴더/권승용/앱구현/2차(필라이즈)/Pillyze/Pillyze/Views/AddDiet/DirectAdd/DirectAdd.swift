@@ -11,21 +11,25 @@ struct DirectAdd: View {
     let foods: [Food]
     
     var body: some View {
-        VStack(spacing: 0) {
-            directAddBanner()
-            chipButtons()
+        ZStack {
+            Color.componentBackground
             
-            if foods.isEmpty {
-                Image(.directAddPlaceholder)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 335, height: 335)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 54)
-                Spacer()
-            } else {
-                ScrollView {
-                    FoodList(foods: foods, isRankedList: false)
+            VStack(spacing: 0) {
+                directAddBanner()
+                chipButtons()
+                
+                if foods.isEmpty {
+                    Image(.directAddPlaceholder)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 335, height: 335)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 54)
+                    Spacer()
+                } else {
+                    ScrollView {
+                        FoodList(foods: foods, isRankedList: false)
+                    }
                 }
             }
         }
@@ -85,8 +89,10 @@ struct DirectAdd: View {
 
 #Preview("With data") {
     DirectAdd(foods: ModelData().foods)
+        .environment(ModelData())
 }
 
 #Preview("No data") {
     DirectAdd(foods: [])
+        .environment(ModelData())
 }

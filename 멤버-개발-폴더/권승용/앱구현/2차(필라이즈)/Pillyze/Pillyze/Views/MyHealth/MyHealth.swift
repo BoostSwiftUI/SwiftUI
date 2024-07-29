@@ -41,7 +41,7 @@ struct MyHealth: View {
                                 topTrailing: 24
                             )
                         )
-                        .foregroundStyle(.background)
+                        .foregroundStyle(.componentBackground)
                     }
                 }
             }

@@ -9,7 +9,8 @@ import SwiftUI
 import Lottie
 
 struct AddDiet: View {
-    @Environment(ModelData.self) var modelData
+    @Environment(ModelData.self) private var modelData
+    @Environment(\.dismiss) private var dismiss
     
     @State private var isAddingList: Bool = false
     @State private var playbackMode: LottiePlaybackMode = .paused
@@ -17,6 +18,9 @@ struct AddDiet: View {
     var body: some View {
         GeometryReader { proxy in
             ZStack {
+                Color.componentBackground
+                    .ignoresSafeArea(edges: .top)
+                
                 VStack {
                     searchBar()
                     CustomTabBar()
@@ -52,6 +56,7 @@ struct AddDiet: View {
                     playbackMode = .playing(.fromProgress(0, toProgress: 1, loopMode: .playOnce))
                 }
             }
+            .toolbar(.hidden)
         }
     }
     
@@ -60,7 +65,7 @@ struct AddDiet: View {
         HStack {
             SearchTextField()
             Button {
-                
+               dismiss()
             } label: {
                 Text("취소")
                     .font(.system(size: 15))
