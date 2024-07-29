@@ -13,15 +13,19 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     
     // MARK: - Attribute
     
-    private let viewModel = AddDietViewModel()
-    private let input = AddDietViewModel.Input()
-    private var output: AddDietViewModel.Output { viewModel.output }
+    private let viewModel: AddDietViewModel
+    private var input: AddDietViewModel.Input { contentView.input }
     private var cancellables: Set<AnyCancellable> = []
     
     // MARK: - Initializer
     
     init() {
-        super.init(rootView: AddDietView(output: viewModel.output))
+        viewModel = .init()
+        let input = AddDietViewModel.Input()
+        let rootView = AddDietView(input: input, output: viewModel.output)
+        viewModel.bind(input: input)
+        print("init")
+        super.init(rootView: rootView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,34 +36,22 @@ final class AddDietViewController: LayoutViewController<AddDietView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad")
         input.viewDidLoad.send()
     }
     
     // MARK: - Setup
     
     override func setUpBinding() {
-        setUpViewModelBinding()
         setUpContentViewBinding()
     }
     
-    private func setUpViewModelBinding() {
-        viewModel.bind(input: input)
-    }
-    
     private func setUpContentViewBinding() {
-        contentView.didTapCancelButton
+        input.didTapCancelButton
             .receive(on: RunLoop.main)
             .sink { [weak self] in
                 guard let self else { return }
                 dismiss(animated: true)
-            }
-            .store(in: &cancellables)
-        
-        contentView.didTapFoodListItem
-            .receive(on: RunLoop.main)
-            .sink { [weak self] food in
-                guard let self else { return }
-                input.toggleFoodSelection.send(food)
             }
             .store(in: &cancellables)
     }

@@ -13,12 +13,10 @@ struct AddDietView: View {
     
     // MARK: - Interface
 
-    @ObservedObject var output: AddDietViewModel.Output
-    
-    let didTapCancelButton = PassthroughSubject<Void, Never>()
-    let didTapFoodListItem = PassthroughSubject<Food, Never>()
+    @ObservedObject private var output: AddDietViewModel.Output
+    let input: AddDietViewModel.Input
 
-    // MARK: - State
+    // MARK: - Source of Truth
     
     @State private var searchKeyword = ""
     @State private var currentTab: AddDietTab = .most
@@ -27,10 +25,20 @@ struct AddDietView: View {
     @State private var playbackMode: LottiePlaybackMode = LottiePlaybackMode.paused
     @State private var animationCount = 0
     
+    // MARK: - Initializer
+    
+    init(
+        input: AddDietViewModel.Input,
+        output: AddDietViewModel.Output
+    ) {
+        self.input = input
+        self.output = output
+    }
+    
     var body: some View {
         VStack {
             SearchHeaderView(
-                didTapCancelButton: didTapCancelButton,
+                didTapCancelButton: input.didTapCancelButton,
                 searchKeyword: $searchKeyword
             )
             .padding(.horizontal)
@@ -56,7 +64,7 @@ struct AddDietView: View {
             case .most:
                 VStack(spacing: 0) {
                     FoodList(
-                        didTapFoodListItem: didTapFoodListItem,
+                        didTapFoodListItem: input.didTapFoodListItem,
                         foods: $output.foods,
                         selectedFoods: $output.selectedFoods
                     )
@@ -82,7 +90,8 @@ struct AddDietView: View {
                 .id(animationCount)
             }
         }
-        .onReceive(output.playAddListLottie) {
+        .onReceive(input.didTapFoodListItem) { food in
+            input.toggleFoodSelection.send(food)
             animationCount += 1
         }
     }
@@ -361,5 +370,5 @@ private struct PlaceholderView: View {
     let input = AddDietViewModel.Input()
     viewModel.bind(input: input)
     input.viewDidLoad.send()
-    return AddDietView(output: viewModel.output)
+    return AddDietView(input: input, output: viewModel.output)
 }
