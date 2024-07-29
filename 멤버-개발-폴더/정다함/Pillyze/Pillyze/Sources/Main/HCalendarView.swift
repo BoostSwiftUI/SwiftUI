@@ -26,6 +26,9 @@ struct HCalendarView: View {
         self.pageSize = size
       }
       .frame(maxHeight: 85)
+      .onAppear {
+        viewModel.sendAction(.onAppeared)
+      }
   }
 
   // MARK: - 일자 표시 뷰
@@ -33,8 +36,9 @@ struct HCalendarView: View {
   private var dayPageView: some View {
     ScrollViewReader { proxy in
       ScrollView(.horizontal, showsIndicators: false) {
+
         LazyHStack(spacing: 0) {
-          let dates = state.front + [state.current] +  state.back
+          let dates = state.front + [state.current] + state.back
           ForEach(dates , id: \.self) { val in
             makePageView(val)
               .frame(width: pageSize.width)
@@ -43,7 +47,7 @@ struct HCalendarView: View {
         .scrollTargetLayout()
       }
       .scrollTargetBehavior(.paging)
-      .onAppear{
+      .onAppear {
         proxy.scrollTo(state.current)
       }
     }
@@ -77,7 +81,6 @@ struct HCalendarView: View {
         .onTapGesture {
           viewModel.sendAction(.tappedDate(date))
         }
-        .onapp
       }
     }
   }
@@ -96,15 +99,39 @@ final class HCalendarViewModel: ViewModelable {
   func setSubscriptions() {
     subscription = sendAction
       .receive(on: RunLoop.main)
+      .throttle(for: 0.5, scheduler: RunLoop.main, latest: false)
       .sink{[weak self] action in
+        guard let self else {
+          return
+        }
         switch action {
+        case .onAppeared :
+          state.displayDatesDescription = state.current
+
         case let .tappedDate(date):
-          self?.state.selectedDate = date
+          state.selectedDate = date
+
+        case let .appearedDates(dates) :
+          state.displayDatesDescription = dates
+          let targetMondayDate = dates[0]
+          // 만약 nowMondayDate가 클 때 즉 prev이면서 값을 추가해야하는 상황이라면
+          if dates == state.front.first,
+             let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: -7, to: targetMondayDate) {
+            let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
+            state.front = [toBeAddWeek] + state.front
+          }
+          else if
+            dates == state.back.last,
+            let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: +7, to: targetMondayDate) {
+            let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
+            state.back.append(toBeAddWeek)
+          }
         }
       }
   }
 
   struct State {
+    var displayDatesDescription: [Date]? = []
     var selectedDate = Date()
     let calendar = Calendar.current
     var front: [[Date]] = []
@@ -130,11 +157,14 @@ final class HCalendarViewModel: ViewModelable {
         back.append(page)
       }
       current = datesForWeek(of: selectedDate)
+      displayDatesDescription = current
     }
   }
 
   enum Action: Equatable {
     case tappedDate(Date)
+    case appearedDates([Date])
+    case onAppeared
   }
 }
 
