@@ -12,11 +12,12 @@
 		600C09372C4554230002B296 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C09362C4554230002B296 /* Food.swift */; };
 		600C09382C4555610002B296 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C092E2C454F3B0002B296 /* FoodList.swift */; };
 		600C09392C4555640002B296 /* FoodListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C09302C454F410002B296 /* FoodListRow.swift */; };
-		605DB0532C527B21001182FD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 605DB0522C527B21001182FD /* Lottie */; };
 		6076A3E12C45039A00F95DC9 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E02C45039A00F95DC9 /* SearchTextField.swift */; };
 		6076A3E42C45073100F95DC9 /* BottomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E32C45073100F95DC9 /* BottomPicker.swift */; };
 		6078E43C2C4571F2007BA201 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078E43B2C4571F2007BA201 /* Favorites.swift */; };
 		6078E4402C457EC9007BA201 /* DirectAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078E43F2C457EC9007BA201 /* DirectAdd.swift */; };
+		6081D1322C5728DC00ADB2E8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6081D1312C5728DC00ADB2E8 /* Lottie */; };
+		6081D1352C572A5C00ADB2E8 /* add-list.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 6081D1342C572A5C00ADB2E8 /* add-list.lottie */; };
 		6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0EA2C410E8D00C72C97 /* PillyzeApp.swift */; };
 		6082A0ED2C410E8D00C72C97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6082A0EC2C410E8D00C72C97 /* ContentView.swift */; };
 		6082A0EF2C410E8E00C72C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6082A0EE2C410E8E00C72C97 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		6076A3E32C45073100F95DC9 /* BottomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPicker.swift; sourceTree = "<group>"; };
 		6078E43B2C4571F2007BA201 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		6078E43F2C457EC9007BA201 /* DirectAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAdd.swift; sourceTree = "<group>"; };
+		6081D1342C572A5C00ADB2E8 /* add-list.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = "add-list.lottie"; sourceTree = "<group>"; };
 		6082A0E72C410E8D00C72C97 /* Pillyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6082A0EA2C410E8D00C72C97 /* PillyzeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillyzeApp.swift; sourceTree = "<group>"; };
 		6082A0EC2C410E8D00C72C97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				605DB0532C527B21001182FD /* Lottie in Frameworks */,
+				6081D1322C5728DC00ADB2E8 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +180,21 @@
 			path = DirectAdd;
 			sourceTree = "<group>";
 		};
+		6081D1302C5728DC00ADB2E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6081D1332C57291700ADB2E8 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				6081D1342C572A5C00ADB2E8 /* add-list.lottie */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		6082A0DE2C410E8D00C72C97 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +202,7 @@
 				6082A0FA2C410E8E00C72C97 /* PillyzeTests */,
 				6082A1042C410E8E00C72C97 /* PillyzeUITests */,
 				6082A0E82C410E8D00C72C97 /* Products */,
+				6081D1302C5728DC00ADB2E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +278,7 @@
 		6082A1172C4120B600C72C97 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6081D1332C57291700ADB2E8 /* Lottie */,
 				600C09342C4553D90002B296 /* food_list.json */,
 				600C09322C4553BF0002B296 /* food_list_with_rank.json */,
 				6082A0EE2C410E8E00C72C97 /* Assets.xcassets */,
@@ -384,7 +403,7 @@
 			);
 			name = Pillyze;
 			packageProductDependencies = (
-				605DB0522C527B21001182FD /* Lottie */,
+				6081D1312C5728DC00ADB2E8 /* Lottie */,
 			);
 			productName = Pillyze;
 			productReference = 6082A0E72C410E8D00C72C97 /* Pillyze.app */;
@@ -459,7 +478,7 @@
 			);
 			mainGroup = 6082A0DE2C410E8D00C72C97;
 			packageReferences = (
-				605DB0512C527B21001182FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				6081D12D2C5728C400ADB2E8 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 6082A0E82C410E8D00C72C97 /* Products */;
 			projectDirPath = "";
@@ -481,6 +500,7 @@
 				6082A0F22C410E8E00C72C97 /* Preview Assets.xcassets in Resources */,
 				600C09352C4553DA0002B296 /* food_list.json in Resources */,
 				6082A0EF2C410E8E00C72C97 /* Assets.xcassets in Resources */,
+				6081D1352C572A5C00ADB2E8 /* add-list.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,9 +890,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		605DB0512C527B21001182FD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		6081D12D2C5728C400ADB2E8 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.5.0;
@@ -881,9 +901,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		605DB0522C527B21001182FD /* Lottie */ = {
+		6081D1312C5728DC00ADB2E8 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 605DB0512C527B21001182FD /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 6081D12D2C5728C400ADB2E8 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

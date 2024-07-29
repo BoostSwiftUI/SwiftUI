@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct BottomPicker: View {
+    @Binding var isAddingList: Bool
+    
     var body: some View {
         VStack(spacing: 0) {
             Divider()
+            
+            if isAddingList {
+                Text("음식이 추가되었어요")
+                    .font(.system(size: 16))
+                    .fontWeight(.regular)
+                    .padding(.top, 16)
+                
+            }
             
             HStack {
                 MealPicker()
@@ -35,7 +45,7 @@ struct BottomPicker: View {
 }
 
 #Preview {
-    BottomPicker()
+    BottomPicker(isAddingList: .constant(true))
 }
 
 struct MealPicker: View {

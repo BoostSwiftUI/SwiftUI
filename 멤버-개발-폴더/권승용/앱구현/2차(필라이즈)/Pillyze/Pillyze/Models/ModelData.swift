@@ -10,4 +10,5 @@ import Foundation
 @Observable
 class ModelData {
     var foods: [Food] = JSONLoader.load("food_list_with_rank.json")
+    var isAdded: Bool = false
 }

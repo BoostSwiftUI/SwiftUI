@@ -19,10 +19,7 @@ struct FoodInfo: View {
             
             HStack(spacing: 12) {
                 Text("\(food.caloriesPerUnit)kcal")
-                Image(.dietUnselected)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
+                AddButton()
             }
         }
         .padding(.vertical, 16)
@@ -71,7 +68,27 @@ struct FoodInfo: View {
     }
 }
 
+struct AddButton: View {
+    @Environment(ModelData.self) private var modelData
+    @State private var isAdded: Bool = false
+    
+    var body: some View {
+        Image(isAdded ? .dietSelected : .dietUnselected)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 24, height: 24)
+            .onTapGesture {
+                isAdded.toggle()
+                if isAdded {
+                    modelData.isAdded = true
+                }
+            }
+            .animation(.easeInOut, value: isAdded)
+            .disabled(modelData.isAdded)
+    }
+}
 
 #Preview {
     FoodInfo(food: ModelData().foods.first!, isRankedList: false)
+        .environment(ModelData())
 }

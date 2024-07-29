@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct AddDiet: View {
-    let foods: [Food]
     @Environment(ModelData.self) var modelData
+    
+    @State private var isAddingList: Bool = false
+    @State private var playbackMode: LottiePlaybackMode = .paused
     
     var body: some View {
         GeometryReader { proxy in
@@ -21,13 +24,33 @@ struct AddDiet: View {
                 
                 VStack {
                     Spacer()
-                    BottomPicker()
+                    BottomPicker(isAddingList: $isAddingList)
                         .padding(.bottom, proxy.safeAreaInsets.bottom)
                         .background {
                             Color(.componentBackground)
                         }
+                        .animation(.easeInOut, value: isAddingList)
                 }
                 .ignoresSafeArea()
+                
+                if isAddingList {
+                    LottieView {
+                        try await DotLottieFile.named("add-list")
+                    }
+                    .animationSpeed(2)
+                    .playbackMode(playbackMode)
+                    .animationDidFinish { completed in
+                        playbackMode = .paused
+                        modelData.isAdded = false
+                        isAddingList = false
+                    }
+                }
+            }
+            .onChange(of: modelData.isAdded) { oldValue, newValue in
+                if newValue == true {
+                    isAddingList = true
+                    playbackMode = .playing(.fromProgress(0, toProgress: 1, loopMode: .playOnce))
+                }
             }
         }
     }
