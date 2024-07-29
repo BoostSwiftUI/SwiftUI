@@ -12,6 +12,7 @@
 		600C09372C4554230002B296 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C09362C4554230002B296 /* Food.swift */; };
 		600C09382C4555610002B296 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C092E2C454F3B0002B296 /* FoodList.swift */; };
 		600C09392C4555640002B296 /* FoodListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C09302C454F410002B296 /* FoodListRow.swift */; };
+		604391EE2C57591B00CE5AB9 /* loading.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 604391ED2C57591B00CE5AB9 /* loading.lottie */; };
 		6076A3E12C45039A00F95DC9 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E02C45039A00F95DC9 /* SearchTextField.swift */; };
 		6076A3E42C45073100F95DC9 /* BottomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6076A3E32C45073100F95DC9 /* BottomPicker.swift */; };
 		6078E43C2C4571F2007BA201 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6078E43B2C4571F2007BA201 /* Favorites.swift */; };
@@ -67,6 +68,7 @@
 		600C09322C4553BF0002B296 /* food_list_with_rank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_list_with_rank.json; sourceTree = "<group>"; };
 		600C09342C4553D90002B296 /* food_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_list.json; sourceTree = "<group>"; };
 		600C09362C4554230002B296 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		604391ED2C57591B00CE5AB9 /* loading.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = loading.lottie; sourceTree = "<group>"; };
 		6076A3E02C45039A00F95DC9 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		6076A3E32C45073100F95DC9 /* BottomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPicker.swift; sourceTree = "<group>"; };
 		6078E43B2C4571F2007BA201 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		6081D1332C57291700ADB2E8 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				604391ED2C57591B00CE5AB9 /* loading.lottie */,
 				6081D1342C572A5C00ADB2E8 /* add-list.lottie */,
 			);
 			path = Lottie;
@@ -497,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				600C09332C4553C00002B296 /* food_list_with_rank.json in Resources */,
+				604391EE2C57591B00CE5AB9 /* loading.lottie in Resources */,
 				6082A0F22C410E8E00C72C97 /* Preview Assets.xcassets in Resources */,
 				600C09352C4553DA0002B296 /* food_list.json in Resources */,
 				6082A0EF2C410E8E00C72C97 /* Assets.xcassets in Resources */,
