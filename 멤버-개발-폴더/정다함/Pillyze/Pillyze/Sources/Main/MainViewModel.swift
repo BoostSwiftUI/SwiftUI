@@ -28,6 +28,8 @@ final class MainViewModel: ViewModelable {
       .receive(on: RunLoop.main)
       .sink { [weak self] action in
         switch action {
+        case .tappedTopScoreButton:
+          break
         case .calendar:
           break
         case .header:
@@ -46,5 +48,6 @@ final class MainViewModel: ViewModelable {
   enum Action: Equatable {
     case header(HeaderViewModel.Action)
     case calendar(HCalendarViewModel.Action)
+    case tappedTopScoreButton
   }
 }
