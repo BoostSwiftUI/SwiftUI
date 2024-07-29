@@ -14,22 +14,22 @@ enum TabCategory {
 
 struct ContentView: View {
     @State private var selectedTab: TabCategory = .myHealth
-    @State private var isAddSheetShown = false
+    @State private var isRecordSheetShown = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
             switch selectedTab {
             case .myHealth:
-                MyHealthView()
+                MyHealthView(isAddSheetShown: $isRecordSheetShown)
             case .nutrients:
                 NutrientsView()
             }
-            TabBar(selectedTab: $selectedTab, isAddSheetShown: $isAddSheetShown)
-        }
-        .fullScreenCover(isPresented: $isAddSheetShown) {
-            RecordView(isAddSheetShown: $isAddSheetShown)
+            TabBar(selectedTab: $selectedTab, isAddSheetShown: $isRecordSheetShown)
         }
         .ignoresSafeArea(edges: .bottom)
+        .fullScreenCover(isPresented: $isRecordSheetShown) {
+            RecordView(isRecordSheetShown: $isRecordSheetShown)
+        }
     }
 }
 
