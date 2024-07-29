@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddDiet: View {
     let foods: [Food]
+    @Environment(ModelData.self) var modelData
     
     var body: some View {
         GeometryReader { proxy in
@@ -50,5 +51,6 @@ struct AddDiet: View {
 }
 
 #Preview {
-    AddDiet(foods: ModelData().foods)
+    AddDiet()
+        .environment(ModelData())
 }

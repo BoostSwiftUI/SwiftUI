@@ -14,6 +14,8 @@ enum TabSelection: Hashable {
 }
 
 struct CustomTabBar: View {
+    @Environment(ModelData.self) private var modelData
+    
     @State private var selection: TabSelection = .frequentlyEaten
     @State private var indicatorOffset = CGFloat.zero
     
@@ -34,13 +36,13 @@ struct CustomTabBar: View {
                 
                 TabView(selection: $selection) {
                     Group {
-                        FrequentlyEaten(foods: ModelData().foods)
+                        FrequentlyEaten(foods: modelData.foods)
                             .tag(TabSelection.frequentlyEaten)
                         
-                        Favorites(foods: ModelData().foods)
+                        Favorites(foods: modelData.foods)
                             .tag(TabSelection.favorites)
                         
-                        DirectAdd(foods: ModelData().foods)
+                        DirectAdd(foods: modelData.foods)
                             .tag(TabSelection.directAdd)
                     }
                 }
@@ -107,4 +109,5 @@ private struct TabBarHeader: View {
 
 #Preview {
     CustomTabBar()
+        .environment(ModelData())
 }

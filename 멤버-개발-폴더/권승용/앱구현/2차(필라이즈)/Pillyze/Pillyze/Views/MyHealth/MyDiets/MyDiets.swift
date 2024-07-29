@@ -29,7 +29,7 @@ struct MyDiets: View {
                 .padding(.vertical, 10)
             
             NavigationLink {
-                AddDiet(foods: ModelData().foods)
+                AddDiet()
             } label: {
                 Text("내 식단 점수 확인하기")
                     .buttonEnabledStyle()
