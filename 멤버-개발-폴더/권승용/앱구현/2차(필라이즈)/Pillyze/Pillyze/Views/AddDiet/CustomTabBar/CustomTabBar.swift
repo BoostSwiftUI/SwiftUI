@@ -61,8 +61,9 @@ struct CustomTabBar: View {
                                 DirectAdd(foods: modelData.foods)
                                     .tag(TabSelection.directAdd)
                             }
-                            .tabViewStyle(.page(indexDisplayMode: .never))
-                            .animation(.easeInOut(duration: 0.2), value: selection)}
+                        }
+                        .tabViewStyle(.page(indexDisplayMode: .never))
+                        .animation(.easeInOut(duration: 0.2), value: selection)
                     }
                 }
                 .ignoresSafeArea(edges: .bottom)
