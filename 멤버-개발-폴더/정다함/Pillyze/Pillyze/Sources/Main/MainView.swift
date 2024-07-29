@@ -20,6 +20,7 @@ struct MainView: View {
   @ViewBuilder
   func makeContent() -> some View {
     makeCalendarView()
+    Spacer()
   }
 
   @ViewBuilder
@@ -28,9 +29,13 @@ struct MainView: View {
   }
 
   var body: some View {
-    VStack {
-      MainHeader(viewModel: viewState.headerViewModel)
-      makeContent()
+    ZStack(alignment: .top) {
+      Color.primaryFL.ignoresSafeArea()
+      VStack(spacing: 0) {
+        MainHeader(viewModel: viewState.headerViewModel)
+        makeContent()
+      }
     }
+
   }
 }

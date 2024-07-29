@@ -16,27 +16,42 @@ struct HCalendarView: View {
   @Bindable
   var viewModel: HCalendarViewModel
 
+  @State var pageSize: CGSize = .init(width: 0, height: 0)
+
   var state: HCalendarViewModel.State { viewModel.state }
 
   var body: some View {
     dayPageView
+      .getSize { size in
+        self.pageSize = size
+      }
+      .frame(maxHeight: 85)
   }
 
   // MARK: - 일자 표시 뷰
   @ViewBuilder
   private var dayPageView: some View {
-    ScrollView(.horizontal, showsIndicators: false) {
-      LazyHStack(spacing: 0) {
-        ForEach(state.front + [state.current] +  state.back, id: \.self) { val in
-          makePageView(val)
+    ScrollViewReader { proxy in
+      ScrollView(.horizontal, showsIndicators: false) {
+        LazyHStack(spacing: 0) {
+          let dates = state.front + [state.current] +  state.back
+          ForEach(dates , id: \.self) { val in
+            makePageView(val)
+              .frame(width: pageSize.width)
+          }
         }
+        .scrollTargetLayout()
+      }
+      .scrollTargetBehavior(.paging)
+      .onAppear{
+        proxy.scrollTo(state.current)
       }
     }
   }
 
   @ViewBuilder
   private func makePageView(_ date: [Date]) -> some View {
-    LazyHStack(spacing: 0) {
+    HStack(spacing: 0) {
       ForEach(date, id: \.self) { date in
         let isSelected = state.selectedDate == date
 
@@ -44,7 +59,7 @@ struct HCalendarView: View {
           ZStack {
             Circle()
               .foregroundStyle(isSelected ? Color.white : Color.clear)
-              .frame(maxWidth: 24, maxHeight: 24)
+              .frame(width: 24, height: 24)
 
             Text(day(from: date))
               .applyFont(.medium, size: ._12)
@@ -53,6 +68,7 @@ struct HCalendarView: View {
 
           Text("\(state.calendar.component(.day, from: date))")
             .applyFont(.bold, size: ._24)
+            .foregroundStyle(Color.white)
         }
         .padding(.top, 4)
         .padding(.bottom, 16)
@@ -61,9 +77,9 @@ struct HCalendarView: View {
         .onTapGesture {
           viewModel.sendAction(.tappedDate(date))
         }
+        .onapp
       }
     }
-    .frame(maxWidth: .infinity)
   }
 }
 
@@ -107,11 +123,11 @@ final class HCalendarViewModel: ViewModelable {
 
       if let back1 = calendar.date(byAdding: .day, value: +7, to: selectedDate) {
         let page = datesForWeek(of: back1)
-        front.append(page)
+        back.append(page)
       }
       if let back2 = calendar.date(byAdding: .day, value: +14, to: selectedDate) {
         let page = datesForWeek(of: back2)
-        front.append(page)
+        back.append(page)
       }
       current = datesForWeek(of: selectedDate)
     }
@@ -126,14 +142,11 @@ fileprivate func datesForWeek(of date: Date) -> [Date] {
   var calendar = Calendar.current
   calendar.firstWeekday = 2 // 월요일을 주의 첫 날로 설정
 
-  // 주의 시작(월요일) 날짜를 찾기 위해 현재 날짜의 요일을 계산
   let currentWeekday = calendar.component(.weekday, from: date)
-  let daysToSubtract = (currentWeekday + 5) % 7 // 월요일까지 며칠을 빼야 하는지 계산 (월요일을 기준으로)
+  let daysToSubtract = (currentWeekday + 5) % 7
 
-  // 주의 시작(월요일) 날짜
   let weekStartDate = calendar.date(byAdding: .day, value: -daysToSubtract, to: date)!
 
-  // 월요일부터 일요일까지의 날짜를 배열에 추가
   var weekDates: [Date] = []
   for dayOffset in 0..<7 {
     if let weekDate = calendar.date(byAdding: .day, value: dayOffset, to: weekStartDate) {

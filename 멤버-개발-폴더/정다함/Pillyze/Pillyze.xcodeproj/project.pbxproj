@@ -14,6 +14,7 @@
 		E820919D2C53D9EB0051472F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E82091982C53D9EB0051472F /* Pretendard-Bold.otf */; };
 		E820919E2C53D9EB0051472F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E82091992C53D9EB0051472F /* Pretendard-Medium.otf */; };
 		E820919F2C53D9EB0051472F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */; };
+		E83F2A932C573A0100610E22 /* GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F2A922C573A0100610E22 /* GetSize.swift */; };
 		E881EA352C53E3FC0016A384 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA342C53E3FC0016A384 /* Header.swift */; };
 		E881EA382C547D510016A384 /* MiniReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA372C547D510016A384 /* MiniReducer.swift */; };
 		E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED12C561F4D006BF124 /* MainView.swift */; };
@@ -31,6 +32,7 @@
 		E82091982C53D9EB0051472F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		E82091992C53D9EB0051472F /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		E83F2A922C573A0100610E22 /* GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSize.swift; sourceTree = "<group>"; };
 		E881EA342C53E3FC0016A384 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E881EA372C547D510016A384 /* MiniReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniReducer.swift; sourceTree = "<group>"; };
 		E8A05ED12C561F4D006BF124 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				E881EA372C547D510016A384 /* MiniReducer.swift */,
 				E8A05ED52C562003006BF124 /* ViewModelable.swift */,
+				E83F2A922C573A0100610E22 /* GetSize.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -187,11 +190,12 @@
 			};
 			buildConfigurationList = E820917B2C53D8480051472F /* Build configuration list for PBXProject "Pillyze" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = E82091772C53D8480051472F;
 			productRefGroup = E82091812C53D8490051472F /* Products */;
@@ -223,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83F2A932C573A0100610E22 /* GetSize.swift in Sources */,
 				E82091842C53D8490051472F /* PillyzeApp.swift in Sources */,
 				E8A05ED62C562003006BF124 /* ViewModelable.swift in Sources */,
 				E881EA352C53E3FC0016A384 /* Header.swift in Sources */,
