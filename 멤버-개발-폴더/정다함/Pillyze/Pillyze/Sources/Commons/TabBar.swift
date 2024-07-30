@@ -60,6 +60,7 @@ struct TabBarView: View {
   var body: some View {
     ZStack(alignment: .bottom) {
       makeTabBarListButton()
+        .shadow(color: Color(.primaryFL).opacity(0.1), radius: 16, x: 0, y: 0)
       centerAddButton()
         .padding(.bottom, 12)
     }
