@@ -11,10 +11,8 @@ struct PhillView: View {
   var body: some View {
     VStack {
       Text("Hello, PhillView")
+      Spacer()
     }
   }
 }
 
-#Preview {
-  PhillView()
-}
