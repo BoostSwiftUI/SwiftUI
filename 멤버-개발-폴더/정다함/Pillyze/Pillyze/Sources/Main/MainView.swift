@@ -19,12 +19,13 @@ struct MainView: View {
 
   @ViewBuilder
   private func makeContent() -> some View {
-    makeCalendarView()
-    ZStack {
-      Color.primaryPlaceholder
-        .clipShape(.rect(topLeadingRadius: 16, topTrailingRadius: 16))
-        .ignoresSafeArea()
-      ScrollView(.vertical) {
+    ScrollView(.vertical) {
+      makeCalendarView()
+      ZStack {
+        Color.primaryPlaceholder
+          .clipShape(.rect(topLeadingRadius: 16, topTrailingRadius: 16))
+          .ignoresSafeArea()
+
         LazyVStack(spacing: 16) {
           ForEach(MainViewContentType.allCases) { type in
             makeMainScrollViewContentView(type)
@@ -33,7 +34,6 @@ struct MainView: View {
         .padding(.all, 16)
       }
     }
-
   }
 
   @ViewBuilder
@@ -77,11 +77,18 @@ struct MainView: View {
   @ViewBuilder
   private func makeCalendarView() -> some View {
     HCalendarView(viewModel: viewState.calendarViewModel)
+      .background(Color.primaryFL)
+      .ignoresSafeArea()
   }
 
   var body: some View {
     ZStack(alignment: .top) {
-      Color.primaryFL.ignoresSafeArea()
+      VStack(spacing: 0) {
+        Color.primaryFL
+        Color.primaryPlaceholder
+      }
+      .ignoresSafeArea()
+      
       VStack(spacing: 0) {
         MainHeader(viewModel: viewState.headerViewModel)
         makeContent()
