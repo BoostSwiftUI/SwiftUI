@@ -23,7 +23,7 @@ final class MainViewModel: ViewModelable {
   func setSubscriptions() {
     scope(state.headerViewModel, action: { .header($0) }, subscriptions: &subscriptions)
     scope(state.calendarViewModel, action: {.calendar($0)}, subscriptions: &subscriptions)
-
+    scope(state.tabBarViewModel, action: { .tabBar($0) }, subscriptions: &subscriptions)
     subscription = sendAction
       .receive(on: RunLoop.main)
       .sink { [weak self] action in
@@ -34,6 +34,8 @@ final class MainViewModel: ViewModelable {
           break
         case .header:
           break
+        case .tabBar:
+          break
         }
       }
   }
@@ -43,11 +45,32 @@ final class MainViewModel: ViewModelable {
   struct State {
     var headerViewModel = HeaderViewModel()
     var calendarViewModel = HCalendarViewModel()
+    var tabBarViewModel = TabBarViewModel()
+    var dietProperty: DietProperty = .default
   }
   
   enum Action: Equatable {
     case header(HeaderViewModel.Action)
     case calendar(HCalendarViewModel.Action)
     case tappedTopScoreButton
+    case tabBar(TabBarViewModel.Action)
+  }
+}
+
+
+struct DietProperty {
+  var totalCals: Int64
+  var carbohydrates: Double
+  var protein: Double
+  var lipid: Double
+
+  var totalCalsLabel: String {
+    "\(totalCals) kcal"
+  }
+}
+
+extension DietProperty {
+  static var `default`: Self {
+    return .init(totalCals: Int64.random(in: 1000...5000), carbohydrates: 33, protein: 33, lipid: 33)
   }
 }

@@ -17,6 +17,7 @@
 		E83F2A932C573A0100610E22 /* GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F2A922C573A0100610E22 /* GetSize.swift */; };
 		E881EA352C53E3FC0016A384 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA342C53E3FC0016A384 /* Header.swift */; };
 		E881EA382C547D510016A384 /* MiniReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA372C547D510016A384 /* MiniReducer.swift */; };
+		E89AC1B22C58B2200026D29B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AC1B12C58B2200026D29B /* TabBar.swift */; };
 		E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED12C561F4D006BF124 /* MainView.swift */; };
 		E8A05ED42C561F76006BF124 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED32C561F76006BF124 /* MainViewModel.swift */; };
 		E8A05ED62C562003006BF124 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED52C562003006BF124 /* ViewModelable.swift */; };
@@ -35,6 +36,7 @@
 		E83F2A922C573A0100610E22 /* GetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSize.swift; sourceTree = "<group>"; };
 		E881EA342C53E3FC0016A384 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E881EA372C547D510016A384 /* MiniReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniReducer.swift; sourceTree = "<group>"; };
+		E89AC1B12C58B2200026D29B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E8A05ED12C561F4D006BF124 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E8A05ED32C561F76006BF124 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E8A05ED52C562003006BF124 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				E881EA372C547D510016A384 /* MiniReducer.swift */,
 				E8A05ED52C562003006BF124 /* ViewModelable.swift */,
 				E83F2A922C573A0100610E22 /* GetSize.swift */,
+				E89AC1B12C58B2200026D29B /* TabBar.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */,
 				E881EA382C547D510016A384 /* MiniReducer.swift in Sources */,
 				E8A05ED42C561F76006BF124 /* MainViewModel.swift in Sources */,
+				E89AC1B22C58B2200026D29B /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
