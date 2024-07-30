@@ -5,8 +5,10 @@
 //  Created by MaraMincho on 7/30/24.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
+
+// MARK: - FLRouterViewModel
 
 @Observable final class FLRouterViewModel {
   var sceneType: TabBarType = .health
@@ -14,6 +16,7 @@ import Combine
   init() {
     addObserver()
   }
+
   func addObserver() {
     NotificationCenter.default.addObserver(forName: TabBarType.health.notificationName, object: nil, queue: .main) { _ in
       self.sceneType = .health
@@ -24,8 +27,9 @@ import Combine
   }
 }
 
+// MARK: - FLRouterView
+
 struct FLRouterView: View {
-  
   @Bindable var viewModel: FLRouterViewModel
   @State var mainViewModel = MainViewModel(state: .init())
 
@@ -49,4 +53,3 @@ struct FLRouterView: View {
       }
   }
 }
-

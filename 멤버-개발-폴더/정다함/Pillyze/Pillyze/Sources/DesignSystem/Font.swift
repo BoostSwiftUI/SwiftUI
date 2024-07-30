@@ -15,6 +15,8 @@ extension Font {
   }
 }
 
+// MARK: - FLFontType
+
 enum FLFontType {
   case regular
   case medium
@@ -32,7 +34,9 @@ enum FLFontType {
   }
 }
 
-enum FLFontSize:CGFloat {
+// MARK: - FLFontSize
+
+enum FLFontSize: CGFloat {
   case _24 = 24
   case _20 = 20
   case _18 = 18
@@ -52,10 +56,10 @@ extension View {
       .padding(.vertical, linePadding)
       .tracking(Constants.FLLetterSpacing)
   }
-
 }
 
-fileprivate enum Constants {
+// MARK: - Constants
+
+private enum Constants {
   static let FLLetterSpacing: CGFloat = -0.5
 }
-

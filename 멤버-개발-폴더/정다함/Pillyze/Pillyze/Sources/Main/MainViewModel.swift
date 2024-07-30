@@ -5,15 +5,16 @@
 //  Created by MaraMincho on 7/28/24.
 //
 
-import Foundation
 import Combine
+import Foundation
+
+// MARK: - MainViewModel
 
 @Observable
 final class MainViewModel: ViewModelable {
   var subscription: AnyCancellable? = nil
   var subscriptions: Set<AnyCancellable> = .init()
   var sendAction: PassthroughSubject<Action, Never> = .init()
-
 
   init(state: State) {
     self.state = state
@@ -22,7 +23,7 @@ final class MainViewModel: ViewModelable {
 
   func setSubscriptions() {
     scope(state.headerViewModel, action: { .header($0) }, subscriptions: &subscriptions)
-    scope(state.calendarViewModel, action: {.calendar($0)}, subscriptions: &subscriptions)
+    scope(state.calendarViewModel, action: { .calendar($0) }, subscriptions: &subscriptions)
     scope(state.tabBarViewModel, action: { .tabBar($0) }, subscriptions: &subscriptions)
     subscription = sendAction
       .receive(on: RunLoop.main)
@@ -48,7 +49,7 @@ final class MainViewModel: ViewModelable {
     var tabBarViewModel = TabBarViewModel()
     var dietProperty: DietProperty = .default
   }
-  
+
   enum Action: Equatable {
     case header(HeaderViewModel.Action)
     case calendar(HCalendarViewModel.Action)
@@ -57,6 +58,7 @@ final class MainViewModel: ViewModelable {
   }
 }
 
+// MARK: - DietProperty
 
 struct DietProperty {
   var totalCals: Int64
@@ -71,6 +73,6 @@ struct DietProperty {
 
 extension DietProperty {
   static var `default`: Self {
-    return .init(totalCals: Int64.random(in: 1000...5000), carbohydrates: 33, protein: 33, lipid: 33)
+    return .init(totalCals: Int64.random(in: 1000 ... 5000), carbohydrates: 33, protein: 33, lipid: 33)
   }
 }

@@ -5,8 +5,10 @@
 //  Created by MaraMincho on 7/28/24.
 //
 
-import Foundation
 import Combine
+import Foundation
+
+// MARK: - ViewModelable
 
 protocol ViewModelable: AnyObject {
   associatedtype State
@@ -24,7 +26,7 @@ extension ViewModelable {
 }
 
 extension ViewModelable {
-  // scope 메서드 정의
+  /// scope 메서드 정의
   func scope<Item: ViewModelable>(_ item: Item, action: @escaping (Item.Action) -> Action, subscriptions: inout Set<AnyCancellable>) {
     item.sendAction
       .receive(on: RunLoop.main)

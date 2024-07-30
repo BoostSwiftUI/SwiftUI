@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct MainView: View {
+// MARK: - MainView
 
+struct MainView: View {
   @Bindable
   var viewModel: MainViewModel
   var viewState: MainViewModel.State { viewModel.state }
@@ -111,13 +112,10 @@ struct MainView: View {
   @ViewBuilder
   private func makeDietTrailingView() -> some View {
     VStack(alignment: .trailing, spacing: 0) {
-
-
       Image(.mainSchedular)
         .resizable()
         .scaledToFit()
         .frame(width: 64, height: 64)
-
 
       HStack(spacing: 0) {
         Spacer()
@@ -139,7 +137,6 @@ struct MainView: View {
         .padding(.horizontal, 16)
         .background(Color.primaryPlaceholder)
         .clipShape(Capsule())
-
     }
   }
 
@@ -154,7 +151,7 @@ struct MainView: View {
         .applyFont(.bold, size: ._18)
 
       VStack(spacing: 8) {
-        ForEach(DietDetailPropertyTypes.allCases){
+        ForEach(DietDetailPropertyTypes.allCases) {
           makeDietDetailPropertyView($0)
         }
       }
@@ -164,14 +161,14 @@ struct MainView: View {
   private func makeDietDetailPropertyView(_ type: DietDetailPropertyTypes) -> some View {
     let portionLabel: String = {
       let res =
-      switch type {
-      case .carbohydrates:
-        viewState.dietProperty.carbohydrates.description
-      case .protein:
-        viewState.dietProperty.protein.description
-      case .lipid:
-        viewState.dietProperty.lipid.description
-      }
+        switch type {
+        case .carbohydrates:
+          viewState.dietProperty.carbohydrates.description
+        case .protein:
+          viewState.dietProperty.protein.description
+        case .lipid:
+          viewState.dietProperty.lipid.description
+        }
 
       return res + "%"
     }()
@@ -189,7 +186,6 @@ struct MainView: View {
         .applyFont(.regular, size: ._14)
         .foregroundStyle(Color.secondary)
     }
-
   }
 
   @ViewBuilder
@@ -216,10 +212,9 @@ struct MainView: View {
     case diet
     case empty
     var id: Int { rawValue }
-
   }
 
-  enum DietDetailPropertyTypes: Int,  Identifiable, CaseIterable {
+  enum DietDetailPropertyTypes: Int, Identifiable, CaseIterable {
     case carbohydrates
     case protein
     case lipid
@@ -229,13 +224,13 @@ struct MainView: View {
     var leadingColor: Color {
       switch self {
       case .carbohydrates:
-        //rgba(162, 134, 253, 1)
+        // rgba(162, 134, 253, 1)
         Color(.init(srgbRed: 162 / 255, green: 134 / 255, blue: 253 / 255, alpha: 1))
       case .protein:
-        //rgba(106, 174, 246, 1)
+        // rgba(106, 174, 246, 1)
         Color(.init(srgbRed: 106 / 255, green: 174 / 255, blue: 246 / 255, alpha: 1))
       case .lipid:
-        //rgba(104, 225, 216, 1)
+        // rgba(104, 225, 216, 1)
         Color(.init(srgbRed: 104 / 255, green: 225 / 255, blue: 216 / 255, alpha: 1))
       }
     }
@@ -253,7 +248,7 @@ struct MainView: View {
   }
 }
 
-fileprivate extension View {
+private extension View {
   func addScrollViewBackground() -> some View {
     background(Color.white)
       .clipShape(RoundedRectangle(cornerRadius: 24))
@@ -261,22 +256,24 @@ fileprivate extension View {
   }
 }
 
+// MARK: - SmoothTriangle
+
 struct SmoothTriangle: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.size.width
-        let height = rect.size.height
+  func path(in rect: CGRect) -> Path {
+    var path = Path()
+    let width = rect.size.width
+    let height = rect.size.height
 
-        let top = CGPoint(x: width / 2, y: 0)
-        let bottomRight = CGPoint(x: width, y: height)
-        let bottomLeft = CGPoint(x: 0, y: height)
+    let top = CGPoint(x: width / 2, y: 0)
+    let bottomRight = CGPoint(x: width, y: height)
+    let bottomLeft = CGPoint(x: 0, y: height)
 
-        path.move(to: bottomLeft)
-        path.addQuadCurve(to: bottomRight, control: top)
-        path.addLine(to: bottomRight)
-        path.addLine(to: bottomLeft)
-        path.closeSubpath()
+    path.move(to: bottomLeft)
+    path.addQuadCurve(to: bottomRight, control: top)
+    path.addLine(to: bottomRight)
+    path.addLine(to: bottomLeft)
+    path.closeSubpath()
 
-        return path
-    }
+    return path
+  }
 }

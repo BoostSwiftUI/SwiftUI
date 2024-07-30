@@ -7,12 +7,15 @@
 
 import Foundation
 
+// MARK: - Reducer
 
 protocol Reducer {
   associatedtype State: ReducerState
   associatedtype Action: ReducerAction
   func body(_ state: inout State, _ action: Action) -> Effect<Action>
 }
+
+// MARK: - CurrentReducer
 
 struct CurrentReducer: Reducer {
   struct State: ReducerState {
@@ -24,7 +27,7 @@ struct CurrentReducer: Reducer {
     case tappedOne
   }
 
-  func body(_ state: inout State, _ action: Action) -> Effect<Action> {
+  func body(_: inout State, _ action: Action) -> Effect<Action> {
     switch action {
     case .tappedSome:
       return .run { sendHandler in
@@ -47,29 +50,30 @@ extension Reducer {
   }
 }
 
+// MARK: - Effect
+
 struct Effect<Action: ReducerAction> {
   let type: ReducerAction?
-
 }
-
 
 extension Effect {
   static var none: Self { .init(type: nil) }
   static func send(_ action: Action) -> Self {
     return .init(type: action)
   }
-  static func run(completion: @escaping (EffectSend<Action>) async -> Void ) -> Effect<Action> {
+
+  static func run(completion: @escaping (EffectSend<Action>) async -> Void) -> Effect<Action> {
     let send = EffectSend<Action>()
     Task {
       await completion(send)
     }
     return .none
   }
-
 }
 
-struct EffectSend<Action: ReducerAction> {
+// MARK: - EffectSend
 
+struct EffectSend<Action: ReducerAction> {
   @MainActor
   @discardableResult
   func send(_ action: Action) -> Effect<Action> {
@@ -77,8 +81,10 @@ struct EffectSend<Action: ReducerAction> {
   }
 }
 
+// MARK: - ReducerState
+
 protocol ReducerState {}
 
+// MARK: - ReducerAction
+
 protocol ReducerAction {}
-
-

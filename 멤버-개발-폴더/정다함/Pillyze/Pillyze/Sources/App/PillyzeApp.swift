@@ -12,9 +12,10 @@ struct PillyzeApp: App {
   init() {
     Font.registerFont()
   }
+
   var body: some Scene {
     WindowGroup {
-      VStack{
+      VStack {
         FLRouterView(viewModel: .init())
       }
     }

@@ -5,24 +5,25 @@
 //  Created by MaraMincho on 7/26/24.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
+
+// MARK: - HeaderViewModel
 
 @Observable
 final class HeaderViewModel: ViewModelable {
-
-
   var state: State = .init()
-  init() { 
+  init() {
     setSubscriptions()
   }
+
   var subscription: AnyCancellable? = nil
 
   var sendAction: PassthroughSubject<Action, Never> = .init()
   func setSubscriptions() {
     subscription = sendAction
       .subscribe(on: RunLoop.main)
-      .sink{ action in
+      .sink { action in
         switch action {
         case .tappedAlarmButton:
           print("tappedAlarmButton")
@@ -34,20 +35,18 @@ final class HeaderViewModel: ViewModelable {
       }
   }
 
-  struct State {
-
-  }
+  struct State {}
 
   enum Action: Equatable {
     case tappedCalendarButton
     case tappedAlarmButton
     case tappedUserButton
   }
-
 }
 
-struct MainHeader: View {
+// MARK: - MainHeader
 
+struct MainHeader: View {
   @Bindable
   var viewModel: HeaderViewModel
 
@@ -101,11 +100,11 @@ struct MainHeader: View {
     var image: Image {
       switch self {
       case .calendar:
-          .init(.calendar)
+        .init(.calendar)
       case .alarm:
-          .init(.alarm)
+        .init(.alarm)
       case .person:
-          .init(.user)
+        .init(.user)
       }
     }
   }

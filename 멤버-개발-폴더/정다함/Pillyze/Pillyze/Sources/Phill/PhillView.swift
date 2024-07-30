@@ -16,5 +16,5 @@ struct PhillView: View {
 }
 
 #Preview {
-    PhillView()
+  PhillView()
 }

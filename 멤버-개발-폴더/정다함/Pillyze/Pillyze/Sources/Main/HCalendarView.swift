@@ -5,8 +5,10 @@
 //  Created by MaraMincho on 7/28/24.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
+
+// MARK: - HCalendarView
 
 struct HCalendarView: View {
   init(viewModel: HCalendarViewModel) {
@@ -23,7 +25,7 @@ struct HCalendarView: View {
   var body: some View {
     dayPageView
       .getSize { size in
-        self.pageSize = size
+        pageSize = size
       }
       .frame(maxHeight: 85)
       .onAppear {
@@ -32,14 +34,14 @@ struct HCalendarView: View {
   }
 
   // MARK: - 일자 표시 뷰
+
   @ViewBuilder
   private var dayPageView: some View {
     ScrollViewReader { proxy in
       ScrollView(.horizontal, showsIndicators: false) {
-
         LazyHStack(spacing: 0) {
           let dates = state.front + [state.current] + state.back
-          ForEach(dates , id: \.self) { val in
+          ForEach(dates, id: \.self) { val in
             makePageView(val)
               .frame(width: pageSize.width)
           }
@@ -86,7 +88,9 @@ struct HCalendarView: View {
   }
 }
 
-@Observable 
+// MARK: - HCalendarViewModel
+
+@Observable
 final class HCalendarViewModel: ViewModelable {
   var sendAction: PassthroughSubject<Action, Never> = .init()
   var state: State = .init()
@@ -100,18 +104,18 @@ final class HCalendarViewModel: ViewModelable {
     subscription = sendAction
       .receive(on: RunLoop.main)
       .throttle(for: 0.5, scheduler: RunLoop.main, latest: false)
-      .sink{[weak self] action in
+      .sink { [weak self] action in
         guard let self else {
           return
         }
         switch action {
-        case .onAppeared :
+        case .onAppeared:
           state.displayDatesDescription = state.current
 
         case let .tappedDate(date):
           state.selectedDate = date
 
-        case let .appearedDates(dates) :
+        case let .appearedDates(dates):
           state.displayDatesDescription = dates
           let targetMondayDate = dates[0]
           // 만약 nowMondayDate가 클 때 즉 prev이면서 값을 추가해야하는 상황이라면
@@ -119,8 +123,7 @@ final class HCalendarViewModel: ViewModelable {
              let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: -7, to: targetMondayDate) {
             let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
             state.front = [toBeAddWeek] + state.front
-          }
-          else if
+          } else if
             dates == state.back.last,
             let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: +7, to: targetMondayDate) {
             let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
@@ -168,7 +171,7 @@ final class HCalendarViewModel: ViewModelable {
   }
 }
 
-fileprivate func datesForWeek(of date: Date) -> [Date] {
+private func datesForWeek(of date: Date) -> [Date] {
   var calendar = Calendar.current
   calendar.firstWeekday = 2 // 월요일을 주의 첫 날로 설정
 
@@ -178,7 +181,7 @@ fileprivate func datesForWeek(of date: Date) -> [Date] {
   let weekStartDate = calendar.date(byAdding: .day, value: -daysToSubtract, to: date)!
 
   var weekDates: [Date] = []
-  for dayOffset in 0..<7 {
+  for dayOffset in 0 ..< 7 {
     if let weekDate = calendar.date(byAdding: .day, value: dayOffset, to: weekStartDate) {
       weekDates.append(weekDate)
     }
@@ -188,9 +191,9 @@ fileprivate func datesForWeek(of date: Date) -> [Date] {
 }
 
 /// 요일 추출
-fileprivate func day(from date: Date) -> String {
+private func day(from date: Date) -> String {
   dateFormatter.setLocalizedDateFormatFromTemplate("E")
   return dateFormatter.string(from: date)
 }
 
-fileprivate var dateFormatter = DateFormatter()
+private var dateFormatter = DateFormatter()

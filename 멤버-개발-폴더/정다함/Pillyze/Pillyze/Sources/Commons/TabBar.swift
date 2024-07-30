@@ -5,12 +5,13 @@
 //  Created by MaraMincho on 7/30/24.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
+
+// MARK: - TabBarViewModel
 
 @Observable
 final class TabBarViewModel: ViewModelable {
-
   init() {
     setSubscriptions()
   }
@@ -21,20 +22,21 @@ final class TabBarViewModel: ViewModelable {
     var currentType: TabBarType = .health
   }
 
-  enum Action:Equatable {
+  enum Action: Equatable {
     case tapped(TabBarType)
     case tappedPlusButton
   }
+
   var subscription: AnyCancellable? = nil
 
-  func postNotification(_ type: TabBarType)  {
+  func postNotification(_ type: TabBarType) {
     NotificationCenter.default.post(name: type.notificationName, object: nil)
   }
 
   func setSubscriptions() {
     subscription = sendAction
       .receive(on: RunLoop.main)
-      .sink { [weak self ] action in
+      .sink { [weak self] action in
         guard let self else {
           return
         }
@@ -45,14 +47,16 @@ final class TabBarViewModel: ViewModelable {
         case .tappedPlusButton:
           break
         }
-    }
+      }
   }
 }
+
+// MARK: - TabBarView
 
 struct TabBarView: View {
   @Bindable
   var viewModel: TabBarViewModel
-  var state: TabBarViewModel.State { viewModel.state}
+  var state: TabBarViewModel.State { viewModel.state }
   var body: some View {
     ZStack(alignment: .bottom) {
       makeTabBarListButton()
@@ -63,7 +67,7 @@ struct TabBarView: View {
 
   @ViewBuilder
   private func centerAddButton() -> some View {
-    Button  {
+    Button {
       viewModel.sendAction(.tappedPlusButton)
     } label: {
       Circle()
@@ -116,12 +120,13 @@ struct TabBarView: View {
   }
 }
 
+// MARK: - TabBarType
 
 enum TabBarType: Int, Identifiable, Equatable, CaseIterable {
   case health
   case phill
 
-  var id: Int { self.rawValue }
+  var id: Int { rawValue }
 
   var image: Image {
     switch self {
@@ -131,6 +136,7 @@ enum TabBarType: Int, Identifiable, Equatable, CaseIterable {
       Image(.nutrients)
     }
   }
+
   var title: String {
     switch self {
     case .health:
