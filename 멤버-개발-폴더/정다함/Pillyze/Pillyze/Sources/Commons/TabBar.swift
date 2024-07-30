@@ -27,6 +27,10 @@ final class TabBarViewModel: ViewModelable {
   }
   var subscription: AnyCancellable? = nil
 
+  func postNotification(_ type: TabBarType)  {
+    NotificationCenter.default.post(name: type.notificationName, object: nil)
+  }
+
   func setSubscriptions() {
     subscription = sendAction
       .receive(on: RunLoop.main)
@@ -37,7 +41,7 @@ final class TabBarViewModel: ViewModelable {
         switch action {
         case let .tapped(type):
           state.currentType = type
-
+          postNotification(type)
         case .tappedPlusButton:
           break
         }
@@ -134,5 +138,9 @@ enum TabBarType: Int, Identifiable, Equatable, CaseIterable {
     case .phill:
       "영양제"
     }
+  }
+
+  var notificationName: Notification.Name {
+    .init(rawValue: title)
   }
 }

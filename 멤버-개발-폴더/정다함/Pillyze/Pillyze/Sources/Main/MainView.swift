@@ -88,14 +88,11 @@ struct MainView: View {
         Color.primaryPlaceholder
       }
       .ignoresSafeArea()
-      
+
       VStack(spacing: 0) {
         MainHeader(viewModel: viewState.headerViewModel)
         makeContent()
       }
-    }
-    .safeAreaInset(edge: .bottom) {
-      TabBarView(viewModel: viewState.tabBarViewModel)
     }
   }
 

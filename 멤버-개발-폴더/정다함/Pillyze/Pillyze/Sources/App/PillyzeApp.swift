@@ -15,8 +15,7 @@ struct PillyzeApp: App {
   var body: some Scene {
     WindowGroup {
       VStack{
-        MainView(viewModel: .init(state: .init()))
-
+        FLRouterView(viewModel: .init())
       }
     }
   }
