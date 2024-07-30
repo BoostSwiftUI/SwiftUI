@@ -15,4 +15,3 @@ struct PhillView: View {
     }
   }
 }
-
