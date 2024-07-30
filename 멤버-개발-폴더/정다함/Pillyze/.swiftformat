@@ -1,0 +1,22 @@
+--swiftversion 5.9
+
+# format options
+
+--indent 2
+--selfrequired
+--importgrouping alpha
+--enable blankLineAfterImports
+--enable blankLinesAroundMark
+--enable blockComments
+--enable docComments
+--enable isEmpty
+--enable markTypes
+--enable sortSwitchCases
+--enable wrapEnumCases
+--enable wrapSwitchCases
+--guardelse "next-line"
+
+--disable wrapMultilineStatementBraces
+--disable andOperator
+--disable redundantReturn
+--disable preferForLoop
