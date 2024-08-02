@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Chip: View {
     let title: String
-    @Binding var isEnabled: Bool
+    let isEnabled: Bool
     
     var body: some View {
         Text(title)
@@ -33,7 +33,7 @@ struct Chip: View {
 
 #Preview {
     Group {
-        Chip(title: "인기", isEnabled: .constant(true))
-        Chip(title: "인기", isEnabled: .constant(false))
+        Chip(title: "인기", isEnabled: true)
+        Chip(title: "인기", isEnabled: false)
     }
 }

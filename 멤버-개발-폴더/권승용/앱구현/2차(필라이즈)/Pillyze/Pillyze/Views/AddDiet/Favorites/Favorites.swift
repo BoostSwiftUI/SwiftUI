@@ -7,8 +7,16 @@
 
 import SwiftUI
 
+private enum ChipInfo: String, CaseIterable {
+    case all = "전체"
+    case food = "음식"
+    case set = "세트"
+    case recipe = "레시피"
+}
+
 struct Favorites: View {
-    let foods: [Food]
+    @Environment(ModelData.self) var modelData
+    @State private var selectedChip: ChipInfo = .all
     
     var body: some View {
         ZStack {
@@ -17,19 +25,21 @@ struct Favorites: View {
             VStack(spacing: 0) {
                 chipButtons()
                 
-                if foods.isEmpty {
-                    Image(.favoritesPlaceholder)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 335, height: 335)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 54)
-                    Spacer()
-                } else {
-                    ScrollView {
-                        VStack {
-                            FoodList(foods: foods, isRankedList: false)
-                        }
+                ScrollView {
+                    switch selectedChip {
+                    case .all:
+                        FoodList(foods: modelData.foods, isRankedList: false)
+                    case .food:
+                        FoodList(foods: modelData.foods, isRankedList: false)
+                    case .set:
+                        Image(.favoritesPlaceholder)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 54)
+                    case .recipe:
+                        FoodList(foods: modelData.foods, isRankedList: false)
                     }
                 }
             }
@@ -39,10 +49,12 @@ struct Favorites: View {
     @ViewBuilder
     func chipButtons() -> some View {
         HStack(spacing: 10) {
-            Chip(title: "전체", isEnabled: .constant(true))
-            Chip(title: "음식", isEnabled: .constant(false))
-            Chip(title: "세트", isEnabled: .constant(false))
-            Chip(title: "레시피", isEnabled: .constant(false))
+            ForEach(ChipInfo.allCases, id: \.self) { chipInfo in
+                Chip(title: chipInfo.rawValue, isEnabled: selectedChip == chipInfo)
+                    .onTapGesture {
+                        selectedChip = chipInfo
+                    }
+            }
             Spacer()
         }
         .padding(.leading, 20)
@@ -51,11 +63,6 @@ struct Favorites: View {
 }
 
 #Preview("With data") {
-    Favorites(foods: ModelData().foods)
-        .environment(ModelData())
-}
-
-#Preview("No data") {
-    Favorites(foods: [])
+    Favorites()
         .environment(ModelData())
 }
