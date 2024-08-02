@@ -52,13 +52,13 @@ struct CustomTabBar: View {
                     else {
                         TabView(selection: $selection) {
                             Group {
-                                FrequentlyEaten(foods: modelData.foods)
+                                FrequentlyEaten()
                                     .tag(TabSelection.frequentlyEaten)
                                 
-                                Favorites(foods: modelData.foods)
+                                Favorites()
                                     .tag(TabSelection.favorites)
                                 
-                                DirectAdd(foods: modelData.foods)
+                                DirectAdd()
                                     .tag(TabSelection.directAdd)
                             }
                         }
