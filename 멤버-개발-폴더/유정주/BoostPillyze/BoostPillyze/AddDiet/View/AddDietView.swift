@@ -281,6 +281,7 @@ private struct FoodListItem: View {
             
             Image(isSelected ? .addDietFoodActiveOn : .addDietFoodActiveOff)
                 .padding(.leading, 12)
+                .animation(.snappy, value: isSelected)
         }
     }
     
