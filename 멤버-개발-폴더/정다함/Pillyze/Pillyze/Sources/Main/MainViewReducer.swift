@@ -29,6 +29,7 @@ struct MainViewReducer {
     Reduce { state, action in
       switch action {
       case .tappedTopScoreButton:
+        state.foodListDetail = .init()
         return .none
       case .calendar:
         return .none
@@ -36,7 +37,12 @@ struct MainViewReducer {
         return .none
       case .tabBar:
         return .none
+      case .foodListDetail:
+        return .none
       }
+    }
+    .ifLet(\.$foodListDetail, action: \.foodListDetail) {
+      FoodListDetail()
     }
   }
 
@@ -46,6 +52,7 @@ struct MainViewReducer {
     var calendar = HCalendarReducer.State()
     var tabBar = TabBarViewReducer.State()
     var dietProperty: DietProperty = .default
+    @Presents var foodListDetail: FoodListDetail.State?
   }
 
   enum Action: Equatable {
@@ -53,6 +60,7 @@ struct MainViewReducer {
     case calendar(HCalendarReducer.Action)
     case tappedTopScoreButton
     case tabBar(TabBarViewReducer.Action)
+    case foodListDetail(PresentationAction<FoodListDetail.Action>)
   }
 }
 

@@ -91,6 +91,10 @@ struct MainView: View {
         makeContent()
       }
     }
+    .fullScreenCover(item: $store.scope(state: \.foodListDetail, action: \.foodListDetail)) { store in
+      FoodListDetailView(store: store)
+    }
+
   }
 
   @ViewBuilder
