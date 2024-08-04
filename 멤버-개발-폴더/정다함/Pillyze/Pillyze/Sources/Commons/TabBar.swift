@@ -5,20 +5,16 @@
 //  Created by MaraMincho on 7/30/24.
 //
 
-import Combine
+import ComposableArchitecture
 import SwiftUI
 
 // MARK: - TabBarViewModel
 
-@Observable
-final class TabBarViewModel: ViewModelable {
-  init() {
-    setSubscriptions()
-  }
+@Reducer
+struct TabBarViewReducer {
 
-  var sendAction: PassthroughSubject<Action, Never> = .init()
-  var state: State = .init()
-  struct State {
+  @ObservableState
+  struct State: Equatable {
     var currentType: TabBarType = .health
   }
 
@@ -27,36 +23,30 @@ final class TabBarViewModel: ViewModelable {
     case tappedPlusButton
   }
 
-  var subscription: AnyCancellable? = nil
-
   func postNotification(_ type: TabBarType) {
     NotificationCenter.default.post(name: type.notificationName, object: nil)
   }
 
-  func setSubscriptions() {
-    subscription = sendAction
-      .receive(on: RunLoop.main)
-      .sink { [weak self] action in
-        guard let self else {
-          return
-        }
-        switch action {
-        case let .tapped(type):
-          state.currentType = type
-          postNotification(type)
-        case .tappedPlusButton:
-          break
-        }
+  var body: some ReducerOf<Self> {
+    Reduce { state, action in
+      switch action {
+      case let .tapped(type):
+        state.currentType = type
+        postNotification(type)
+        return .none
+      case .tappedPlusButton:
+        return .none
       }
+    }
   }
+
 }
 
 // MARK: - TabBarView
 
 struct TabBarView: View {
   @Bindable
-  var viewModel: TabBarViewModel
-  var state: TabBarViewModel.State { viewModel.state }
+  var store: StoreOf<TabBarViewReducer>
   var body: some View {
     ZStack(alignment: .bottom) {
       makeTabBarListButton()
@@ -69,7 +59,7 @@ struct TabBarView: View {
   @ViewBuilder
   private func centerAddButton() -> some View {
     Button {
-      viewModel.sendAction(.tappedPlusButton)
+      store.send(.tappedPlusButton)
     } label: {
       Circle()
         .foregroundStyle(Color.primaryFL)
@@ -99,7 +89,7 @@ struct TabBarView: View {
 
   @ViewBuilder
   private func makeTabBarButton(type: TabBarType) -> some View {
-    let isSelected = type == state.currentType
+    let isSelected = type == store.currentType
     VStack(spacing: 8) {
       type
         .image
@@ -115,7 +105,7 @@ struct TabBarView: View {
     }
     .contentShape(Rectangle())
     .onTapGesture {
-      viewModel.sendAction(.tapped(type))
+      store.send(.tapped(type))
     }
     .frame(width: 82)
   }
