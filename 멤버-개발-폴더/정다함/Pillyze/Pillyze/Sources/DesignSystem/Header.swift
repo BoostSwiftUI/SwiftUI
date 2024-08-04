@@ -6,41 +6,39 @@
 //
 
 import Combine
+import ComposableArchitecture
 import SwiftUI
 
 // MARK: - HeaderViewModel
 
-@Observable
-final class HeaderViewModel: ViewModelable {
-  var state: State = .init()
-  init() {
-    setSubscriptions()
-  }
-
+@Reducer
+struct HeaderReducer {
   var subscription: AnyCancellable? = nil
 
   var sendAction: PassthroughSubject<Action, Never> = .init()
-  func setSubscriptions() {
-    subscription = sendAction
-      .subscribe(on: RunLoop.main)
-      .sink { action in
-        switch action {
-        case .tappedAlarmButton:
-          print("tappedAlarmButton")
-        case .tappedCalendarButton:
-          print("tappedCalendarButton")
-        case .tappedUserButton:
-          print("tappedUserButton")
-        }
-      }
-  }
 
-  struct State {}
+  struct State: Equatable {}
 
   enum Action: Equatable {
     case tappedCalendarButton
     case tappedAlarmButton
     case tappedUserButton
+  }
+
+  var body: some ReducerOf<Self> {
+    Reduce { state, action in
+      switch action {
+      case .tappedCalendarButton:
+        print("캘린더 탭")
+        return .none
+      case .tappedAlarmButton:
+        print("알람 탭")
+        return .none
+      case .tappedUserButton:
+        print("User BUtton Tapped")
+        return .none
+      }
+    }
   }
 }
 
@@ -48,10 +46,10 @@ final class HeaderViewModel: ViewModelable {
 
 struct MainHeader: View {
   @Bindable
-  var viewModel: HeaderViewModel
+  var store: StoreOf<HeaderReducer>
 
-  init(viewModel: HeaderViewModel) {
-    self.viewModel = viewModel
+  init(store: StoreOf<HeaderReducer>) {
+    self.store = store
   }
 
   var body: some View {
@@ -78,11 +76,11 @@ struct MainHeader: View {
           .onTapGesture {
             switch current {
             case .alarm:
-              viewModel.sendAction(.tappedAlarmButton)
+              store.send(.tappedAlarmButton)
             case .calendar:
-              viewModel.sendAction(.tappedAlarmButton)
+              store.send(.tappedCalendarButton)
             case .person:
-              viewModel.sendAction(.tappedUserButton)
+              store.send(.tappedUserButton)
             }
           }
       }
