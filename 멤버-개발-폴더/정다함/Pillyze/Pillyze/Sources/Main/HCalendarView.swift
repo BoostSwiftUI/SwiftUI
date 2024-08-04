@@ -5,22 +5,17 @@
 //  Created by MaraMincho on 7/28/24.
 //
 
-import Combine
+import ComposableArchitecture
 import SwiftUI
 
 // MARK: - HCalendarView
 
 struct HCalendarView: View {
-  init(viewModel: HCalendarViewModel) {
-    self.viewModel = viewModel
-  }
 
   @Bindable
-  var viewModel: HCalendarViewModel
+  var store: StoreOf<HCalendarReducer>
 
   @State var pageSize: CGSize = .init(width: 0, height: 0)
-
-  var state: HCalendarViewModel.State { viewModel.state }
 
   var body: some View {
     dayPageView
@@ -29,7 +24,7 @@ struct HCalendarView: View {
       }
       .frame(maxHeight: 85)
       .onAppear {
-        viewModel.sendAction(.onAppeared)
+        store.send(.onAppeared)
       }
   }
 
@@ -40,7 +35,7 @@ struct HCalendarView: View {
     ScrollViewReader { proxy in
       ScrollView(.horizontal, showsIndicators: false) {
         LazyHStack(spacing: 0) {
-          let dates = state.front + [state.current] + state.back
+          let dates = store.front + [store.current] + store.back
           ForEach(dates, id: \.self) { val in
             makePageView(val)
               .frame(width: pageSize.width)
@@ -50,7 +45,7 @@ struct HCalendarView: View {
       }
       .scrollTargetBehavior(.paging)
       .onAppear {
-        proxy.scrollTo(state.current)
+        proxy.scrollTo(store.current)
       }
     }
   }
@@ -59,7 +54,7 @@ struct HCalendarView: View {
   private func makePageView(_ date: [Date]) -> some View {
     HStack(spacing: 0) {
       ForEach(date, id: \.self) { date in
-        let isSelected = state.selectedDate == date
+        let isSelected = store.selectedDate == date
 
         VStack(spacing: 12) {
           ZStack {
@@ -72,7 +67,7 @@ struct HCalendarView: View {
               .foregroundStyle(isSelected ? Color.primaryFL : Color.primaryDisabled)
           }
 
-          Text("\(state.calendar.component(.day, from: date))")
+          Text("\(store.calendar.component(.day, from: date))")
             .applyFont(.bold, size: ._24)
             .foregroundStyle(Color.white)
         }
@@ -81,7 +76,7 @@ struct HCalendarView: View {
         .frame(width: 49, height: 80)
         .contentShape(Rectangle())
         .onTapGesture {
-          viewModel.sendAction(.tappedDate(date))
+          store.send(.tappedDate(date))
         }
       }
     }
@@ -90,50 +85,42 @@ struct HCalendarView: View {
 
 // MARK: - HCalendarViewModel
 
-@Observable
-final class HCalendarViewModel: ViewModelable {
-  var sendAction: PassthroughSubject<Action, Never> = .init()
-  var state: State = .init()
+@Reducer
+struct HCalendarReducer {
 
-  init() {
-    setSubscriptions()
-  }
+  var body: some ReducerOf<Self> {
+    Reduce { state, action in
+      switch action {
+      case .onAppeared:
+        state.displayDatesDescription = state.current
+        return .none
 
-  var subscription: AnyCancellable? = nil
-  func setSubscriptions() {
-    subscription = sendAction
-      .receive(on: RunLoop.main)
-      .throttle(for: 0.5, scheduler: RunLoop.main, latest: false)
-      .sink { [weak self] action in
-        guard let self else {
-          return
+      case let .tappedDate(date):
+        state.selectedDate = date
+        return .none
+
+      case let .appearedDates(dates):
+        state.displayDatesDescription = dates
+        let targetMondayDate = dates[0]
+        // 만약 nowMondayDate가 클 때 즉 prev이면서 값을 추가해야하는 상황이라면
+        if dates == state.front.first,
+           let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: -7, to: targetMondayDate) {
+          let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
+          state.front = [toBeAddWeek] + state.front
+        } else if
+          dates == state.back.last,
+          let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: +7, to: targetMondayDate) {
+          let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
+          state.back.append(toBeAddWeek)
         }
-        switch action {
-        case .onAppeared:
-          state.displayDatesDescription = state.current
+        return .none
 
-        case let .tappedDate(date):
-          state.selectedDate = date
-
-        case let .appearedDates(dates):
-          state.displayDatesDescription = dates
-          let targetMondayDate = dates[0]
-          // 만약 nowMondayDate가 클 때 즉 prev이면서 값을 추가해야하는 상황이라면
-          if dates == state.front.first,
-             let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: -7, to: targetMondayDate) {
-            let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
-            state.front = [toBeAddWeek] + state.front
-          } else if
-            dates == state.back.last,
-            let toBeAddWeekForTargetDate = state.calendar.date(byAdding: .day, value: +7, to: targetMondayDate) {
-            let toBeAddWeek = datesForWeek(of: toBeAddWeekForTargetDate)
-            state.back.append(toBeAddWeek)
-          }
-        }
       }
+    }
   }
 
-  struct State {
+  @ObservableState
+  struct State: Equatable {
     var displayDatesDescription: [Date]? = []
     var selectedDate = Date()
     let calendar = Calendar.current

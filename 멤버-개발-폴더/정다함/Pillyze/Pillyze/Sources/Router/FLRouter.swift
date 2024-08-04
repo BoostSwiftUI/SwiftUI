@@ -7,12 +7,12 @@
 
 import Combine
 import SwiftUI
+import ComposableArchitecture
 
 // MARK: - FLRouterViewModel
 
 @Observable final class FLRouterViewModel {
   var sceneType: TabBarType = .health
-  var tabBarViewModel = TabBarViewModel()
   init() {
     addObserver()
   }
@@ -31,7 +31,12 @@ import SwiftUI
 
 struct FLRouterView: View {
   @Bindable var viewModel: FLRouterViewModel
-  @State var mainViewModel = MainViewModel(state: .init())
+  @State var mainViewStore: StoreOf<MainViewReducer> = .init(initialState: .init()) {
+    MainViewReducer()
+  }
+  @State var tabBarStore: StoreOf<TabBarViewReducer> = .init(initialState: .init()) {
+    TabBarViewReducer()
+  }
 
   init(viewModel: FLRouterViewModel) {
     self.viewModel = viewModel
@@ -40,7 +45,7 @@ struct FLRouterView: View {
   @ViewBuilder func showView() -> some View {
     switch viewModel.sceneType {
     case .health:
-      MainView(viewModel: mainViewModel)
+      MainView(store: mainViewStore)
     case .phill:
       PhillView()
     }
@@ -49,7 +54,7 @@ struct FLRouterView: View {
   var body: some View {
     showView()
       .safeAreaInset(edge: .bottom) {
-        TabBarView(viewModel: viewModel.tabBarViewModel)
+        TabBarView(store: tabBarStore)
       }
   }
 }

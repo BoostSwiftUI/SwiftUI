@@ -1,86 +1,76 @@
-// 
-//  MainViewReducer.swift
+//
+//  MainViewModel.swift
 //  Pillyze
 //
-//  Created by MaraMincho on 8/4/24.
+//  Created by MaraMincho on 7/28/24.
 //
-import Foundation
+
 import ComposableArchitecture
-import FeatureAction
+import Foundation
+
+// MARK: - MainViewModel
 
 @Reducer
 struct MainViewReducer {
 
-  @ObservableState
-  struct State: Equatable {
-    var isOnAppear = false
-    init () {}
-  }
-
-  enum Action: Equatable, FeatureAction {
-    case view(ViewAction)
-    case inner(InnerAction)
-    case async(AsyncAction)
-    case scope(ScopeAction)
-    case delegate(DelegateAction)
-  }
-
-  enum ViewAction: Equatable {
-    case onAppear(Bool)
-  }
-
-  enum InnerAction: Equatable {}
-
-  enum AsyncAction: Equatable {}
-
-  @CasePathable
-  enum ScopeAction: Equatable {}
-
-  enum DelegateAction: Equatable {}
-
-  var viewAction: (_ state: inout State, _ action: Action.ViewAction) -> Effect<Action> = { state, action in
-    switch action {
-    case let .onAppear(isAppear) :
-      if state.isOnAppear {
-        return .none
-      }
-      state.isOnAppear = isAppear
-      return .none
+  var body: some ReducerOf<Self> {
+    Scope(state: \.header, action: \.header) {
+      HeaderReducer()
     }
-  }
 
-  var scopeAction: (_ state: inout State, _ action: Action.ScopeAction) -> Effect<Action> = { state, action in
-    return .none
-  }
+    Scope(state: \.calendar, action: \.calendar) {
+      HCalendarReducer()
+    }
 
-  var innerAction: (_ state: inout State, _ action: Action.InnerAction) -> Effect<Action> = { state, action in
-    return .none
-  }
+    Scope(state: \.tabBar, action: \.tabBar) {
+      TabBarViewReducer()
+    }
 
-  var asyncAction: (_ state: inout State, _ action: Action.AsyncAction) -> Effect<Action> = { state, action in
-    return .none
-  }
-
-  var delegateAction: (_ state: inout State, _ action: Action.DelegateAction) -> Effect<Action> = { state, action in
-    return .none
-  }
-
-  var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
-      case let .view(currentAction):
-        return viewAction(&state, currentAction)
-      case let .inner(currentAction):
-        return innerAction(&state, currentAction)
-      case let .async(currentAction):
-        return asyncAction(&state, currentAction)
-      case let .scope(currentAction) :
-        return scopeAction(&state, currentAction)
-      case let .delegate(currentAction) :
-        return delegateAction(&state, currentAction)
+      case .tappedTopScoreButton:
+        return .none
+      case .calendar:
+        return .none
+      case .header:
+        return .none
+      case .tabBar:
+        return .none
       }
     }
+  }
+
+  @ObservableState
+  struct State: Equatable {
+    var header = HeaderReducer.State()
+    var calendar = HCalendarReducer.State()
+    var tabBar = TabBarViewReducer.State()
+    var dietProperty: DietProperty = .default
+  }
+
+  enum Action: Equatable {
+    case header(HeaderReducer.Action)
+    case calendar(HCalendarReducer.Action)
+    case tappedTopScoreButton
+    case tabBar(TabBarViewReducer.Action)
   }
 }
 
-extension Reducer where Self.State == MainViewReducer.State, Self.Action == MainViewReducer.Action { }
+// MARK: - DietProperty
+
+struct DietProperty: Equatable {
+  var totalCals: Int64
+  var carbohydrates: Double
+  var protein: Double
+  var lipid: Double
+
+  var totalCalsLabel: String {
+    "\(totalCals) kcal"
+  }
+}
+
+extension DietProperty {
+  static var `default`: Self {
+    return .init(totalCals: Int64.random(in: 1000 ... 5000), carbohydrates: 33, protein: 33, lipid: 33)
+  }
+}

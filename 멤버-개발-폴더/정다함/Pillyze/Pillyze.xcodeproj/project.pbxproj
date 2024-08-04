@@ -15,13 +15,14 @@
 		E820919E2C53D9EB0051472F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E82091992C53D9EB0051472F /* Pretendard-Medium.otf */; };
 		E820919F2C53D9EB0051472F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */; };
 		E83F2A932C573A0100610E22 /* GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F2A922C573A0100610E22 /* GetSize.swift */; };
+		E862B84A2C5FA6AD00006D0E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E862B8492C5FA6AD00006D0E /* ComposableArchitecture */; };
 		E881EA352C53E3FC0016A384 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA342C53E3FC0016A384 /* Header.swift */; };
 		E881EA382C547D510016A384 /* MiniReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881EA372C547D510016A384 /* MiniReducer.swift */; };
 		E89AC1B22C58B2200026D29B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AC1B12C58B2200026D29B /* TabBar.swift */; };
 		E89AC1B52C58D28F0026D29B /* FLRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AC1B42C58D28F0026D29B /* FLRouter.swift */; };
 		E89AC1B82C58D2A30026D29B /* PhillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AC1B72C58D2A30026D29B /* PhillView.swift */; };
 		E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED12C561F4D006BF124 /* MainView.swift */; };
-		E8A05ED42C561F76006BF124 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED32C561F76006BF124 /* MainViewModel.swift */; };
+		E8A05ED42C561F76006BF124 /* MainViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED32C561F76006BF124 /* MainViewReducer.swift */; };
 		E8A05ED62C562003006BF124 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED52C562003006BF124 /* ViewModelable.swift */; };
 		E8A05ED82C562E95006BF124 /* HCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05ED72C562E95006BF124 /* HCalendarView.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +43,7 @@
 		E89AC1B42C58D28F0026D29B /* FLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLRouter.swift; sourceTree = "<group>"; };
 		E89AC1B72C58D2A30026D29B /* PhillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhillView.swift; sourceTree = "<group>"; };
 		E8A05ED12C561F4D006BF124 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		E8A05ED32C561F76006BF124 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E8A05ED32C561F76006BF124 /* MainViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReducer.swift; sourceTree = "<group>"; };
 		E8A05ED52C562003006BF124 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 		E8A05ED72C562E95006BF124 /* HCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E862B84A2C5FA6AD00006D0E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A05ED12C561F4D006BF124 /* MainView.swift */,
-				E8A05ED32C561F76006BF124 /* MainViewModel.swift */,
+				E8A05ED32C561F76006BF124 /* MainViewReducer.swift */,
 				E8A05ED72C562E95006BF124 /* HCalendarView.swift */,
 			);
 			path = Main;
@@ -194,6 +196,9 @@
 			dependencies = (
 			);
 			name = Pillyze;
+			packageProductDependencies = (
+				E862B8492C5FA6AD00006D0E /* ComposableArchitecture */,
+			);
 			productName = Pillyze;
 			productReference = E82091802C53D8490051472F /* Pillyze.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				ko,
 			);
 			mainGroup = E82091772C53D8480051472F;
+			packageReferences = (
+				E862B8482C5FA6AD00006D0E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = E82091812C53D8490051472F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,7 +269,7 @@
 				E82091932C53D8840051472F /* Font.swift in Sources */,
 				E8A05ED22C561F4D006BF124 /* MainView.swift in Sources */,
 				E881EA382C547D510016A384 /* MiniReducer.swift in Sources */,
-				E8A05ED42C561F76006BF124 /* MainViewModel.swift in Sources */,
+				E8A05ED42C561F76006BF124 /* MainViewReducer.swift in Sources */,
 				E89AC1B82C58D2A30026D29B /* PhillView.swift in Sources */,
 				E89AC1B22C58B2200026D29B /* TabBar.swift in Sources */,
 			);
@@ -467,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E862B8482C5FA6AD00006D0E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E862B8492C5FA6AD00006D0E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E862B8482C5FA6AD00006D0E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E82091782C53D8480051472F /* Project object */;
 }

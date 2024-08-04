@@ -6,17 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 // MARK: - MainView
 
 struct MainView: View {
   @Bindable
-  var viewModel: MainViewModel
-  var viewState: MainViewModel.State { viewModel.state }
-
-  init(viewModel: MainViewModel) {
-    self.viewModel = viewModel
-  }
+  var store: StoreOf<MainViewReducer>
 
   @ViewBuilder
   private func makeContent() -> some View {
@@ -54,7 +50,7 @@ struct MainView: View {
         .padding(.vertical, 10)
 
       Button {
-        viewModel.sendAction(.tappedTopScoreButton)
+        store.send(.tappedTopScoreButton)
       } label: {
         Text("내 식단 점수 확인하기")
           .applyFont(.medium, size: ._18)
@@ -77,7 +73,7 @@ struct MainView: View {
 
   @ViewBuilder
   private func makeCalendarView() -> some View {
-    HCalendarView(viewModel: viewState.calendarViewModel)
+    HCalendarView(store: store.scope(state: \.calendar, action: \.calendar))
       .background(Color.primaryFL)
       .ignoresSafeArea()
   }
@@ -91,7 +87,7 @@ struct MainView: View {
       .ignoresSafeArea()
 
       VStack(spacing: 0) {
-        MainHeader(viewModel: viewState.headerViewModel)
+        MainHeader(store: store.scope(state: \.header, action: \.header))
         makeContent()
       }
     }
@@ -142,7 +138,7 @@ struct MainView: View {
 
   @ViewBuilder
   private func makeDietLeadingView() -> some View {
-    let dietProperty = viewState.dietProperty
+    let dietProperty = store.dietProperty
     VStack(alignment: .leading, spacing: 8) {
       Text("식단")
         .applyFont(.medium, size: ._14)
@@ -163,11 +159,11 @@ struct MainView: View {
       let res =
         switch type {
         case .carbohydrates:
-          viewState.dietProperty.carbohydrates.description
+          store.dietProperty.carbohydrates.description
         case .protein:
-          viewState.dietProperty.protein.description
+          store.dietProperty.protein.description
         case .lipid:
-          viewState.dietProperty.lipid.description
+          store.dietProperty.lipid.description
         }
 
       return res + "%"
