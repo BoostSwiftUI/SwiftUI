@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import ComposableArchitecture
+import Lottie
 
 struct FoodListDetailView: View {
 

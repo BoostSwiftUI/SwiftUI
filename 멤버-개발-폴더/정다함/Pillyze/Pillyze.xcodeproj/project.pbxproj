@@ -15,6 +15,7 @@
 		E820919E2C53D9EB0051472F /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E82091992C53D9EB0051472F /* Pretendard-Medium.otf */; };
 		E820919F2C53D9EB0051472F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E820919A2C53D9EB0051472F /* Pretendard-Regular.otf */; };
 		E83F2A932C573A0100610E22 /* GetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F2A922C573A0100610E22 /* GetSize.swift */; };
+		E855B7742C60B5B0002C2B8C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E855B7732C60B5B0002C2B8C /* Lottie */; };
 		E862B84A2C5FA6AD00006D0E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E862B8492C5FA6AD00006D0E /* ComposableArchitecture */; };
 		E862B8522C5FAEFC00006D0E /* FoodListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862B8502C5FAEFC00006D0E /* FoodListDetailView.swift */; };
 		E862B8532C5FAEFC00006D0E /* FoodListDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862B8512C5FAEFC00006D0E /* FoodListDetail.swift */; };
@@ -60,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E862B84A2C5FA6AD00006D0E /* ComposableArchitecture in Frameworks */,
+				E855B7742C60B5B0002C2B8C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +217,7 @@
 			name = Pillyze;
 			packageProductDependencies = (
 				E862B8492C5FA6AD00006D0E /* ComposableArchitecture */,
+				E855B7732C60B5B0002C2B8C /* Lottie */,
 			);
 			productName = Pillyze;
 			productReference = E82091802C53D8490051472F /* Pillyze.app */;
@@ -247,6 +250,7 @@
 			mainGroup = E82091772C53D8480051472F;
 			packageReferences = (
 				E862B8482C5FA6AD00006D0E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				E855B7722C60B5B0002C2B8C /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = E82091812C53D8490051472F /* Products */;
 			projectDirPath = "";
@@ -497,6 +501,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E855B7722C60B5B0002C2B8C /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		E862B8482C5FA6AD00006D0E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -508,6 +520,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E855B7732C60B5B0002C2B8C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855B7722C60B5B0002C2B8C /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		E862B8492C5FA6AD00006D0E /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E862B8482C5FA6AD00006D0E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
