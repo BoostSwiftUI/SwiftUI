@@ -13,24 +13,29 @@ struct FoodListDetail {
   struct State: Equatable {
     var isOnAppear = false
     var textFieldText: String = ""
-    var currentStepperType: FoodDetailStepperTypes = .frequently
+    var currentStepperType: FoodDetailStepperTypes? = .frequently
     var frequentFilterType: FoodDetailFilterContentType = .all
     var favoriteFilterType: FoodDetailFilterContentType = .all
     var manuallyFilterType: FoodDetailFilterContentType = .all
     var foodList: [DisplayFoodProperty] = []
+    var selectedFoodList: [DisplayFoodProperty] = []
+
     init () {}
   }
 
   enum Action: Equatable {
     case isAppear(Bool)
     case changeTextField(String)
-    case tappedStepper(FoodDetailStepperTypes)
+    case tappedStepper(FoodDetailStepperTypes?)
     case tappedFrequentFilter(FoodDetailFilterContentType)
     case tappedFavoriteFilter(FoodDetailFilterContentType)
     case tappedManuallyFilter(FoodDetailFilterContentType)
+    case tappedFoodItem(DisplayFoodProperty)
+    case tappedDismissButton
   }
 
 
+  @Dependency(\.dismiss) var dismiss
   var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
@@ -43,6 +48,7 @@ struct FoodListDetail {
         return .none
       case let .tappedStepper(type):
         state.currentStepperType = type
+        dump(state.currentStepperType)
         return .none
       case let .tappedFrequentFilter(type):
         state.frequentFilterType = type
@@ -53,6 +59,17 @@ struct FoodListDetail {
       case let .tappedManuallyFilter(type):
         state.manuallyFilterType = type
         return .none
+      case let .tappedFoodItem(property):
+        if state.selectedFoodList.contains(property) {
+          state.selectedFoodList.removeAll(where: {$0 == property})
+        }else {
+          state.selectedFoodList.append(property)
+        }
+        return .none
+      case .tappedDismissButton:
+        return .run { send in
+          await dismiss()
+        }
       }
     }
   }
