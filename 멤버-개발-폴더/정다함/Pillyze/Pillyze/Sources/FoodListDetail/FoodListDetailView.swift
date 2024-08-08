@@ -91,9 +91,9 @@ struct FoodListDetailView: View {
         LazyHStack(spacing: 0) {
           makeFrequentDetailView()
             .id(FoodDetailStepperTypes.frequently)
-          makeFrequentDetailView()
+          makeFavoriteDetailView()
             .id(FoodDetailStepperTypes.favorite)
-          makeFrequentDetailView()
+          makeManuallyDetailView()
             .id(FoodDetailStepperTypes.manually)
         }
         .scrollPosition(id: $store.currentStepperType.sending(\.tappedStepper))
@@ -140,6 +140,61 @@ struct FoodListDetailView: View {
     }
     .frame(width: scrollViewSize)
   }
+
+  @ViewBuilder
+  private func makeFavoriteDetailView() -> some View {
+    VStack(alignment: .center, spacing: 0 ) {
+      makeTopFilterView()
+        .padding(.horizontal, 20)
+        .padding(.vertical, 11)
+        .frame(maxWidth: .infinity, alignment: .leading)
+      Spacer()
+        .frame(height: 54)
+      Image("emptyDetailImage", bundle: .main)
+      Spacer()
+
+    }
+    .frame(width: scrollViewSize)
+  }
+
+  @ViewBuilder
+  private func makeManuallyDetailView() -> some View {
+    VStack(alignment: .center, spacing: 0 ) {
+      makeTopFilterView()
+        .padding(.horizontal, 20)
+        .padding(.vertical, 11)
+        .frame(maxWidth: .infinity, alignment: .leading)
+      HStack(alignment: .center, spacing: 8) {
+        Image(.search)
+          .renderingMode(.template)
+          .foregroundStyle(Color.primaryFL)
+        Text("찾는 음식이 없나요?")
+          .applyFont(.medium, size: ._16)
+          .foregroundStyle(Color(.textNormal))
+
+        Spacer()
+
+        Text("직접 등록")
+          .padding(.vertical, 8)
+          .padding(.horizontal, 15)
+          .background(
+            Color.primaryFL
+          )
+          .clipShape(Capsule())
+          .foregroundStyle(Color.white)
+      }
+      .padding(.vertical, 14)
+      .padding(.horizontal, 20)
+      .background(Color.primaryThird)
+      Spacer()
+        .frame(height: 54)
+      Image("emptyDetailImage", bundle: .main)
+      Spacer()
+
+    }
+    .frame(width: scrollViewSize)
+  }
+
 
   @ViewBuilder
   private func makeTopFilterView() -> some View {
@@ -224,6 +279,9 @@ struct FoodListDetailView: View {
                 .renderingMode(.template)
                 .foregroundStyle(Color.white)
                 .frame(width: 16, height: 16)
+                .transition(.opacity)
+                .rotationEffect(.degrees(isSelectedItem ? 0 : 90))
+                .animation(.bouncy, value: isSelectedItem)
             }
 
           }
@@ -279,6 +337,17 @@ struct FoodListDetailView: View {
     .safeAreaInset(edge: .bottom, content: {
       makeBottomView()
     })
+    .overlay{
+      if store.isLottieAnimation {
+        LottieView(animation: .named("add-list"))
+          .reloadAnimationTrigger(store.lottieAnimationTrigger)
+          .playing(loopMode: .playOnce)
+          .animationDidFinish { completed in
+            store.send(.lottieAnimation(false))
+          }
+      }
+
+    }
 
     .onAppear{
       store.send(.isAppear(true))

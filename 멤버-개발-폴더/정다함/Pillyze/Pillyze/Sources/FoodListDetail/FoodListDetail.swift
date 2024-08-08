@@ -5,6 +5,10 @@
 //  Created by MaraMincho on 8/4/24.
 //
 import ComposableArchitecture
+import Combine
+import Foundation
+
+var lottiePublisher: PassthroughSubject<Void, Never> = .init()
 
 @Reducer
 struct FoodListDetail {
@@ -19,6 +23,8 @@ struct FoodListDetail {
     var manuallyFilterType: FoodDetailFilterContentType = .all
     var foodList: [DisplayFoodProperty] = []
     var selectedFoodList: [DisplayFoodProperty] = []
+    var isLottieAnimation: Bool = false
+    var lottieAnimationTrigger: Int = 0
 
     init () {}
   }
@@ -32,13 +38,22 @@ struct FoodListDetail {
     case tappedManuallyFilter(FoodDetailFilterContentType)
     case tappedFoodItem(DisplayFoodProperty)
     case tappedDismissButton
+    case lottieAnimation(Bool)
   }
 
+  enum CancelID {
+    case debounceID
+  }
 
   @Dependency(\.dismiss) var dismiss
+  @Dependency(\.mainRunLoop) var runloop
   var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
+      case let .lottieAnimation(val):
+        state.isLottieAnimation = val
+
+        return .none
       case let .isAppear(val):
         state.isOnAppear = val
         state.foodList = FoodListDetailNetwork.getJson()
@@ -64,6 +79,11 @@ struct FoodListDetail {
           state.selectedFoodList.removeAll(where: {$0 == property})
         }else {
           state.selectedFoodList.append(property)
+          return .run { send in
+            await send(.lottieAnimation(false))
+            try await Task.sleep(nanoseconds: 50_000_000)
+            await send(.lottieAnimation(true))
+          }
         }
         return .none
       case .tappedDismissButton:
