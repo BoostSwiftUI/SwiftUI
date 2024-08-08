@@ -160,10 +160,6 @@ struct FoodListDetailView: View {
   @ViewBuilder
   private func makeManuallyDetailView() -> some View {
     VStack(alignment: .center, spacing: 0 ) {
-      makeTopFilterView()
-        .padding(.horizontal, 20)
-        .padding(.vertical, 11)
-        .frame(maxWidth: .infinity, alignment: .leading)
       HStack(alignment: .center, spacing: 8) {
         Image(.search)
           .renderingMode(.template)
@@ -175,17 +171,24 @@ struct FoodListDetailView: View {
         Spacer()
 
         Text("직접 등록")
+          .applyFont(.medium, size: ._16)
+          .foregroundStyle(Color.white)
           .padding(.vertical, 8)
           .padding(.horizontal, 15)
           .background(
             Color.primaryFL
           )
           .clipShape(Capsule())
-          .foregroundStyle(Color.white)
       }
       .padding(.vertical, 14)
       .padding(.horizontal, 20)
       .background(Color.primaryThird)
+
+      makeTopFilterView()
+        .padding(.horizontal, 20)
+        .padding(.vertical, 11)
+        .frame(maxWidth: .infinity, alignment: .leading)
+
       Spacer()
         .frame(height: 54)
       Image("emptyDetailImage", bundle: .main)
