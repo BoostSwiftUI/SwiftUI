@@ -280,8 +280,9 @@ private struct FoodListItem: View {
                 .foregroundStyle(.textSecondary)
             
             Image(isSelected ? .addDietFoodActiveOn : .addDietFoodActiveOff)
-                .padding(.leading, 12)
+                .rotationEffect(.degrees(isSelected ? 0 : 90))
                 .animation(.snappy, value: isSelected)
+                .padding(.leading, 12)
         }
     }
     
