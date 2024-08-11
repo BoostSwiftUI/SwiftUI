@@ -60,8 +60,39 @@ struct RecordView: View {
                            tabs: RecordTabMenu.allCases.map { $0.categoryTitle })
             
             TabView(selection: $selectionTab) {
-                ForEach(RecordTabMenu.allCases, id: \.self) { menu in
-                    VStack {
+                ForEach(Array(RecordTabMenu.allCases.enumerated()), id: \.element) { index, menu in
+                    VStack(spacing: 0) {
+                        if menu == .directRegister {
+                            ZStack {
+                                Color.placeholderPurple
+                                    .ignoresSafeArea()
+                                    .padding(.horizontal, -20)
+                                HStack {
+                                    Image(systemName: "magnifyingglass")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundStyle(.primaryPurple)
+                                    Text("찾는 음식이 없나요?")
+                                        .font(.Pretendard.medium(.size16).font)
+                                    
+                                    Spacer()
+                                    
+                                    Button {
+                                        print("직접 등록 버튼 Tapped")
+                                    } label: {
+                                        Text("직접 등록")
+                                            .font(.Pretendard.medium(.size16).font)
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal, 15)
+                                            .padding(.vertical, 8)
+                                            .background(.primaryPurple)
+                                            .clipShape(RoundedRectangle(cornerRadius: 99))
+                                    }
+                                }
+                            }
+                            .frame(height: 64)
+                        }
+                        
                         HStack(spacing: 10) {
                             ForEach(FilteringMenu.allCases, id: \.self) { filter in
                                 ChipButton(element: filter, selectedFilter: filterElement, setFilter: {
