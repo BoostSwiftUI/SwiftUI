@@ -12,12 +12,6 @@ public struct SlidingTabView : View {
     
     let tabs: [String]
     
-    public init(selection: Binding<Int>,
-                tabs: [String]) {
-        self._selection = selection
-        self.tabs = tabs
-    }
-    
     public var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 0) {
@@ -40,7 +34,12 @@ public struct SlidingTabView : View {
                 }
             }
             GeometryReader { geometry in
-                ZStack(alignment: .leading) {
+                ZStack(alignment: .bottomLeading) {
+                    Rectangle()
+                        .fill(.placeholderGray)
+                        .frame(width: geometry.size.width,
+                               height: 1,
+                               alignment: .leading)
                     Rectangle()
                         .fill(.primaryPurple)
                         .frame(width: self.tabWidth(from: geometry.size.width),
@@ -49,14 +48,9 @@ public struct SlidingTabView : View {
                         .offset(x: self.selectionBarXOffset(from: geometry.size.width),
                                 y: 0)
                         .animation(.bouncy, value: selection)
-                    Rectangle()
-                        .fill(.placeholderGray)
-                        .frame(width: geometry.size.width,
-                               height: 1,
-                               alignment: .leading)
-                }.fixedSize(horizontal: false, vertical: true)
-            }.fixedSize(horizontal: false, vertical: true)
-            
+                }
+            }
+            .frame(height: 2)
         }
     }
     
@@ -66,7 +60,6 @@ public struct SlidingTabView : View {
     }
     
     private func selectionBarXOffset(from totalWidth: CGFloat) -> CGFloat {
-        print(selection)
         return self.tabWidth(from: totalWidth) * CGFloat(selection)
     }
     
