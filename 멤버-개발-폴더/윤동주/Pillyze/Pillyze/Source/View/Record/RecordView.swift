@@ -48,11 +48,16 @@ struct RecordView: View {
     @State private var selectionTab: Int = RecordTabMenu.frequentlyAte.selectedTab
     @State private var filterElement: FilteringMenu = .all
     @State private var userSex: UserSex = .male
+    @State private var isLottieAnimationShown = false
+    @State private var selectedFoods: [RankingFood] = []
+    @State private var isLoadingLottieShown: Bool = true
     
     @Binding var isRecordSheetShown: Bool
     
+    var lottieAnimation = DotLottieAnimation(fileName: "loading", config: AnimationConfig(autoplay: true, loop: false))
+    
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             SearchNavigatorView(isRecordSheetShown: $isRecordSheetShown)
                 .padding(20)
             
@@ -101,29 +106,47 @@ struct RecordView: View {
                             }
                             Spacer()
                         }
+                        .padding(.vertical, 11)
+                        
                         Spacer()
                             .frame(height: 23)
-                        UserSexFilterView(userSex: $userSex)
-                        
-                        ScrollView {
-                            ForEach(Array(modelData.rankingFoods.enumerated()),
-                                    id: \.element.id) { index, food in
-                                FoodRankCell(food: food, index: index + 1)
-                                Divider()
+                        ZStack {
+                            switch menu {
+                            case .frequentlyAte:
+                                FrequentlyAteView(selectedFoods: $selectedFoods,
+                                                  isLottieAnimationShown: $isLottieAnimationShown,
+                                                  userSex: $userSex)
+                            case .favorite:
+                                FavoriteView()
+                            case .directRegister:
+                                DirectRegisterView()
+                            }
+                            if isLoadingLottieShown {
+                                ZStack {
+                                    Color.white
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    lottieAnimation.view()
+                                        .frame(width: 100, height: 100)
+                                        .onAppear {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                                isLoadingLottieShown = false
+                                            }
+                                        }
+                                }
                             }
                         }
-                        .scrollIndicators(.hidden)
-                        Spacer()
+                        
                     }
                     .padding(.horizontal, 20)
-                    .tag(menu.selectedTab)
+                    .tag(index)
                 }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-            .onChange(of: selectionTab) { oldValue, newValue in
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .onChange(of: selectionTab) { _, newValue in
                 self.selectionTab = newValue
             }
-            RecordButtonView()
+            RecordButtonView(isLottieAnimationShown: $isLottieAnimationShown,
+                             selectedFoods: $selectedFoods)
         }
         
     }
