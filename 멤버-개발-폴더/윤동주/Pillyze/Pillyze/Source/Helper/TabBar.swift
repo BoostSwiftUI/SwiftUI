@@ -50,7 +50,6 @@ struct TabBar: View {
                 .clipShape(RoundedCorner(radius: 24, corners: [.topLeft, .topRight]))
                 .shadow(color: .primaryPurple.opacity(0.1), radius: 24, x: 0, y: 0)
         )
-        .shadow(color: .primaryPurple.opacity(0.1), radius: 24, x: 0, y: 0)
     }
     
     @ViewBuilder

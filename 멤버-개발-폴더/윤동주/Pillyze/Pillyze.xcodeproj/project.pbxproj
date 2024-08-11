@@ -31,8 +31,23 @@
 		082D454E2C468B21007AD8FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D454D2C468B21007AD8FB /* ContentView.swift */; };
 		082D45542C468B96007AD8FB /* NutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D45532C468B96007AD8FB /* NutrientsView.swift */; };
 		082D45572C468E20007AD8FB /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D45562C468E20007AD8FB /* RecordView.swift */; };
+		08621D242C57EC2F00E26998 /* UserSexFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D232C57EC2F00E26998 /* UserSexFilterView.swift */; };
+		08621D272C57FDF400E26998 /* RecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D262C57FDF400E26998 /* RecordButtonView.swift */; };
 		087B50A02C4906B4005BF53C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087B509F2C4906B4005BF53C /* TabBar.swift */; };
 		087B50A42C492100005BF53C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087B50A32C492100005BF53C /* RoundedCorner.swift */; };
+		088DFC4E2C52489400469FD1 /* loading.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 088DFC4D2C52489400469FD1 /* loading.lottie */; };
+		088DFC512C524A9600469FD1 /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 088DFC502C524A9600469FD1 /* DotLottie */; };
+		08A793AB2C623933004A1FEB /* addList.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 08A793AA2C62392F004A1FEB /* addList.lottie */; };
+		08C737A92C4C06A000FA93A4 /* DoubleSidedBackgroundScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737A82C4C06A000FA93A4 /* DoubleSidedBackgroundScrollView.swift */; };
+		08C737AB2C4C0E7200FA93A4 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737AA2C4C0E7200FA93A4 /* SlidingTabView.swift */; };
+		08C737AD2C4CA2B400FA93A4 /* FrequentlyAteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737AC2C4CA2B400FA93A4 /* FrequentlyAteView.swift */; };
+		08C737AF2C4CA2D900FA93A4 /* ChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737AE2C4CA2D900FA93A4 /* ChipButton.swift */; };
+		08C737F52C52267600FA93A4 /* RankingFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F42C52267600FA93A4 /* RankingFood.swift */; };
+		08C737F72C52277E00FA93A4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F62C52277E00FA93A4 /* ModelData.swift */; };
+		08C737F92C52297600FA93A4 /* FoodRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F82C52297600FA93A4 /* FoodRankCell.swift */; };
+		08CC18702C492BA8007EF06E /* SearchNavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC186F2C492BA8007EF06E /* SearchNavigatorView.swift */; };
+		08EAA4F52C58DF7C00115508 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAA4F42C58DF7C00115508 /* FavoriteView.swift */; };
+		08EAA4F72C58DF8500115508 /* DirectRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAA4F62C58DF8500115508 /* DirectRegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,8 +77,22 @@
 		082D454D2C468B21007AD8FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		082D45532C468B96007AD8FB /* NutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsView.swift; sourceTree = "<group>"; };
 		082D45562C468E20007AD8FB /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		08621D232C57EC2F00E26998 /* UserSexFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSexFilterView.swift; sourceTree = "<group>"; };
+		08621D262C57FDF400E26998 /* RecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonView.swift; sourceTree = "<group>"; };
 		087B509F2C4906B4005BF53C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		087B50A32C492100005BF53C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		088DFC4D2C52489400469FD1 /* loading.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = loading.lottie; sourceTree = "<group>"; };
+		08A793AA2C62392F004A1FEB /* addList.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = addList.lottie; sourceTree = "<group>"; };
+		08C737A82C4C06A000FA93A4 /* DoubleSidedBackgroundScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSidedBackgroundScrollView.swift; sourceTree = "<group>"; };
+		08C737AA2C4C0E7200FA93A4 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
+		08C737AC2C4CA2B400FA93A4 /* FrequentlyAteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentlyAteView.swift; sourceTree = "<group>"; };
+		08C737AE2C4CA2D900FA93A4 /* ChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipButton.swift; sourceTree = "<group>"; };
+		08C737F42C52267600FA93A4 /* RankingFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFood.swift; sourceTree = "<group>"; };
+		08C737F62C52277E00FA93A4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		08C737F82C52297600FA93A4 /* FoodRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRankCell.swift; sourceTree = "<group>"; };
+		08CC186F2C492BA8007EF06E /* SearchNavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigatorView.swift; sourceTree = "<group>"; };
+		08EAA4F42C58DF7C00115508 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		08EAA4F62C58DF8500115508 /* DirectRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectRegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088DFC512C524A9600469FD1 /* DotLottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +148,6 @@
 				082D45552C468E14007AD8FB /* Record */,
 				082D45502C468B81007AD8FB /* Nutrients */,
 				082D454F2C468B7B007AD8FB /* MyHealth */,
-				082D453E2C459450007AD8FB /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +155,8 @@
 		082D45182C458180007AD8FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				08C737F42C52267600FA93A4 /* RankingFood.swift */,
+				08C737F62C52277E00FA93A4 /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				082D45422C4599D5007AD8FB /* Constants.swift */,
-				082D451D2C4581BB007AD8FB /* Extension */,
 				087B509F2C4906B4005BF53C /* TabBar.swift */,
 				087B50A32C492100005BF53C /* RoundedCorner.swift */,
+				082D451D2C4581BB007AD8FB /* Extension */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -156,6 +187,8 @@
 				082D45392C458DC3007AD8FB /* Data */,
 				082D45222C4582F9007AD8FB /* Fonts */,
 				082D450D2C458093007AD8FB /* Assets.xcassets */,
+				088DFC4D2C52489400469FD1 /* loading.lottie */,
+				08A793AA2C62392F004A1FEB /* addList.lottie */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -182,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				082D45442C467A2F007AD8FB /* CustomButton.swift */,
+				08C737AE2C4CA2D900FA93A4 /* ChipButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -238,16 +272,10 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		082D453E2C459450007AD8FB /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		082D454F2C468B7B007AD8FB /* MyHealth */ = {
 			isa = PBXGroup;
 			children = (
+				08C737A72C4C069100FA93A4 /* Component */,
 				082D450B2C458092007AD8FB /* MyHealthView.swift */,
 				082D453F2C4594BB007AD8FB /* MyHealthCalendarListItem.swift */,
 				082D45492C467F0D007AD8FB /* MyHealthSectionStack.swift */,
@@ -266,9 +294,33 @@
 		082D45552C468E14007AD8FB /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				08EAA4F32C58DF4900115508 /* RecordTabmenuView */,
 				082D45562C468E20007AD8FB /* RecordView.swift */,
+				08CC186F2C492BA8007EF06E /* SearchNavigatorView.swift */,
+				08C737AA2C4C0E7200FA93A4 /* SlidingTabView.swift */,
+				08C737F82C52297600FA93A4 /* FoodRankCell.swift */,
+				08621D232C57EC2F00E26998 /* UserSexFilterView.swift */,
+				08621D262C57FDF400E26998 /* RecordButtonView.swift */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		08C737A72C4C069100FA93A4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				08C737A82C4C06A000FA93A4 /* DoubleSidedBackgroundScrollView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		08EAA4F32C58DF4900115508 /* RecordTabmenuView */ = {
+			isa = PBXGroup;
+			children = (
+				08C737AC2C4CA2B400FA93A4 /* FrequentlyAteView.swift */,
+				08EAA4F42C58DF7C00115508 /* FavoriteView.swift */,
+				08EAA4F62C58DF8500115508 /* DirectRegisterView.swift */,
+			);
+			path = RecordTabmenuView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +339,9 @@
 			dependencies = (
 			);
 			name = Pillyze;
+			packageProductDependencies = (
+				088DFC502C524A9600469FD1 /* DotLottie */,
+			);
 			productName = Pillyze;
 			productReference = 082D45062C458092007AD8FB /* Pillyze.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +370,9 @@
 				Base,
 			);
 			mainGroup = 082D44FD2C458091007AD8FB;
+			packageReferences = (
+				088DFC4F2C524A9500469FD1 /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
+			);
 			productRefGroup = 082D45072C458092007AD8FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				082D45302C458325007AD8FB /* Pretendard-Medium.otf in Resources */,
+				088DFC4E2C52489400469FD1 /* loading.lottie in Resources */,
 				082D453C2C458DE2007AD8FB /* food_list.json in Resources */,
 				082D452C2C458325007AD8FB /* Pretendard-SemiBold.otf in Resources */,
 				082D45332C458325007AD8FB /* Pretendard-ExtraLight.otf in Resources */,
@@ -337,6 +396,7 @@
 				082D452E2C458325007AD8FB /* Pretendard-Bold.otf in Resources */,
 				082D452D2C458325007AD8FB /* Pretendard-Light.otf in Resources */,
 				082D45112C458093007AD8FB /* Preview Assets.xcassets in Resources */,
+				08A793AB2C623933004A1FEB /* addList.lottie in Resources */,
 				082D45312C458325007AD8FB /* Pretendard-Regular.otf in Resources */,
 				082D452F2C458325007AD8FB /* Pretendard-Black.otf in Resources */,
 				082D453D2C458DE2007AD8FB /* food_list_with_rank.json in Resources */,
@@ -353,17 +413,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				082D45432C4599D5007AD8FB /* Constants.swift in Sources */,
+				08C737AD2C4CA2B400FA93A4 /* FrequentlyAteView.swift in Sources */,
+				08C737F92C52297600FA93A4 /* FoodRankCell.swift in Sources */,
+				08621D272C57FDF400E26998 /* RecordButtonView.swift in Sources */,
 				082D454C2C4685A9007AD8FB /* Color+.swift in Sources */,
 				082D45372C4583C6007AD8FB /* Font+.swift in Sources */,
 				087B50A02C4906B4005BF53C /* TabBar.swift in Sources */,
 				087B50A42C492100005BF53C /* RoundedCorner.swift in Sources */,
 				082D45572C468E20007AD8FB /* RecordView.swift in Sources */,
 				082D45452C467A2F007AD8FB /* CustomButton.swift in Sources */,
+				08CC18702C492BA8007EF06E /* SearchNavigatorView.swift in Sources */,
 				082D450C2C458092007AD8FB /* MyHealthView.swift in Sources */,
 				082D454E2C468B21007AD8FB /* ContentView.swift in Sources */,
+				08C737AF2C4CA2D900FA93A4 /* ChipButton.swift in Sources */,
+				08EAA4F72C58DF8500115508 /* DirectRegisterView.swift in Sources */,
 				082D450A2C458092007AD8FB /* PillyzeApp.swift in Sources */,
+				08C737AB2C4C0E7200FA93A4 /* SlidingTabView.swift in Sources */,
+				08EAA4F52C58DF7C00115508 /* FavoriteView.swift in Sources */,
 				082D45542C468B96007AD8FB /* NutrientsView.swift in Sources */,
 				082D454A2C467F0D007AD8FB /* MyHealthSectionStack.swift in Sources */,
+				08C737A92C4C06A000FA93A4 /* DoubleSidedBackgroundScrollView.swift in Sources */,
+				08621D242C57EC2F00E26998 /* UserSexFilterView.swift in Sources */,
+				08C737F72C52277E00FA93A4 /* ModelData.swift in Sources */,
+				08C737F52C52267600FA93A4 /* RankingFood.swift in Sources */,
 				082D45402C4594BB007AD8FB /* MyHealthCalendarListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		088DFC4F2C524A9500469FD1 /* XCRemoteSwiftPackageReference "dotlottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LottieFiles/dotlottie-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		088DFC502C524A9600469FD1 /* DotLottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088DFC4F2C524A9500469FD1 /* XCRemoteSwiftPackageReference "dotlottie-ios" */;
+			productName = DotLottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 082D44FE2C458091007AD8FB /* Project object */;
 }
