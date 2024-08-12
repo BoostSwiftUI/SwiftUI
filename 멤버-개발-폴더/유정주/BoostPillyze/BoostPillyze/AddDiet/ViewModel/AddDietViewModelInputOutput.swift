@@ -16,6 +16,9 @@ extension AddDietViewModel {
      
         let viewDidLoad: PassthroughSubject<Void, Never> = .init()
         let toggleFoodSelection: PassthroughSubject<Food, Never> = .init()
+        
+        let didTapCancelButton: PassthroughSubject<Void, Never> = .init()
+        let didTapFoodListItem: PassthroughSubject<Food, Never> = .init()
     }
     
     // MARK: - Output
@@ -25,7 +28,5 @@ extension AddDietViewModel {
         @Published var foods: [Food] = []
         @Published var selectedFoods: Set<Food> = []
         @Published var totalCalories: Int = 0
-        
-        let playAddListLottie: PassthroughSubject<Void, Never> = .init()
     }
 }
