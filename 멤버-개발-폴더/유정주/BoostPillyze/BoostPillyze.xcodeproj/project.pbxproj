@@ -31,6 +31,7 @@
 		9B5AE84D2C46860800BC1ED7 /* AddDietTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AE84C2C46860800BC1ED7 /* AddDietTab.swift */; };
 		9B5AE8A12C53B6AD00BC1ED7 /* add-list.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 9B5AE8A02C53B6AD00BC1ED7 /* add-list.lottie */; };
 		9B5AE8A72C53BAF400BC1ED7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9B5AE8A62C53BAF400BC1ED7 /* Lottie */; };
+		9BD488462C676A080066D1E8 /* ExampleCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD488452C676A080066D1E8 /* ExampleCharts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9B5AE8482C452D8000BC1ED7 /* food_list_with_rank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_list_with_rank.json; sourceTree = "<group>"; };
 		9B5AE84C2C46860800BC1ED7 /* AddDietTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietTab.swift; sourceTree = "<group>"; };
 		9B5AE8A02C53B6AD00BC1ED7 /* add-list.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = "add-list.lottie"; sourceTree = "<group>"; };
+		9BD488452C676A080066D1E8 /* ExampleCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCharts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				9B0470232C427F5B00ADAFF3 /* TabBar */,
 				9B0470202C41752100ADAFF3 /* MyHealth */,
 				9B5AE8372C43978C00BC1ED7 /* AddDiet */,
+				9BD488432C6769F20066D1E8 /* EditDiet */,
 				9B0470282C4288C300ADAFF3 /* Extensions */,
 				9B0470212C41752800ADAFF3 /* Resource */,
 				9B046FFC2C41735C00ADAFF3 /* Preview Content */,
@@ -257,6 +260,22 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		9BD488432C6769F20066D1E8 /* EditDiet */ = {
+			isa = PBXGroup;
+			children = (
+				9BD488442C6769FF0066D1E8 /* View */,
+			);
+			path = EditDiet;
+			sourceTree = "<group>";
+		};
+		9BD488442C6769FF0066D1E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BD488452C676A080066D1E8 /* ExampleCharts.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,6 +387,7 @@
 				9B5AE8412C452AFB00BC1ED7 /* AddDietViewModelInputOutput.swift in Sources */,
 				9B5AE84D2C46860800BC1ED7 /* AddDietTab.swift in Sources */,
 				9B5AE8352C42B54200BC1ED7 /* LayoutViewController.swift in Sources */,
+				9BD488462C676A080066D1E8 /* ExampleCharts.swift in Sources */,
 				9B5AE8442C452B5D00BC1ED7 /* Food.swift in Sources */,
 				9B0470252C427F6C00ADAFF3 /* MainTabBar.swift in Sources */,
 				9B5AE8332C42B49E00BC1ED7 /* MyHealthView.swift in Sources */,
@@ -540,7 +560,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +593,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
