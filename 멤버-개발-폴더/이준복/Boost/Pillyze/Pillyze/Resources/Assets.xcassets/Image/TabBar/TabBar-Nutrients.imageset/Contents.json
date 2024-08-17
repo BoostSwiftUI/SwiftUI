@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Type=nutrients, State=default.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
