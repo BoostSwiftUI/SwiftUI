@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyHealth: View {
+    
     var body: some View {
         ZStack {
             VStack {
@@ -40,7 +41,7 @@ struct MyHealth: View {
                                 topTrailing: 24
                             )
                         )
-                        .foregroundStyle(.background)
+                        .foregroundStyle(.componentBackground)
                     }
                 }
             }

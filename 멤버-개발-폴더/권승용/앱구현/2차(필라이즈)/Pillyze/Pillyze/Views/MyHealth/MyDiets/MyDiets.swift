@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MyDiets: View {
+    
+    @State private var isPresented: Bool = false
+    
     var body: some View {
         VStack(spacing: 0) {
             Text("오늘 내 식사,\n몇 점 짜리 식단일까?")
@@ -28,15 +31,14 @@ struct MyDiets: View {
                 .padding(.vertical, 10)
             
             Button {
-                
+                isPresented = true
             } label: {
                 Text("내 식단 점수 확인하기")
-                    .font(.system(size: 18))
-                    .fontWeight(.medium)
-                    .foregroundStyle(.white)
-                    .buttonBackground()
+                    .buttonEnabledStyle()
             }
-            .buttonStyle(PlainButtonStyle())
+            .fullScreenCover(isPresented: $isPresented) {
+                AddDiet()
+            }
         }
         .frame(maxWidth: .infinity)
         .padding(20)
@@ -46,7 +48,6 @@ struct MyDiets: View {
                 HStack {
                     Spacer()
                     Button {
-                        
                     } label: {
                         Image(.close)
                             .resizable()

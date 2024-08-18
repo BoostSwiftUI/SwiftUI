@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct ButtonBackground: ViewModifier {
+struct ButtonEnabledStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .font(.system(size: 18))
+            .fontWeight(.medium)
+            .foregroundStyle(.textButton)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background {
@@ -20,8 +23,8 @@ struct ButtonBackground: ViewModifier {
 }
 
 extension View {
-    func buttonBackground() -> some View {
-        modifier(ButtonBackground())
+    func buttonEnabledStyle() -> some View {
+        modifier(ButtonEnabledStyle())
     }
 }
 
