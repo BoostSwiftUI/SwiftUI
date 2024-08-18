@@ -60,3 +60,4 @@ DerivedData/
 
 ### Projects ###
 *.xcworkspace
+Package.resolved
