@@ -21,12 +21,12 @@ struct AddDiet: View {
                 Color.componentBackground
                     .ignoresSafeArea(edges: .top)
                 
-                VStack {
+                VStack(spacing: 0) {
                     searchBar()
                     CustomTabBar()
                 }
                 
-                VStack {
+                VStack(spacing: 0) {
                     Spacer()
                     BottomPicker(isAddingList: $isAddingList)
                         .padding(.bottom, proxy.safeAreaInsets.bottom)

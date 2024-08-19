@@ -19,6 +19,9 @@ struct FoodInfo: View {
             
             HStack(spacing: 12) {
                 Text("\(food.caloriesPerUnit)kcal")
+                    .font(.system(size: 16))
+                    .fontWeight(.medium)
+                    .foregroundStyle(.textSecondary)
                 AddButton()
             }
         }
@@ -61,8 +64,8 @@ struct FoodInfo: View {
                     .foregroundStyle(.textNormal)
                 Text(food.unit)
                     .font(.system(size: 16))
-                    .fontWeight(.light)
-                    .foregroundStyle(.textSecondary)
+                    .fontWeight(.regular)
+                    .foregroundStyle(.textPlaceholder)
             }
         }
     }
