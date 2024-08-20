@@ -1,5 +1,5 @@
 //
-//  ButtonBackground.swift
+//  MyButtonStyle.swift
 //  Pillyze
 //
 //  Created by 권승용 on 7/13/24.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ButtonEnabledStyle: ViewModifier {
+struct MyButtonStyle: ViewModifier {
+    var isEnabled: Bool
+    
     func body(content: Content) -> some View {
         content
             .font(.system(size: 18))
@@ -17,14 +19,14 @@ struct ButtonEnabledStyle: ViewModifier {
             .padding(.vertical, 16)
             .background {
                 RoundedRectangle(cornerRadius: 8)
-                    .foregroundStyle(.appPrimary)
+                    .foregroundStyle(isEnabled ? .appPrimary : .appPrimaryDisabled)
             }
     }
 }
 
 extension View {
-    func buttonEnabledStyle() -> some View {
-        modifier(ButtonEnabledStyle())
+    func myButtonStyle(isEnabled: Bool = true) -> some View {
+        modifier(MyButtonStyle(isEnabled: isEnabled))
     }
 }
 

@@ -22,7 +22,7 @@ struct FoodInfo: View {
                     .font(.system(size: 16))
                     .fontWeight(.medium)
                     .foregroundStyle(.textSecondary)
-                AddButton()
+                AddButton(food: food)
             }
         }
         .padding(.vertical, 16)
@@ -74,6 +74,7 @@ struct FoodInfo: View {
 struct AddButton: View {
     @Environment(ModelData.self) private var modelData
     @State private var isAdded: Bool = false
+    let food: Food
     
     var body: some View {
         Image(isAdded ? .dietSelected : .dietUnselected)
@@ -84,10 +85,25 @@ struct AddButton: View {
                 isAdded.toggle()
                 if isAdded {
                     modelData.isAdded = true
+                    modelData.selectedFoods[food] = food.hashValue
+                } else {
+                    modelData.selectedFoods[food] = nil
                 }
             }
             .animation(.easeInOut, value: isAdded)
             .disabled(modelData.isAdded)
+            .onAppear {
+                if modelData.selectedFoods[food] != nil {
+                    isAdded = true
+                }
+            }
+            .onChange(of: modelData.selectedFoods) { oldValue, newValue in
+                if newValue[food] != nil {
+                    isAdded = true
+                } else {
+                    isAdded = false
+                }
+            }
     }
 }
 

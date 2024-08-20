@@ -40,7 +40,7 @@ struct FrequentlyEaten: View {
                         case .all:
                             FoodList(foods: modelData.foods, isRankedList: false)
                         case .food:
-                            FoodList(foods: modelData.foods.filter { $0.name.contains("밥")}, isRankedList: false)
+                            FoodList(foods: modelData.foodsWithRice, isRankedList: false)
                         case .set:
                             Image(.favoritesPlaceholder)
                                 .resizable()

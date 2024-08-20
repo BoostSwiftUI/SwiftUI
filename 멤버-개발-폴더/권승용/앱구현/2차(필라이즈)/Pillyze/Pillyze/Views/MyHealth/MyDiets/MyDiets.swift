@@ -34,7 +34,7 @@ struct MyDiets: View {
                 isPresented = true
             } label: {
                 Text("내 식단 점수 확인하기")
-                    .buttonEnabledStyle()
+                    .myButtonStyle()
             }
             .fullScreenCover(isPresented: $isPresented) {
                 AddDiet()
