@@ -40,7 +40,7 @@ struct FrequentlyEaten: View {
                         case .all:
                             FoodList(foods: modelData.foods, isRankedList: false)
                         case .food:
-                            FoodList(foods: modelData.foods.filter { $0.name.contains("밥")}, isRankedList: false)
+                            FoodList(foods: modelData.foodsWithRice, isRankedList: false)
                         case .set:
                             Image(.favoritesPlaceholder)
                                 .resizable()
@@ -74,7 +74,7 @@ struct FrequentlyEaten: View {
     
     @ViewBuilder
     func frequentlyEatenGroup() -> some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 0) {
                 Text("남성")
                     .font(.system(size: 16))
@@ -92,14 +92,16 @@ struct FrequentlyEaten: View {
                     .font(.system(size: 16))
                     .fontWeight(.bold)
                     .foregroundStyle(.textNormal)
+                    .padding(.leading, 8)
             }
+            
             Text("\(currentDateString) 아침 식사 기준")
                 .font(.system(size: 15))
                 .fontWeight(.regular)
                 .foregroundStyle(.textPlaceholder)
         }
         .padding(.horizontal, 20)
-        .padding(.top, 23)
+        .padding(.top, 24)
     }
 }
 

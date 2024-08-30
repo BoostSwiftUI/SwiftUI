@@ -39,7 +39,7 @@
 		60C610E02C4D3C4700C94465 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C610DF2C4D3C4700C94465 /* CustomTabBar.swift */; };
 		60DF1A4B2C4235E80090057B /* ComponentBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A4A2C4235E80090057B /* ComponentBackground.swift */; };
 		60DF1A4F2C4238060090057B /* MyDiets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A4E2C4238060090057B /* MyDiets.swift */; };
-		60DF1A542C423CD40090057B /* ButtonEnabledStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A532C423CD40090057B /* ButtonEnabledStyle.swift */; };
+		60DF1A542C423CD40090057B /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A532C423CD40090057B /* MyButtonStyle.swift */; };
 		60DF1A572C4260960090057B /* Diet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A562C4260960090057B /* Diet.swift */; };
 		60DF1A592C429DFE0090057B /* TransparentBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A582C429DFE0090057B /* TransparentBlurView.swift */; };
 		60DF1A5C2C42C0D50090057B /* AddDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A5B2C42C0D50090057B /* AddDiet.swift */; };
@@ -97,7 +97,7 @@
 		60C610DF2C4D3C4700C94465 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		60DF1A4A2C4235E80090057B /* ComponentBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBackground.swift; sourceTree = "<group>"; };
 		60DF1A4E2C4238060090057B /* MyDiets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiets.swift; sourceTree = "<group>"; };
-		60DF1A532C423CD40090057B /* ButtonEnabledStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEnabledStyle.swift; sourceTree = "<group>"; };
+		60DF1A532C423CD40090057B /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
 		60DF1A562C4260960090057B /* Diet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet.swift; sourceTree = "<group>"; };
 		60DF1A582C429DFE0090057B /* TransparentBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentBlurView.swift; sourceTree = "<group>"; };
 		60DF1A5B2C42C0D50090057B /* AddDiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiet.swift; sourceTree = "<group>"; };
@@ -345,7 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				60DF1A4A2C4235E80090057B /* ComponentBackground.swift */,
-				60DF1A532C423CD40090057B /* ButtonEnabledStyle.swift */,
+				60DF1A532C423CD40090057B /* MyButtonStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -548,7 +548,7 @@
 				60C610E02C4D3C4700C94465 /* CustomTabBar.swift in Sources */,
 				6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */,
 				6082A11F2C41299900C72C97 /* TabBarButton.swift in Sources */,
-				60DF1A542C423CD40090057B /* ButtonEnabledStyle.swift in Sources */,
+				60DF1A542C423CD40090057B /* MyButtonStyle.swift in Sources */,
 				6076A3E42C45073100F95DC9 /* BottomPicker.swift in Sources */,
 				6082A11D2C41288300C72C97 /* TabBar.swift in Sources */,
 				60DF1A592C429DFE0090057B /* TransparentBlurView.swift in Sources */,

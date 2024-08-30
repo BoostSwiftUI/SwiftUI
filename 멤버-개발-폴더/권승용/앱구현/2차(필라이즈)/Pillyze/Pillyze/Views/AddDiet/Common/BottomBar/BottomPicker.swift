@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BottomPicker: View {
     @Binding var isAddingList: Bool
+    @Environment(ModelData.self) private var modelData
     
     var body: some View {
         VStack(spacing: 0) {
@@ -29,12 +30,13 @@ struct BottomPicker: View {
                     .font(.system(size: 18))
                     .fontWeight(.heavy)
                     .foregroundStyle(.textNormal)
+                    .padding(.trailing, 29)
                 
                 Button {
                     
                 } label: {
                     Text("기록하기")
-                        .buttonEnabledStyle()
+                        .myButtonStyle(isEnabled: !modelData.selectedFoods.isEmpty)
                 }
                 .buttonStyle(PlainButtonStyle())
             }
@@ -45,7 +47,8 @@ struct BottomPicker: View {
 }
 
 #Preview {
-    BottomPicker(isAddingList: .constant(true))
+    BottomPicker(isAddingList: .constant(false))
+        .environment(ModelData())
 }
 
 struct MealPicker: View {

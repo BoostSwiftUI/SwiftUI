@@ -44,7 +44,7 @@ struct TabBar: View {
                         Image(.addButton)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 52, height: 52)
+                            .frame(width: 56, height: 56)
                             .offset(y: -12)
                         
                         Spacer()

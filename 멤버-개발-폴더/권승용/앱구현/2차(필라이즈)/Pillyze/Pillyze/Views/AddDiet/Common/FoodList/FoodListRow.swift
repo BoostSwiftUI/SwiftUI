@@ -36,4 +36,5 @@ struct FoodListRow: View {
 
 #Preview {
     FoodListRow(food: ModelData().foods.first!, isRankedList: true)
+        .environment(ModelData())
 }

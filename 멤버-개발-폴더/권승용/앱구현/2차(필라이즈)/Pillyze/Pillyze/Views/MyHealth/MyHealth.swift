@@ -11,14 +11,14 @@ struct MyHealth: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            VStack(spacing: 0) {
                 Color(.appPrimary)
                 Color(.componentBackground)
             }
             .ignoresSafeArea()
             
             ScrollView {
-                VStack {
+                VStack(spacing: 0) {
                     Spacer()
                         .frame(height: 46)
                     Calender()

@@ -29,6 +29,7 @@ struct CustomTabBar: View {
                 VStack(spacing: 0) {
                     TabBarHeader(selection: $selection, indicatorOffset: $indicatorOffset, proxy: proxy)
                         .onChange(of: selection) { oldValue, newValue in
+                            modelData.selectedFoods = [:]
                             switch newValue {
                             case .frequentlyEaten:
                                 indicatorOffset = 0
