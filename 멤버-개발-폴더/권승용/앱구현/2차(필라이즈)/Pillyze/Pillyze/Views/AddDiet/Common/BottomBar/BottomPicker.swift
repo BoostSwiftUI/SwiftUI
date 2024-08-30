@@ -35,7 +35,7 @@ struct BottomPicker: View {
                 Button {
                     
                 } label: {
-                    Text("기록하기")
+                    Text(modelData.selectedFoods.isEmpty ? "기록하기" : "\(modelData.selectedFoods.count)개 기록하기")
                         .myButtonStyle(isEnabled: !modelData.selectedFoods.isEmpty)
                 }
                 .buttonStyle(PlainButtonStyle())
