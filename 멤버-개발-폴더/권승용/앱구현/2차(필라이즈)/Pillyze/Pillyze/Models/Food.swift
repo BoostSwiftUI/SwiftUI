@@ -14,6 +14,9 @@ struct Food: Hashable, Identifiable, Codable {
     let caloriesPerUnit: Int
     let currentRank: Int
     let rankChange: Int
+    let carbohydrates: Double
+    let protein: Double
+    let fat: Double
     
     enum CodingKeys: String, CodingKey {
         case name = "foodName"
@@ -21,6 +24,9 @@ struct Food: Hashable, Identifiable, Codable {
         case caloriesPerUnit
         case currentRank
         case rankChange
+        case carbohydrates
+        case protein
+        case fat
     }
     
     enum RankChangeStatus {

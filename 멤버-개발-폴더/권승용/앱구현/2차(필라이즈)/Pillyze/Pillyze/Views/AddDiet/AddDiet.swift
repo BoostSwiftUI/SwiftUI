@@ -16,47 +16,49 @@ struct AddDiet: View {
     @State private var playbackMode: LottiePlaybackMode = .paused
     
     var body: some View {
-        GeometryReader { proxy in
-            ZStack {
-                Color.componentBackground
-                    .ignoresSafeArea(edges: .top)
-                
-                VStack(spacing: 0) {
-                    searchBar()
-                    CustomTabBar()
-                }
-                
-                VStack(spacing: 0) {
-                    Spacer()
-                    BottomPicker(isAddingList: $isAddingList)
-                        .padding(.bottom, proxy.safeAreaInsets.bottom)
-                        .background {
-                            Color(.componentBackground)
+        NavigationStack {
+            GeometryReader { proxy in
+                ZStack {
+                    Color.componentBackground
+                        .ignoresSafeArea(edges: .top)
+                    
+                    VStack(spacing: 0) {
+                        searchBar()
+                        CustomTabBar()
+                    }
+                    
+                    VStack(spacing: 0) {
+                        Spacer()
+                        BottomPicker(isAddingList: $isAddingList)
+                            .padding(.bottom, proxy.safeAreaInsets.bottom)
+                            .background {
+                                Color(.componentBackground)
+                            }
+                            .animation(.easeInOut, value: isAddingList)
+                    }
+                    .ignoresSafeArea()
+                    
+                    if isAddingList {
+                        LottieView {
+                            try await DotLottieFile.named("add-list")
                         }
-                        .animation(.easeInOut, value: isAddingList)
-                }
-                .ignoresSafeArea()
-                
-                if isAddingList {
-                    LottieView {
-                        try await DotLottieFile.named("add-list")
-                    }
-                    .animationSpeed(2)
-                    .playbackMode(playbackMode)
-                    .animationDidFinish { completed in
-                        playbackMode = .paused
-                        modelData.isAdded = false
-                        isAddingList = false
+                        .animationSpeed(2)
+                        .playbackMode(playbackMode)
+                        .animationDidFinish { completed in
+                            playbackMode = .paused
+                            modelData.isAdded = false
+                            isAddingList = false
+                        }
                     }
                 }
-            }
-            .onChange(of: modelData.isAdded) { oldValue, newValue in
-                if newValue == true {
-                    isAddingList = true
-                    playbackMode = .playing(.fromProgress(0, toProgress: 1, loopMode: .playOnce))
+                .onChange(of: modelData.isAdded) { oldValue, newValue in
+                    if newValue == true {
+                        isAddingList = true
+                        playbackMode = .playing(.fromProgress(0, toProgress: 1, loopMode: .playOnce))
+                    }
                 }
+                .toolbar(.hidden)
             }
-            .toolbar(.hidden)
         }
     }
     

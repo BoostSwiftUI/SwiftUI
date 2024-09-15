@@ -32,13 +32,12 @@ struct BottomPicker: View {
                     .foregroundStyle(.textNormal)
                     .padding(.trailing, 29)
                 
-                Button {
-                    
+                NavigationLink {
+                    AnalyzeCalory()
                 } label: {
                     Text(modelData.selectedFoods.isEmpty ? "기록하기" : "\(modelData.selectedFoods.count)개 기록하기")
                         .myButtonStyle(isEnabled: !modelData.selectedFoods.isEmpty)
                 }
-                .buttonStyle(PlainButtonStyle())
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 8)

@@ -37,6 +37,8 @@
 		60A9C3E92C4568CD006433AF /* FrequentlyEaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9C3E82C4568CD006433AF /* FrequentlyEaten.swift */; };
 		60A9C3EE2C4569BA006433AF /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A9C3ED2C4569BA006433AF /* Chip.swift */; };
 		60C610E02C4D3C4700C94465 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C610DF2C4D3C4700C94465 /* CustomTabBar.swift */; };
+		60D24F662C82277400845118 /* AnalyzeCalory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D24F652C82277400845118 /* AnalyzeCalory.swift */; };
+		60D24F6B2C84477A00845118 /* CaloryChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D24F6A2C84477A00845118 /* CaloryChart.swift */; };
 		60DF1A4B2C4235E80090057B /* ComponentBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A4A2C4235E80090057B /* ComponentBackground.swift */; };
 		60DF1A4F2C4238060090057B /* MyDiets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A4E2C4238060090057B /* MyDiets.swift */; };
 		60DF1A542C423CD40090057B /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF1A532C423CD40090057B /* MyButtonStyle.swift */; };
@@ -95,6 +97,8 @@
 		60A9C3E82C4568CD006433AF /* FrequentlyEaten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentlyEaten.swift; sourceTree = "<group>"; };
 		60A9C3ED2C4569BA006433AF /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
 		60C610DF2C4D3C4700C94465 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		60D24F652C82277400845118 /* AnalyzeCalory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeCalory.swift; sourceTree = "<group>"; };
+		60D24F6A2C84477A00845118 /* CaloryChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryChart.swift; sourceTree = "<group>"; };
 		60DF1A4A2C4235E80090057B /* ComponentBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBackground.swift; sourceTree = "<group>"; };
 		60DF1A4E2C4238060090057B /* MyDiets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiets.swift; sourceTree = "<group>"; };
 		60DF1A532C423CD40090057B /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
@@ -341,6 +345,15 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
+		60D24F642C82273300845118 /* AnalyzeCalory */ = {
+			isa = PBXGroup;
+			children = (
+				60D24F652C82277400845118 /* AnalyzeCalory.swift */,
+				60D24F6A2C84477A00845118 /* CaloryChart.swift */,
+			);
+			path = AnalyzeCalory;
+			sourceTree = "<group>";
+		};
 		60DF1A492C4235B40090057B /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +397,7 @@
 				60A9C3E72C4568AE006433AF /* FrequentlyEaten */,
 				6078E43A2C4571E5007BA201 /* Favorites */,
 				6078E43E2C457EA2007BA201 /* DirectAdd */,
+				60D24F642C82273300845118 /* AnalyzeCalory */,
 				6078E43D2C457E82007BA201 /* Common */,
 			);
 			path = AddDiet;
@@ -533,6 +547,7 @@
 				600C09392C4555640002B296 /* FoodListRow.swift in Sources */,
 				600C09382C4555610002B296 /* FoodList.swift in Sources */,
 				60A9C3E02C4556E0006433AF /* ModelData.swift in Sources */,
+				60D24F662C82277400845118 /* AnalyzeCalory.swift in Sources */,
 				6082A0ED2C410E8D00C72C97 /* ContentView.swift in Sources */,
 				6078E4402C457EC9007BA201 /* DirectAdd.swift in Sources */,
 				60DF1A4B2C4235E80090057B /* ComponentBackground.swift in Sources */,
@@ -544,6 +559,7 @@
 				6082A11A2C41235500C72C97 /* Header.swift in Sources */,
 				60DF1A4F2C4238060090057B /* MyDiets.swift in Sources */,
 				60A9C3E62C456626006433AF /* FoodInfo.swift in Sources */,
+				60D24F6B2C84477A00845118 /* CaloryChart.swift in Sources */,
 				60DF1A5C2C42C0D50090057B /* AddDiet.swift in Sources */,
 				60C610E02C4D3C4700C94465 /* CustomTabBar.swift in Sources */,
 				6082A0EB2C410E8D00C72C97 /* PillyzeApp.swift in Sources */,

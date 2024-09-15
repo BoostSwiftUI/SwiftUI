@@ -4,209 +4,299 @@
         "unit": "1그릇(450g)",
         "caloriesPerUnit": 530,
         "currentRank": 1,
-        "rankChange": 3
+        "rankChange": 3,
+        "carbohydrates": 81.2,
+        "protein": 13.5,
+        "fat": 14.7
     },
     {
         "foodName": "불고기",
         "unit": "1인분(200g)",
         "caloriesPerUnit": 290,
         "currentRank": 2,
-        "rankChange": 1
+        "rankChange": 1,
+        "carbohydrates": 7.8,
+        "protein": 25.4,
+        "fat": 17.9
     },
     {
         "foodName": "삼겹살",
         "unit": "100g",
         "caloriesPerUnit": 370,
         "currentRank": 3,
-        "rankChange": -2
+        "rankChange": -2,
+        "carbohydrates": 0.2,
+        "protein": 14.8,
+        "fat": 32.6
     },
     {
         "foodName": "김치찌개",
         "unit": "1인분(300g)",
         "caloriesPerUnit": 240,
         "currentRank": 4,
-        "rankChange": 4
+        "rankChange": 4,
+        "carbohydrates": 11.9,
+        "protein": 15.7,
+        "fat": 13.6
     },
     {
         "foodName": "밥",
         "unit": "1공기(210g)",
         "caloriesPerUnit": 313,
         "currentRank": 5,
-        "rankChange": -3
+        "rankChange": -3,
+        "carbohydrates": 68.2,
+        "protein": 6.1,
+        "fat": 1.3
     },
     {
         "foodName": "잡채",
         "unit": "1인분(250g)",
         "caloriesPerUnit": 440,
         "currentRank": 6,
-        "rankChange": 2
+        "rankChange": 2,
+        "carbohydrates": 59.4,
+        "protein": 8.2,
+        "fat": 14.9
     },
     {
         "foodName": "떡볶이",
         "unit": "1인분(300g)",
         "caloriesPerUnit": 335,
         "currentRank": 7,
-        "rankChange": -1
+        "rankChange": -1,
+        "carbohydrates": 71.5,
+        "protein": 5.6,
+        "fat": 3.9
     },
     {
         "foodName": "제육볶음",
         "unit": "1인분(200g)",
         "caloriesPerUnit": 320,
         "currentRank": 8,
-        "rankChange": 5
+        "rankChange": 5,
+        "carbohydrates": 10.3,
+        "protein": 22.7,
+        "fat": 19.4
     },
     {
         "foodName": "라면",
         "unit": "1봉지(120g)",
         "caloriesPerUnit": 500,
         "currentRank": 9,
-        "rankChange": -2
+        "rankChange": -2,
+        "carbohydrates": 79.8,
+        "protein": 9.4,
+        "fat": 18.2
     },
     {
         "foodName": "김밥",
         "unit": "1줄(200g)",
         "caloriesPerUnit": 320,
         "currentRank": 10,
-        "rankChange": 1
+        "rankChange": 1,
+        "carbohydrates": 57.6,
+        "protein": 9.5,
+        "fat": 5.8
     },
     {
         "foodName": "닭갈비",
         "unit": "1인분(200g)",
         "caloriesPerUnit": 355,
         "currentRank": 11,
-        "rankChange": 4
+        "rankChange": 4,
+        "carbohydrates": 11.6,
+        "protein": 24.7,
+        "fat": 21.3
     },
     {
         "foodName": "된장찌개",
         "unit": "1인분(300g)",
         "caloriesPerUnit": 185,
         "currentRank": 12,
-        "rankChange": -4
+        "rankChange": -4,
+        "carbohydrates": 11.4,
+        "protein": 11.6,
+        "fat": 6.8
     },
     {
         "foodName": "갈비탕",
         "unit": "1그릇(400g)",
         "caloriesPerUnit": 370,
         "currentRank": 13,
-        "rankChange": -3
+        "rankChange": -3,
+        "carbohydrates": 9.8,
+        "protein": 24.6,
+        "fat": 24.3
     },
     {
         "foodName": "된장국",
         "unit": "1그릇(300g)",
         "caloriesPerUnit": 90,
         "currentRank": 14,
-        "rankChange": 6
+        "rankChange": 6,
+        "carbohydrates": 4.6,
+        "protein": 6.8,
+        "fat": 2.7
     },
     {
         "foodName": "미역국",
         "unit": "1그릇(300g)",
         "caloriesPerUnit": 75,
         "currentRank": 15,
-        "rankChange": 3
+        "rankChange": 3,
+        "carbohydrates": 3.8,
+        "protein": 6.3,
+        "fat": 1.9
     },
     {
         "foodName": "김치",
         "unit": "1접시(100g)",
         "caloriesPerUnit": 30,
         "currentRank": 16,
-        "rankChange": -5
+        "rankChange": -5,
+        "carbohydrates": 6.1,
+        "protein": 1.8,
+        "fat": 0.3
     },
     {
         "foodName": "새우볶음밥",
         "unit": "1그릇(300g)",
         "caloriesPerUnit": 470,
         "currentRank": 17,
-        "rankChange": 2
+        "rankChange": 2,
+        "carbohydrates": 60.5,
+        "protein": 13.9,
+        "fat": 17.6
     },
     {
         "foodName": "어묵볶음",
         "unit": "1접시(150g)",
         "caloriesPerUnit": 280,
         "currentRank": 18,
-        "rankChange": -2
+        "rankChange": -2,
+        "carbohydrates": 14.2,
+        "protein": 9.8,
+        "fat": 17.1
     },
     {
         "foodName": "오징어볶음",
         "unit": "1인분(200g)",
         "caloriesPerUnit": 180,
         "currentRank": 19,
-        "rankChange": 5
+        "rankChange": 5,
+        "carbohydrates": 9.6,
+        "protein": 17.2,
+        "fat": 5.4
     },
     {
         "foodName": "파전",
         "unit": "1개(200g)",
         "caloriesPerUnit": 350,
         "currentRank": 20,
-        "rankChange": -1
+        "rankChange": -1,
+        "carbohydrates": 49.7,
+        "protein": 10.5,
+        "fat": 15.4
     },
     {
         "foodName": "콩나물국",
         "unit": "1그릇(300g)",
         "caloriesPerUnit": 60,
         "currentRank": 21,
-        "rankChange": 3
+        "rankChange": 3,
+        "carbohydrates": 4.5,
+        "protein": 6.2,
+        "fat": 1.3
     },
     {
         "foodName": "두부조림",
         "unit": "1접시(150g)",
         "caloriesPerUnit": 200,
         "currentRank": 22,
-        "rankChange": -4
+        "rankChange": -4,
+        "carbohydrates": 9.7,
+        "protein": 11.8,
+        "fat": 9.4
     },
     {
         "foodName": "감자조림",
         "unit": "1접시(150g)",
         "caloriesPerUnit": 210,
         "currentRank": 23,
-        "rankChange": 2
+        "rankChange": 2,
+        "carbohydrates": 39.6,
+        "protein": 3.9,
+        "fat": 4.3
     },
     {
         "foodName": "계란찜",
         "unit": "1인분(150g)",
         "caloriesPerUnit": 140,
         "currentRank": 24,
-        "rankChange": -3
+        "rankChange": -3,
+        "carbohydrates": 1.7,
+        "protein": 9.8,
+        "fat": 9.7
     },
     {
         "foodName": "부추전",
         "unit": "1개(200g)",
         "caloriesPerUnit": 330,
         "currentRank": 25,
-        "rankChange": 4
+        "rankChange": 4,
+        "carbohydrates": 38.5,
+        "protein": 7.2,
+        "fat": 15.8
     },
     {
         "foodName": "동태찌개",
         "unit": "1그릇(400g)",
         "caloriesPerUnit": 260,
         "currentRank": 26,
-        "rankChange": -2
+        "rankChange": -2,
+        "carbohydrates": 12.3,
+        "protein": 24.2,
+        "fat": 9.8
     },
     {
         "foodName": "콩비지찌개",
         "unit": "1그릇(300g)",
         "caloriesPerUnit": 180,
         "currentRank": 27,
-        "rankChange": 1
+        "rankChange": 1,
+        "carbohydrates": 8.9,
+        "protein": 9.7,
+        "fat": 8.5
     },
     {
         "foodName": "돼지국밥",
         "unit": "1그릇(450g)",
         "caloriesPerUnit": 450,
         "currentRank": 28,
-        "rankChange": -1
+        "rankChange": -1,
+        "carbohydrates": 64.8,
+        "protein": 23.9,
+        "fat": 13.2
     },
     {
         "foodName": "고추장찌개",
         "unit": "1인분(300g)",
         "caloriesPerUnit": 210,
         "currentRank": 29,
-        "rankChange": -3
+        "rankChange": -3,
+        "carbohydrates": 12.2,
+        "protein": 11.4,
+        "fat": 8.1
     },
     {
         "foodName": "물김치",
         "unit": "1접시(100g)",
         "caloriesPerUnit": 20,
         "currentRank": 30,
-        "rankChange": 0
+        "rankChange": 0,
+        "carbohydrates": 3.5,
+        "protein": 1.2,
+        "fat": 0.1
     }
 ]
