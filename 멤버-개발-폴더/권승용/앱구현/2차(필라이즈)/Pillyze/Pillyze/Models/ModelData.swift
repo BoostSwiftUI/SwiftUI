@@ -17,6 +17,9 @@ class ModelData {
     var foodsWithRice: [Food] = []
     var isAdded: Bool = false
     var selectedFoods: [Food: Int] = [:]
+    var selectedFoodsArray: [Food] {
+        selectedFoods.toArray()
+    }
     
     var totalCalory: Int {
         selectedFoods.reduce(0) { partialResult, food in
@@ -102,5 +105,16 @@ class ModelData {
         selectedFoods.reduce(0) { partialResult, food in
             return partialResult + food.key.fat
         }
+    }
+}
+
+extension Dictionary where Key: Comparable {
+    func toArray() -> [Key] {
+        var arr: [Key] = []
+        for (key, _) in self {
+            arr.append(key)
+        }
+        let sorted = arr.sorted()
+        return sorted
     }
 }

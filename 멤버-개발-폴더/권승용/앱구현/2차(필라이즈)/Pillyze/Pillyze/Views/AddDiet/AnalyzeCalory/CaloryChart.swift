@@ -18,6 +18,9 @@ struct CaloryChart: View {
         .padding(.horizontal, 20)
         .padding(.top, 24)
         .padding(.bottom, 30)
+        .background {
+            Color.componentBackground
+        }
     }
     
     private var totalCalory: some View {

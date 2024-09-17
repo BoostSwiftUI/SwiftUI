@@ -12,8 +12,15 @@ struct AnalyzeCalory: View {
     
     var body: some View {
         ZStack {
-            VStack(spacing: 0) {
-                CaloryChart()
+            Color.appPrimaryBackground
+            
+            ScrollView {
+                VStack(spacing: 0) {
+                    CaloryChart()
+                        .padding(.bottom, 10)
+                    SelectedFoodList()
+                    InfoText()
+                }
             }
         }
     }

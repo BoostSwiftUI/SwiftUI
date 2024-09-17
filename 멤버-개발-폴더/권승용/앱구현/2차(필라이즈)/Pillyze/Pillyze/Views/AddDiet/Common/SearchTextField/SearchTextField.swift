@@ -24,7 +24,7 @@ struct SearchTextField: View {
         .padding(16)
         .background {
             RoundedRectangle(cornerRadius: 99)
-                .foregroundStyle(.appPrimaryPlaceholder)
+                .foregroundStyle(.appPrimaryBackground)
         }
     }
 }

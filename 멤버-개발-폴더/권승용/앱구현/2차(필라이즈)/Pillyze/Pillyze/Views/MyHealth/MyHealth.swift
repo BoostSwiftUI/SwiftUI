@@ -13,7 +13,7 @@ struct MyHealth: View {
         ZStack {
             VStack(spacing: 0) {
                 Color(.appPrimary)
-                Color(.componentBackground)
+                Color(.appPrimaryBackground)
             }
             .ignoresSafeArea()
             
@@ -41,7 +41,7 @@ struct MyHealth: View {
                                 topTrailing: 24
                             )
                         )
-                        .foregroundStyle(.componentBackground)
+                        .foregroundStyle(.appPrimaryBackground)
                     }
                 }
             }

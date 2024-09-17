@@ -45,3 +45,9 @@ struct Food: Hashable, Identifiable, Codable {
         }
     }
 }
+
+extension Food: Comparable {
+    static func < (lhs: Food, rhs: Food) -> Bool {
+        return lhs.name < rhs.name
+    }
+}
