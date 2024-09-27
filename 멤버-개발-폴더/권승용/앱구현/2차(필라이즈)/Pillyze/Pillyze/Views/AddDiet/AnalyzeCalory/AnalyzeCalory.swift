@@ -16,6 +16,7 @@ struct AnalyzeCalory: View {
             
             ScrollView {
                 VStack(spacing: 0) {
+                    CapturePhoto()
                     CaloryChart()
                         .padding(.bottom, 10)
                     SelectedFoodList()
