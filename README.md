@@ -7,7 +7,7 @@
 
 # 🏃🏻 대표 활동
 1. [SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui)로 **기초 다지기**
-2. 디자이너와 협업하며 SwiftUI **경험 쌓기** ([피그마](https://www.figma.com/design/qrlbOp6UoxE38H7gcxEosB/🚀-Boost--SwiftUI-Study?node-id=0-1&t=dZ9cJ9IU9nNUYKqQ-0)로 상용 앱 UI 구현)
+2. 디자이너와 협업하며 SwiftUI **경험 쌓기** ([피그마](https://www.figma.com/design/nHhIbnOKxW45aZzEIEEbzA/Design-page?node-id=3-2495&t=MsZ2UrBw74ey4Pkc-1)로 상용 앱 UI 구현)
 3. WWDC로 SwiftUI **Deep Dive** ([함께 본 WWDC 리스트](https://github.com/BoostSwiftUI/SwiftUI/wiki#-함께-본-wwdc))
 
 # 📝 [Wiki](https://github.com/BoostSwiftUI/SwiftUI/wiki) 콘텐츠
