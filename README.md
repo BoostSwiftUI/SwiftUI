@@ -22,15 +22,15 @@
 # 🧑🏻‍💻 스터디원
 ## iOS 개발자
 
-| 권승용 | 김대황 | 김인환 | 유정주 | 윤동주 |
+| 고병학 | 권승용 | 김대황 | 김인환 | 유정주 |
 | :--: | :--: | :--: | :--: | :--: |
-| <a href="https://github.com/ericKwon95"><img src="https://avatars.githubusercontent.com/u/22342277?v=4" width="100"></a> | <a href="https://github.com/qwerty3345"><img src="https://avatars.githubusercontent.com/u/59835351?v=4" width="100"></a> | <a href="https://github.com/loinsir"><img src="https://avatars.githubusercontent.com/u/46420281?v=4" width="100"></a> | <a href="https://github.com/jeongju9216"><img src="https://avatars.githubusercontent.com/u/89075274?v=4" width="100"></a> | <a href="https://github.com/yoondj98"><img src="https://avatars.githubusercontent.com/u/54929503?v=4" width="100"></a> |
-| [ericKwon95](https://github.com/ericKwon95) | [qwerty3345](https://github.com/qwerty3345) | [loinsir](https://github.com/loinsir) | [jeongju9216](https://github.com/jeongju9216) | [yoondj98](https://github.com/yoondj98) |
+| <a href="https://github.com/bengHak"><img src="https://avatars.githubusercontent.com/u/41236155?v=4" width="100"></a> | <a href="https://github.com/ericKwon95"><img src="https://avatars.githubusercontent.com/u/22342277?v=4" width="100"></a> | <a href="https://github.com/qwerty3345"><img src="https://avatars.githubusercontent.com/u/59835351?v=4" width="100"></a> | <a href="https://github.com/loinsir"><img src="https://avatars.githubusercontent.com/u/46420281?v=4" width="100"></a> | <a href="https://github.com/jeongju9216"><img src="https://avatars.githubusercontent.com/u/89075274?v=4" width="100"></a> |
+| [bengHak](https://github.com/bengHak) | [ericKwon95](https://github.com/ericKwon95) | [qwerty3345](https://github.com/qwerty3345) | [loinsir](https://github.com/loinsir) | [jeongju9216](https://github.com/jeongju9216) |
 
-| 이준복 | 이창준 | 정종인 | 홍승현 |
-| :--: | :--: | :--: | :--: |
-| <a href="https://github.com/junbok97"><img src="https://avatars.githubusercontent.com/u/71696675?v=4" width="100"></a> | <a href="https://github.com/SwiftyJunnos"><img src="https://avatars.githubusercontent.com/u/138548400?v=4" width="100"></a> | <a href="https://github.com/WhiteHyun"><img src="https://avatars.githubusercontent.com/u/19565940?v=4" width="100"></a> | <a href="https://github.com/chongin12"><img src="https://avatars.githubusercontent.com/u/57972338?v=4" width="100"></a> |
-| [junbok97](https://github.com/junbok97) | [SwiftyJunnos](https://github.com/SwiftyJunnos) | [chongin12](https://github.com/chongin12) | [WhiteHyun](https://github.com/WhiteHyun) |
+| 윤동주 | 이준복 | 이창준 | 정종인 | 홍승현 |
+| :--: | :--: | :--: | :--: | :-: |
+| <a href="https://github.com/yoondj98"><img src="https://avatars.githubusercontent.com/u/54929503?v=4" width="100"></a> | <a href="https://github.com/junbok97"><img src="https://avatars.githubusercontent.com/u/71696675?v=4" width="100"></a> | <a href="https://github.com/SwiftyJunnos"><img src="https://avatars.githubusercontent.com/u/138548400?v=4" width="100"></a> | <a href="https://github.com/WhiteHyun"><img src="https://avatars.githubusercontent.com/u/19565940?v=4" width="100"></a> | <a href="https://github.com/chongin12"><img src="https://avatars.githubusercontent.com/u/57972338?v=4" width="100"></a> |
+| [yoondj98](https://github.com/yoondj98) | [junbok97](https://github.com/junbok97) | [SwiftyJunnos](https://github.com/SwiftyJunnos) | [chongin12](https://github.com/chongin12) | [WhiteHyun](https://github.com/WhiteHyun) |
 
 ## 디자이너
 | 김채영 |
